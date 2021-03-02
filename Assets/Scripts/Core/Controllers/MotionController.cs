@@ -11,15 +11,33 @@ public abstract class MotionController : Controller
         Sprint
     }
     
-    protected Vector3 Velocity;
-
-    private CharacterController _characterController;
-
     [SerializeField] private float speed;
     
     [SerializeField] private float rotationSpeed;
     
+    [Space]
+    
+    [SerializeField] private float jumpHeight;
+    
+    [SerializeField] private float gravity = Physics.gravity.y;
+    
+    [Space]
+    
     [SerializeField] private Transform body;
+    
+    protected Vector3 Velocity;
+
+    protected Vector3 CachedGroundedVelocity { get; private set; }
+
+    private CharacterController _characterController;
+    
+    private float _realSpeed;
+    
+    private float _verticalDistanceFromGround;
+    
+    private float _verticalDisplacementFromGround;
+
+    public bool IsJumping { get; private set; }
     
     public bool IsGrounded { get; protected set; }
 
@@ -33,7 +51,8 @@ public abstract class MotionController : Controller
         {
             new WalkAction(),
             new RunAction(),
-            new SprintAction()
+            new SprintAction(),
+            new JumpAction(),
         });
         
         _characterController = character.GetComponent<CharacterController>();
@@ -46,6 +65,11 @@ public abstract class MotionController : Controller
         CheckGround();
         
         ApplyGravity();
+        
+        if (IsJumping)
+        {
+            Jump();
+        }
     }
     
     protected virtual void LateUpdate()
@@ -55,7 +79,7 @@ public abstract class MotionController : Controller
 
     private void Look()
     {
-        if (IsGrounded && Velocity.magnitude > 0)
+        if (Velocity.magnitude > 0)
         {
             body.transform.rotation = Quaternion.RotateTowards(body.transform.rotation, 
                 Quaternion.LookRotation(Velocity.normalized), rotationSpeed * 360f * Time.deltaTime);
@@ -70,42 +94,76 @@ public abstract class MotionController : Controller
         {
             IsGrounded = _characterController.isGrounded
                          || Physics.Raycast(origin, Vector3.down, _characterController.stepOffset);
+
+            //take off
+            if (!IsGrounded)
+            {
+                CachedGroundedVelocity = Velocity;
+            }
         }
 
         else
         {
             IsGrounded = _characterController.isGrounded;
+
+            //land
+            if (IsGrounded)
+            {
+                _verticalDistanceFromGround = 0;
+
+                _verticalDisplacementFromGround = 0;
+            }
+        }
+
+        if (!IsGrounded && !IsJumping)
+        {
+            _verticalDistanceFromGround += Mathf.Abs(gravity) * Time.deltaTime;
+            
+            _verticalDisplacementFromGround += gravity * Time.deltaTime;
         }
     }
     
     private void ApplyGravity()
     {
-        Velocity += Physics.gravity;
+        Velocity = new Vector3(Velocity.x, gravity, Velocity.z);
+    }
+    
+    private void Jump()
+    {
+        Velocity.y = Mathf.Abs(gravity);
+            
+        _verticalDistanceFromGround += Mathf.Abs(gravity) * Time.deltaTime;
+
+        _verticalDisplacementFromGround = _verticalDistanceFromGround;
+        
+        //jumpHeight reached
+        if (_verticalDistanceFromGround >= jumpHeight)
+        {
+            IsJumping = false;
+        }
     }
     
     private void Move()
     {
-        float localSpeed = 0;
-        
         if (IsGrounded)
         {
             switch (Rate)
             {
                 case SpeedRate.Walk:
-                    localSpeed = speed / 2.5f;
+                    _realSpeed = speed / 2.5f;
                     break;
                 case SpeedRate.Run:
-                    localSpeed = speed;
+                    _realSpeed = speed;
                     break;
                 case SpeedRate.Sprint:
-                    localSpeed = speed * 1.5f;
+                    _realSpeed = speed * 1.5f;
                     break;
             }
         }
-        
-        Velocity.x *= localSpeed;
-        Velocity.z *= localSpeed;
-        
+
+        Velocity.x *= _realSpeed;
+        Velocity.z *= _realSpeed;
+
         _characterController.Move(Velocity * Time.deltaTime);
     }
     
@@ -118,16 +176,26 @@ public abstract class MotionController : Controller
     {
         return speed;
     }
+    
+    public float GetGravity()
+    {
+        return gravity;
+    }
 
     public void ChangeSpeedRate(SpeedRate rate)
     {
-        if (Rate == rate)
-        {
-            Debug.LogError($"SpeedRate already {rate}");
-            
-            return;
-        }
+        if (Rate == rate) return;
 
         Rate = rate;
+    }
+
+    public void TriggerJump()
+    {
+        //restrict multiple jumps
+        if (!IsGrounded) return;
+
+        IsJumping = true;
+
+        IsGrounded = false;
     }
 }

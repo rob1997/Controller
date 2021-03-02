@@ -345,6 +345,7 @@
         <e p="Scripts" t="Include">
           <e p="Core" t="Include">
             <e p="Actions" t="Include">
+              <e p="JumpAction.cs" t="Include" />
               <e p="RunAction.cs" t="Include" />
               <e p="SprintAction.cs" t="Include" />
               <e p="WalkAction.cs" t="Include" />
@@ -374,6 +375,7 @@
           </e>
           <e p="Utils" t="Include">
             <e p="Constants.cs" t="Include" />
+            <e p="IkAdditives.cs" t="Include" />
             <e p="MouseLook.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
           </e>

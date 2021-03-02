@@ -6,8 +6,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerMotionController : MotionController
 {
+    [SerializeField] private bool controlAirMovement;
+    
     private PlayerInputActions _inputActions;
-
+    
     public override void Initialize(Character character)
     {
         base.Initialize(character);
@@ -56,5 +58,15 @@ public class PlayerMotionController : MotionController
         right.y = 0;
 
         Velocity = (realInput.x * right + realInput.y * forward).normalized;
+        
+        if (!controlAirMovement && !IsGrounded)
+        {
+            Velocity = CachedGroundedVelocity;
+        }
+
+        if (_inputActions.Foot.Jump.triggered)
+        {
+            TakeAction<JumpAction>();
+        }
     }
 }
