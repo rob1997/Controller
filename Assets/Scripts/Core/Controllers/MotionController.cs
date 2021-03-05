@@ -37,6 +37,11 @@ public abstract class MotionController : Controller
     
     private float _verticalDisplacementFromGround;
 
+    /// <summary>
+    /// extra force applied to keep grounded while moving on slopes and stairs
+    /// </summary>
+    private readonly float _extraDownForce = Physics.gravity.y;
+    
     public bool IsJumping { get; private set; }
     
     public bool IsGrounded { get; protected set; }
@@ -92,13 +97,23 @@ public abstract class MotionController : Controller
 
         if (IsGrounded)
         {
+            bool cast = Physics.Raycast(origin, Vector3.down, out RaycastHit hit, _characterController.stepOffset);
+            
             IsGrounded = _characterController.isGrounded
-                         || Physics.Raycast(origin, Vector3.down, _characterController.stepOffset);
-
+                         || cast;
+            
             //take off
             if (!IsGrounded)
             {
                 CachedGroundedVelocity = Velocity;
+            }
+
+            //always keep grounded
+            else
+            {
+                //add extra force if grounded
+                //useful for moving on slopes and stairs with low gravity
+                Velocity.y += _extraDownForce;
             }
         }
 
@@ -125,7 +140,7 @@ public abstract class MotionController : Controller
     
     private void ApplyGravity()
     {
-        Velocity = new Vector3(Velocity.x, gravity, Velocity.z);
+        Velocity += new Vector3(0, gravity, 0);
     }
     
     private void Jump()
