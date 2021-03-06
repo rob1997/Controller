@@ -26,6 +26,8 @@ public abstract class AnimationController : Controller
         animator.SetInteger(Constants.RawSpeedHash, Mathf.RoundToInt(speed));
         animator.SetFloat(Constants.SpeedHash, speed * GetSpeedRate(), .15f, Time.deltaTime);
         
+        animator.SetFloat(Constants.VerticalDisplacementHash, _motionController.GetVerticalDisplacement());
+        
         animator.SetBool(Constants.IsGroundedHash, _motionController.IsGrounded);
     }
 

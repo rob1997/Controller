@@ -380,11 +380,37 @@
             <e p="Singleton.cs" t="Include" />
           </e>
         </e>
+        <e p="UMotionEditor" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="Application" t="Include">
+              <e p="AssetResourcesFile.cs" t="Include" />
+              <e p="UMotionSourceApplication.asmdef" t="Include" />
+              <e p="VersionCompatibilityUtility.cs" t="Include" />
+            </e>
+            <e p="Editor" t="Include">
+              <e p="AnimationCurveUtilityRecent.cs" t="Include" />
+              <e p="EditorVersionCompatibilityUtility.cs" t="Include" />
+              <e p="GUICompatibilityUtility.cs" t="Include" />
+              <e p="UMotionSourceEditor.asmdef" t="Include" />
+            </e>
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="CameraLit.shader" t="Include" />
+            <e p="ColorUnlit.shader" t="Include" />
+            <e p="ColorUnlitTransparent.shader" t="Include" />
+            <e p="UnlitDashedLine.shader" t="Include" />
+            <e p="UnlitLine.shader" t="Include" />
+            <e p="VertexColorUnlit.shader" t="Include" />
+            <e p="WiresOnly.shader" t="Include" />
+          </e>
+        </e>
       </e>
       <e p="Controller.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="UMotionSourceApplication.csproj" t="IncludeRecursive" />
+      <e p="UMotionSourceEditor.csproj" t="IncludeRecursive" />
     </e>
   </component>
 </project>

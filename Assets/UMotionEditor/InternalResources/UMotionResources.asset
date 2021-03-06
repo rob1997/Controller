@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4518f215ae949c4e9341e0353fc63b2, type: 3}
+  m_Name: UMotionResources
+  m_EditorClassIdentifier: 
+  resourcesList:
+  - Name: BoneMesh
+    Reference: {fileID: 4300000, guid: 25fc17412156d8445953abccae0301cc, type: 2}
+  - Name: JointMesh
+    Reference: {fileID: 4300000, guid: 6bb8247713a511d43be1201ddbd6d6ae, type: 2}
+  - Name: StickJointMesh
+    Reference: {fileID: 4300000, guid: 606b83f535f265c4599359df0b67ed9a, type: 2}
+  - Name: TransformMesh
+    Reference: {fileID: 4300000, guid: 21666f0998fcc6740858ec61771e6efd, type: 2}
+  - Name: StickMesh
+    Reference: {fileID: 4300000, guid: 742841b2f7233644898dc4d7a256c8f9, type: 2}
+  - Name: LineMesh
+    Reference: {fileID: 4300000, guid: 96f58a2a22beb494aad989dc627e4c73, type: 2}
+  - Name: PlaneMesh
+    Reference: {fileID: 4300000, guid: ee96c65aecd3358488867f1b879f82c8, type: 2}
+  - Name: CharacterDirMesh
+    Reference: {fileID: 4300000, guid: 8e19627191eff7c4aab77503bcb4edf9, type: 2}
+  - Name: BoneMaterial
+    Reference: {fileID: 2100000, guid: 0e664c14e21228443a2dabd67f5bac9a, type: 2}
+  - Name: BoneWireMaterial
+    Reference: {fileID: 2100000, guid: cfbc1140f1b12a7499429eadf5eab7b0, type: 2}
+  - Name: StickMaterial
+    Reference: {fileID: 2100000, guid: 063fd114d94810343b328b2a17eb9313, type: 2}
+  - Name: PlaneMaterial
+    Reference: {fileID: 2100000, guid: bf57a637da3548349a506614a871e4ed, type: 2}
+  - Name: CharacterDirMaterial
+    Reference: {fileID: 2100000, guid: ef4c220979ff26645b7376a8b92585f6, type: 2}
+  - Name: LineMaterial
+    Reference: {fileID: 2100000, guid: f173d54a0be94a54bb3c9f8d72d2c3e7, type: 2}
+  - Name: DashedLineMaterial
+    Reference: {fileID: 2100000, guid: 07698b24c9a94f44d8b5edcfbb4a5f52, type: 2}
+  - Name: UMotionTabLogo
+    Reference: {fileID: 2800000, guid: 00d99e4cf26b52f478eb6bf369455882, type: 3}
+  - Name: UMotionTabLogoDark
+    Reference: {fileID: 2800000, guid: 19b7e0552df01a54282aced29a68d756, type: 3}
+  - Name: FbxSdkWindows_X86
+    Reference: {fileID: -1121539586, guid: 9bcef43a3a95e452cac0b14bd167c7be, type: 3}
+  - Name: FbxSdkWindows_X64
+    Reference: {fileID: -1121539586, guid: c82a003de87344f429e62b0511fd0931, type: 3}
+  - Name: FbxSdkMac
+    Reference: {fileID: 102900000, guid: dcf0c0c752e3ae44881d4d2a604ba227, type: 3}
+  optionalResourcesList:
+  - Name: Manual
+    Reference: {fileID: 4900000, guid: 03551c0b797ca734097802d09c654c02, type: 3}

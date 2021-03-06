@@ -1,0 +1,104 @@
+.treeFolderLink:link
+{
+	color: #000000;
+	font-size: 16px;
+	font-weight: normal;
+	font-family: "arial";
+	text-decoration: none;
+}
+
+.treeFolderLink:visited
+{
+	color: #000000;
+	font-size: 16px;
+	font-weight: normal;
+	font-family: "arial";
+	text-decoration: none;
+}
+
+.treeFolderLink:hover
+{
+	color: #000000;
+	font-size: 16px;
+	font-weight: normal;
+	font-family: "arial";
+	text-decoration: underline;
+}
+
+.treeFolderLink:active
+{
+	color: #000000;
+	font-size: 16px;
+	font-weight: normal;
+	font-family: "arial";
+	text-decoration: none;
+}
+
+ol.tree
+{
+	margin-left: 0px;
+	padding: 0 0 0 20px;
+	width: 300px;
+}
+	li 
+	{ 
+		position: relative; 
+		margin-left: -15px;
+		list-style: none;
+	}
+	li.file
+	{
+		margin-left: -17px !important;
+	}
+		li.file a
+		{
+			background: url(TreeViewItem.png) 0 0 no-repeat;
+			color: #000000;
+			font-size: 16px;
+			font-weight: normal;
+			font-family: "arial";
+			padding-left: 21px;
+			margin-top: 5px;
+			text-decoration: none;
+			display: block;
+		}
+		li.file a:hover
+		{
+			text-decoration: underline;
+		}
+	li input
+	{
+		position: absolute;
+		left: 0;
+		margin-left: 0;
+		opacity: 0;
+		z-index: 2;
+		cursor: pointer;
+		height: 1em;
+		width: 1em;
+		top: 0;
+	}
+		li input + ol
+		{
+			background: url(TreeViewExpand.png) 40px 0 no-repeat;
+			margin: -17px 0 0 -44px;
+			height: 1em;
+		}
+		li input + ol > li { display: none; margin-left: -14px !important; padding-left: 1px; }
+	li label
+	{
+		cursor: pointer;
+		display: block;
+		padding-left: 18px;
+		margin-top: 5px;
+	}
+
+	li input:checked + ol
+	{
+		background: url(TreeViewCollapse.png) 40px 5px no-repeat;
+		margin: -22px 0 0 -44px;
+		padding: 20px 0 0 80px;
+		height: auto;
+	}
+		li input:checked + ol > li { display: block; margin: 0 0 0.125em;  /* 2px */}
+		li input:checked + ol > li:last-child { margin: 0 0 0.063em; /* 1px */ }

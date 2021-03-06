@@ -6,6 +6,6 @@ public class JumpAction : Action
 {
     public override void OnAction()
     {
-        ((MotionController) GetController()).TriggerJump();   
+        ((MotionController) GetController()).TriggerJump();
     }
 }

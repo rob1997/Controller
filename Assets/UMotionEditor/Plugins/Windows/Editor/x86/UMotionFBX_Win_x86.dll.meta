@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 9bcef43a3a95e452cac0b14bd167c7be
+PluginImporter:
+  serializedVersion: 1
+  iconMap: {}
+  executionOrder: {}
+  isPreloaded: 0
+  platformData:
+    Editor:
+      enabled: 1
+      settings:
+        CPU: x86
+        DefaultValueInitialized: true
+    first:
+      enabled: 0
+      settings: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

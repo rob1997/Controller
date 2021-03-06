@@ -196,6 +196,11 @@ public abstract class MotionController : Controller
     {
         return gravity;
     }
+    
+    public float GetVerticalDisplacement()
+    {
+        return _verticalDisplacementFromGround;
+    }
 
     public void ChangeSpeedRate(SpeedRate rate)
     {
