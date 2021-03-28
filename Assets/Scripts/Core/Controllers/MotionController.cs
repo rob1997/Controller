@@ -67,12 +67,9 @@ public abstract class MotionController : Controller
 
         AddActions(new List<Action>
         {
-            new WalkAction(),
-            new RunAction(),
-            new SprintAction(),
+            new SpeedRateAction(),
             new JumpAction(),
-            new FreeModeAction(),
-            new StrafeModeAction(),
+            new MotionModeAction(),
         });
         
         _characterController = character.GetComponent<CharacterController>();

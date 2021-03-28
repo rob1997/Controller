@@ -17,21 +17,21 @@ public class PlayerMotionController : MotionController
             _inputActions = inputManager.InputActions;
         }
         
-        _inputActions.Foot.Walk.started += delegate { TakeAction<WalkAction>(); };
+        _inputActions.Foot.Walk.started += delegate { TakeAction<SpeedRateAction>(SpeedRate.Walk); };
         _inputActions.Foot.Walk.canceled += delegate 
         {
             if (Rate == SpeedRate.Walk)
             {
-                TakeAction<RunAction>();
+                TakeAction<SpeedRateAction>(SpeedRate.Run);
             }
         };
         
-        _inputActions.Foot.Sprint.started += delegate { TakeAction<SprintAction>(); };
+        _inputActions.Foot.Sprint.started += delegate { TakeAction<SpeedRateAction>(SpeedRate.Sprint); };
         _inputActions.Foot.Sprint.canceled += delegate
         {
             if (Rate == SpeedRate.Sprint)
             {
-                TakeAction<RunAction>();
+                TakeAction<SpeedRateAction>(SpeedRate.Run);
             }
         };
     }
@@ -67,15 +67,7 @@ public class PlayerMotionController : MotionController
 #if UNITY_EDITOR
         if (Keyboard.current.tabKey.wasPressedThisFrame)
         {
-            switch (Mode)
-            {
-                case MotionMode.Free:
-                    TakeAction<StrafeModeAction>();
-                    break;
-                case MotionMode.Strafe:
-                    TakeAction<FreeModeAction>();
-                    break;
-            }
+            TakeAction<MotionModeAction>(Mode == MotionMode.Free ? MotionMode.Strafe : MotionMode.Free);
         }
 #endif
     }

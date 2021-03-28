@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JumpAction : Action
+public class MotionModeAction : Action
 {
     public override void OnAction(params object[] objs)
     {
-        ((MotionController) GetController()).TriggerJump();
+        ((MotionController) GetController()).ChangeMotionMode(GetObj<MotionController.MotionMode>(objs[0]));
     }
 }

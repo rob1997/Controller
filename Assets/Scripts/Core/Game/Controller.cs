@@ -31,11 +31,11 @@ public abstract class Controller : MonoBehaviour
         });
     }
     
-    public void TakeAction<T>() where T : Action
+    public void TakeAction<T>(params object[] objs) where T : Action
     {
         if (GetAction(out T action))
         {
-            action.OnAction();
+            action.OnAction(objs);
         }
     }
     

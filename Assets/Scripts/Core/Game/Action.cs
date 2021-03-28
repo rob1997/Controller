@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -43,9 +44,24 @@ public abstract class Action
         OnActionInitiated += delegate { _character.InvokeActionInitiated(this); };
         OnActionCompleted += delegate { _character.InvokeActionCompleted(this); };
     }
-    
-    public abstract void OnAction();
 
+    public abstract void OnAction(params object[] objs);
+
+    protected T GetObj<T>(object obj)
+    {
+        try
+        {
+            return (T) obj;
+        }
+        
+        catch (Exception e)
+        {
+            Debug.LogError("Argument Type Mismatch");
+            
+            throw;
+        }
+    }
+    
     public Character GetCharacter()
     {
         return _character;
