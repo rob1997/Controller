@@ -345,9 +345,11 @@
         <e p="Scripts" t="Include">
           <e p="Core" t="Include">
             <e p="Actions" t="Include">
+              <e p="FreeModeAction.cs" t="Include" />
               <e p="JumpAction.cs" t="Include" />
               <e p="RunAction.cs" t="Include" />
               <e p="SprintAction.cs" t="Include" />
+              <e p="StrafeModeAction.cs" t="Include" />
               <e p="WalkAction.cs" t="Include" />
             </e>
             <e p="Characters" t="Include">

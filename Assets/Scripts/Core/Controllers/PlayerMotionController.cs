@@ -6,8 +6,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerMotionController : MotionController
 {
-    [SerializeField] private bool controlAirMovement;
-    
     private PlayerInputActions _inputActions;
     
     public override void Initialize(Character character)
@@ -59,14 +57,26 @@ public class PlayerMotionController : MotionController
 
         Velocity = (realInput.x * right + realInput.y * forward).normalized;
         
-        if (!controlAirMovement && !IsGrounded)
-        {
-            Velocity = CachedGroundedVelocity;
-        }
-
         if (_inputActions.Foot.Jump.triggered)
         {
             TakeAction<JumpAction>();
         }
+
+        LookFrom = cameraTransform.position;
+        
+#if UNITY_EDITOR
+        if (Keyboard.current.tabKey.wasPressedThisFrame)
+        {
+            switch (Mode)
+            {
+                case MotionMode.Free:
+                    TakeAction<StrafeModeAction>();
+                    break;
+                case MotionMode.Strafe:
+                    TakeAction<FreeModeAction>();
+                    break;
+            }
+        }
+#endif
     }
 }

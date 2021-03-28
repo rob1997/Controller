@@ -22,6 +22,15 @@ public abstract class AnimationController : Controller
         Vector3 realVelocity = _motionController.GetVelocity();
 
         float speed = new Vector3(realVelocity.x, 0, realVelocity.z).normalized.magnitude;
+
+        //realVelocity = _motionController.GetTarget().InverseTransformDirection(realVelocity);
+        realVelocity.y = 0;
+        
+        float forward = realVelocity.z;
+        float right = realVelocity.x;
+        
+        animator.SetFloat(Constants.ForwardHash, forward);
+        animator.SetFloat(Constants.RightHash, right);
         
         animator.SetInteger(Constants.RawSpeedHash, Mathf.RoundToInt(speed));
         animator.SetFloat(Constants.SpeedHash, speed * GetSpeedRate(), .15f, Time.deltaTime);

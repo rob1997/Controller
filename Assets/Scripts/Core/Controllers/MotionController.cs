@@ -11,6 +11,12 @@ public abstract class MotionController : Controller
         Sprint
     }
     
+    public enum MotionMode
+    {
+        Free,
+        Strafe,
+    }
+    
     [SerializeField] private float speed;
     
     [SerializeField] private float rotationSpeed;
@@ -21,16 +27,19 @@ public abstract class MotionController : Controller
     
     [SerializeField] private float gravity = Physics.gravity.y;
     
+    [SerializeField] protected bool controlAirMovement = false;
+    
     [Space]
     
     [SerializeField] private Transform body;
+    [SerializeField] private Transform lookAt;
     
     protected Vector3 Velocity;
 
     protected Vector3 CachedGroundedVelocity { get; private set; }
 
     private CharacterController _characterController;
-    
+
     private float _realSpeed;
     
     private float _verticalDistanceFromGround;
@@ -45,8 +54,12 @@ public abstract class MotionController : Controller
     public bool IsJumping { get; private set; }
     
     public bool IsGrounded { get; protected set; }
-
+    
     public SpeedRate Rate { get; protected set; } = SpeedRate.Run;
+    
+    public MotionMode Mode { get; protected set; } = MotionMode.Free;
+    
+    public Vector3 LookFrom { get; protected set; }
     
     public override void Initialize(Character character)
     {
@@ -58,6 +71,8 @@ public abstract class MotionController : Controller
             new RunAction(),
             new SprintAction(),
             new JumpAction(),
+            new FreeModeAction(),
+            new StrafeModeAction(),
         });
         
         _characterController = character.GetComponent<CharacterController>();
@@ -84,13 +99,32 @@ public abstract class MotionController : Controller
 
     private void Look()
     {
-        if (Velocity.magnitude > 0)
+        if (!controlAirMovement && !IsGrounded)
         {
-            body.transform.rotation = Quaternion.RotateTowards(body.transform.rotation, 
-                Quaternion.LookRotation(Velocity.normalized), rotationSpeed * 360f * Time.deltaTime);
+            Velocity = CachedGroundedVelocity;
         }
+
+        Quaternion lookRotation = body.rotation;
+        
+        switch (Mode)
+        {
+            case MotionMode.Free:
+                if (Velocity.magnitude > 0)
+                {
+                    lookRotation = Quaternion.LookRotation(Velocity.normalized);
+                }
+                break;
+            case MotionMode.Strafe:
+                Vector3 toTarget = lookAt.position - LookFrom;
+                toTarget.y = 0;
+                lookRotation = Quaternion.LookRotation(toTarget.normalized);
+                break;
+        }
+        
+        body.rotation = Quaternion.RotateTowards(body.rotation, 
+            lookRotation, rotationSpeed * 360f * Time.deltaTime);
     }
-    
+
     private void CheckGround()
     {
         Vector3 origin = transform.position + Vector3.down * _characterController.height / 2f;
@@ -207,6 +241,13 @@ public abstract class MotionController : Controller
         if (Rate == rate) return;
 
         Rate = rate;
+    }
+    
+    public void ChangeMotionMode(MotionMode mode)
+    {
+        if (Mode == mode) return;
+
+        Mode = mode;
     }
 
     public void TriggerJump()
