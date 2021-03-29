@@ -34,6 +34,8 @@ public class PlayerMotionController : MotionController
                 TakeAction<SpeedRateAction>(SpeedRate.Run);
             }
         };
+        
+        LookFrom = Camera.main.transform;
     }
     
     protected override void Update()
@@ -61,8 +63,6 @@ public class PlayerMotionController : MotionController
         {
             TakeAction<JumpAction>();
         }
-
-        LookFrom = cameraTransform.position;
         
 #if UNITY_EDITOR
         if (Keyboard.current.tabKey.wasPressedThisFrame)

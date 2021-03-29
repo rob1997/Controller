@@ -10,27 +10,53 @@ public abstract class AnimationController : Controller
 
     private MotionController _motionController;
     
+    private PlayerInputActions _inputActions;
+
     public override void Initialize(Character character)
     {
         base.Initialize(character);
         
+        if (GameManager.Instance.GetManager(out InputManager inputManager))
+        {
+            _inputActions = inputManager.InputActions;
+        }
+        
         character.GetController(out _motionController);
+
+        _motionController.OnGroundStateChange += grounded =>
+        {
+            animator.ResetTrigger(grounded ? Constants.OnAirHash : Constants.OnGroundedHash);
+            animator.SetTrigger(grounded ?  Constants.OnGroundedHash : Constants.OnAirHash);
+        };
+
+        _motionController.OnMotionModeChange += mode =>
+        {
+            switch (mode)
+            {
+                case MotionController.MotionMode.Free:
+                    animator.ResetTrigger(Constants.OnStrafeMotionHash);
+                    animator.SetTrigger(Constants.OnFreeMotionHash);
+                    break;
+                case MotionController.MotionMode.Strafe:
+                    animator.ResetTrigger(Constants.OnFreeMotionHash);
+                    animator.SetTrigger(Constants.OnStrafeMotionHash);
+                    break;
+            }
+        };
     }
 
     private void Update()
     {
         Vector3 realVelocity = _motionController.GetVelocity();
-
+        Vector2 realInput = _inputActions.Foot.Move.ReadValue<Vector2>();
+        
         float speed = new Vector3(realVelocity.x, 0, realVelocity.z).normalized.magnitude;
 
-        //realVelocity = _motionController.GetTarget().InverseTransformDirection(realVelocity);
-        realVelocity.y = 0;
+        float forward = realInput.y * speed;
+        float right = realInput.x * speed;
         
-        float forward = realVelocity.z;
-        float right = realVelocity.x;
-        
-        animator.SetFloat(Constants.ForwardHash, forward);
-        animator.SetFloat(Constants.RightHash, right);
+        animator.SetFloat(Constants.ForwardHash, forward, .15f, Time.deltaTime);
+        animator.SetFloat(Constants.RightHash, right, .15f, Time.deltaTime);
         
         animator.SetInteger(Constants.RawSpeedHash, Mathf.RoundToInt(speed));
         animator.SetFloat(Constants.SpeedHash, speed * GetSpeedRate(), .15f, Time.deltaTime);

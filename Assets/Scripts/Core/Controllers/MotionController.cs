@@ -16,6 +16,45 @@ public abstract class MotionController : Controller
         Free,
         Strafe,
     }
+
+    #region GroundStateChange
+
+    public delegate void GroundStateChange(bool isGrounded);
+
+    public event GroundStateChange OnGroundStateChange;
+
+    private void InvokeGroundStateChange()
+    {
+        OnGroundStateChange?.Invoke(IsGrounded);
+    }
+
+    #endregion
+
+    #region MotionModeChange
+
+    public delegate void MotionModeChange(MotionMode mode);
+
+    public event MotionModeChange OnMotionModeChange;
+
+    private void InvokeMotionModeChange()
+    {
+        OnMotionModeChange?.Invoke(Mode);
+    }
+
+    #endregion
+
+    #region SpeedRateChange
+
+    public delegate void SpeedRateChange(SpeedRate rate);
+
+    public event SpeedRateChange OnSpeedRateChange;
+
+    private void InvokeSpeedRateChange()
+    {
+        OnSpeedRateChange?.Invoke(Rate);
+    }
+
+    #endregion
     
     [SerializeField] private float speed;
     
@@ -32,14 +71,15 @@ public abstract class MotionController : Controller
     [Space]
     
     [SerializeField] private Transform body;
+    
     [SerializeField] private Transform lookAt;
     
     protected Vector3 Velocity;
 
-    protected Vector3 CachedGroundedVelocity { get; private set; }
-
     private CharacterController _characterController;
 
+    private Vector3 _cachedGroundedVelocity;
+    
     private float _realSpeed;
     
     private float _verticalDistanceFromGround;
@@ -59,7 +99,9 @@ public abstract class MotionController : Controller
     
     public MotionMode Mode { get; protected set; } = MotionMode.Free;
     
-    public Vector3 LookFrom { get; protected set; }
+    public Transform LookAt => lookAt;
+    
+    public Transform LookFrom { get; protected set; }
     
     public override void Initialize(Character character)
     {
@@ -98,7 +140,7 @@ public abstract class MotionController : Controller
     {
         if (!controlAirMovement && !IsGrounded)
         {
-            Velocity = CachedGroundedVelocity;
+            Velocity = _cachedGroundedVelocity;
         }
 
         Quaternion lookRotation = body.rotation;
@@ -112,7 +154,7 @@ public abstract class MotionController : Controller
                 }
                 break;
             case MotionMode.Strafe:
-                Vector3 toTarget = lookAt.position - LookFrom;
+                Vector3 toTarget = lookAt.position - LookFrom.position;
                 toTarget.y = 0;
                 lookRotation = Quaternion.LookRotation(toTarget.normalized);
                 break;
@@ -133,10 +175,12 @@ public abstract class MotionController : Controller
             IsGrounded = _characterController.isGrounded
                          || cast;
             
-            //take off
+            //take off/fall
             if (!IsGrounded)
             {
-                CachedGroundedVelocity = Velocity;
+                _cachedGroundedVelocity = Velocity;
+                
+                InvokeGroundStateChange();
             }
 
             //always keep grounded
@@ -158,6 +202,8 @@ public abstract class MotionController : Controller
                 _verticalDistanceFromGround = 0;
 
                 _verticalDisplacementFromGround = 0;
+                
+                InvokeGroundStateChange();
             }
         }
 
@@ -238,6 +284,8 @@ public abstract class MotionController : Controller
         if (Rate == rate) return;
 
         Rate = rate;
+        
+        InvokeSpeedRateChange();
     }
     
     public void ChangeMotionMode(MotionMode mode)
@@ -245,6 +293,8 @@ public abstract class MotionController : Controller
         if (Mode == mode) return;
 
         Mode = mode;
+        
+        InvokeMotionModeChange();
     }
 
     public void TriggerJump()
