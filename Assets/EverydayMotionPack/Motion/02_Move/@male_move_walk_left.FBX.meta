@@ -1,140 +1,392 @@
 fileFormatVersion: 2
 guid: 9c5e7b0096e8c2b48a8c6d7c47889473
-timeCreated: 1546861909
-licenseType: Store
 ModelImporter:
-  serializedVersion: 21
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: Bip001
-    100004: Bip001 Head
-    100006: Bip001 L Calf
-    100008: Bip001 L Clavicle
-    100010: Bip001 L Finger0
-    100012: Bip001 L Finger01
-    100014: Bip001 L Finger02
-    100016: Bip001 L Finger1
-    100018: Bip001 L Finger11
-    100020: Bip001 L Finger12
-    100022: Bip001 L Finger2
-    100024: Bip001 L Finger21
-    100026: Bip001 L Finger22
-    100028: Bip001 L Finger3
-    100030: Bip001 L Finger31
-    100032: Bip001 L Finger32
-    100034: Bip001 L Finger4
-    100036: Bip001 L Finger41
-    100038: Bip001 L Finger42
-    100040: Bip001 L Foot
-    100042: Bip001 L Forearm
-    100044: Bip001 L ForeTwist
-    100046: Bip001 L Hand
-    100048: Bip001 L Thigh
-    100050: Bip001 L Toe0
-    100052: Bip001 L UpperArm
-    100054: Bip001 LCalfTwist
-    100056: Bip001 LThighTwist
-    100058: Bip001 LUpArmTwist
-    100060: Bip001 Neck
-    100062: Bip001 Pelvis
-    100064: Bip001 R Calf
-    100066: Bip001 R Clavicle
-    100068: Bip001 R Finger0
-    100070: Bip001 R Finger01
-    100072: Bip001 R Finger02
-    100074: Bip001 R Finger1
-    100076: Bip001 R Finger11
-    100078: Bip001 R Finger12
-    100080: Bip001 R Finger2
-    100082: Bip001 R Finger21
-    100084: Bip001 R Finger22
-    100086: Bip001 R Finger3
-    100088: Bip001 R Finger31
-    100090: Bip001 R Finger32
-    100092: Bip001 R Finger4
-    100094: Bip001 R Finger41
-    100096: Bip001 R Finger42
-    100098: Bip001 R Foot
-    100100: Bip001 R Forearm
-    100102: Bip001 R ForeTwist
-    100104: Bip001 R Hand
-    100106: Bip001 R Thigh
-    100108: Bip001 R Toe0
-    100110: Bip001 R UpperArm
-    100112: Bip001 RCalfTwist
-    100114: Bip001 RThighTwist
-    100116: Bip001 RUpArmTwist
-    100118: Bip001 Spine
-    100120: Bip001 Spine1
-    100122: Bip001 Spine2
-    400000: //RootNode
-    400002: Bip001
-    400004: Bip001 Head
-    400006: Bip001 L Calf
-    400008: Bip001 L Clavicle
-    400010: Bip001 L Finger0
-    400012: Bip001 L Finger01
-    400014: Bip001 L Finger02
-    400016: Bip001 L Finger1
-    400018: Bip001 L Finger11
-    400020: Bip001 L Finger12
-    400022: Bip001 L Finger2
-    400024: Bip001 L Finger21
-    400026: Bip001 L Finger22
-    400028: Bip001 L Finger3
-    400030: Bip001 L Finger31
-    400032: Bip001 L Finger32
-    400034: Bip001 L Finger4
-    400036: Bip001 L Finger41
-    400038: Bip001 L Finger42
-    400040: Bip001 L Foot
-    400042: Bip001 L Forearm
-    400044: Bip001 L ForeTwist
-    400046: Bip001 L Hand
-    400048: Bip001 L Thigh
-    400050: Bip001 L Toe0
-    400052: Bip001 L UpperArm
-    400054: Bip001 LCalfTwist
-    400056: Bip001 LThighTwist
-    400058: Bip001 LUpArmTwist
-    400060: Bip001 Neck
-    400062: Bip001 Pelvis
-    400064: Bip001 R Calf
-    400066: Bip001 R Clavicle
-    400068: Bip001 R Finger0
-    400070: Bip001 R Finger01
-    400072: Bip001 R Finger02
-    400074: Bip001 R Finger1
-    400076: Bip001 R Finger11
-    400078: Bip001 R Finger12
-    400080: Bip001 R Finger2
-    400082: Bip001 R Finger21
-    400084: Bip001 R Finger22
-    400086: Bip001 R Finger3
-    400088: Bip001 R Finger31
-    400090: Bip001 R Finger32
-    400092: Bip001 R Finger4
-    400094: Bip001 R Finger41
-    400096: Bip001 R Finger42
-    400098: Bip001 R Foot
-    400100: Bip001 R Forearm
-    400102: Bip001 R ForeTwist
-    400104: Bip001 R Hand
-    400106: Bip001 R Thigh
-    400108: Bip001 R Toe0
-    400110: Bip001 R UpperArm
-    400112: Bip001 RCalfTwist
-    400114: Bip001 RThighTwist
-    400116: Bip001 RUpArmTwist
-    400118: Bip001 Spine
-    400120: Bip001 Spine1
-    400122: Bip001 Spine2
-    7400000: male_move_walk_left
-    9500000: //RootNode
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Bip001
+  - first:
+      1: 100004
+    second: Bip001 Head
+  - first:
+      1: 100006
+    second: Bip001 L Calf
+  - first:
+      1: 100008
+    second: Bip001 L Clavicle
+  - first:
+      1: 100010
+    second: Bip001 L Finger0
+  - first:
+      1: 100012
+    second: Bip001 L Finger01
+  - first:
+      1: 100014
+    second: Bip001 L Finger02
+  - first:
+      1: 100016
+    second: Bip001 L Finger1
+  - first:
+      1: 100018
+    second: Bip001 L Finger11
+  - first:
+      1: 100020
+    second: Bip001 L Finger12
+  - first:
+      1: 100022
+    second: Bip001 L Finger2
+  - first:
+      1: 100024
+    second: Bip001 L Finger21
+  - first:
+      1: 100026
+    second: Bip001 L Finger22
+  - first:
+      1: 100028
+    second: Bip001 L Finger3
+  - first:
+      1: 100030
+    second: Bip001 L Finger31
+  - first:
+      1: 100032
+    second: Bip001 L Finger32
+  - first:
+      1: 100034
+    second: Bip001 L Finger4
+  - first:
+      1: 100036
+    second: Bip001 L Finger41
+  - first:
+      1: 100038
+    second: Bip001 L Finger42
+  - first:
+      1: 100040
+    second: Bip001 L Foot
+  - first:
+      1: 100042
+    second: Bip001 L Forearm
+  - first:
+      1: 100044
+    second: Bip001 L ForeTwist
+  - first:
+      1: 100046
+    second: Bip001 L Hand
+  - first:
+      1: 100048
+    second: Bip001 L Thigh
+  - first:
+      1: 100050
+    second: Bip001 L Toe0
+  - first:
+      1: 100052
+    second: Bip001 L UpperArm
+  - first:
+      1: 100054
+    second: Bip001 LCalfTwist
+  - first:
+      1: 100056
+    second: Bip001 LThighTwist
+  - first:
+      1: 100058
+    second: Bip001 LUpArmTwist
+  - first:
+      1: 100060
+    second: Bip001 Neck
+  - first:
+      1: 100062
+    second: Bip001 Pelvis
+  - first:
+      1: 100064
+    second: Bip001 R Calf
+  - first:
+      1: 100066
+    second: Bip001 R Clavicle
+  - first:
+      1: 100068
+    second: Bip001 R Finger0
+  - first:
+      1: 100070
+    second: Bip001 R Finger01
+  - first:
+      1: 100072
+    second: Bip001 R Finger02
+  - first:
+      1: 100074
+    second: Bip001 R Finger1
+  - first:
+      1: 100076
+    second: Bip001 R Finger11
+  - first:
+      1: 100078
+    second: Bip001 R Finger12
+  - first:
+      1: 100080
+    second: Bip001 R Finger2
+  - first:
+      1: 100082
+    second: Bip001 R Finger21
+  - first:
+      1: 100084
+    second: Bip001 R Finger22
+  - first:
+      1: 100086
+    second: Bip001 R Finger3
+  - first:
+      1: 100088
+    second: Bip001 R Finger31
+  - first:
+      1: 100090
+    second: Bip001 R Finger32
+  - first:
+      1: 100092
+    second: Bip001 R Finger4
+  - first:
+      1: 100094
+    second: Bip001 R Finger41
+  - first:
+      1: 100096
+    second: Bip001 R Finger42
+  - first:
+      1: 100098
+    second: Bip001 R Foot
+  - first:
+      1: 100100
+    second: Bip001 R Forearm
+  - first:
+      1: 100102
+    second: Bip001 R ForeTwist
+  - first:
+      1: 100104
+    second: Bip001 R Hand
+  - first:
+      1: 100106
+    second: Bip001 R Thigh
+  - first:
+      1: 100108
+    second: Bip001 R Toe0
+  - first:
+      1: 100110
+    second: Bip001 R UpperArm
+  - first:
+      1: 100112
+    second: Bip001 RCalfTwist
+  - first:
+      1: 100114
+    second: Bip001 RThighTwist
+  - first:
+      1: 100116
+    second: Bip001 RUpArmTwist
+  - first:
+      1: 100118
+    second: Bip001 Spine
+  - first:
+      1: 100120
+    second: Bip001 Spine1
+  - first:
+      1: 100122
+    second: Bip001 Spine2
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Bip001
+  - first:
+      4: 400004
+    second: Bip001 Head
+  - first:
+      4: 400006
+    second: Bip001 L Calf
+  - first:
+      4: 400008
+    second: Bip001 L Clavicle
+  - first:
+      4: 400010
+    second: Bip001 L Finger0
+  - first:
+      4: 400012
+    second: Bip001 L Finger01
+  - first:
+      4: 400014
+    second: Bip001 L Finger02
+  - first:
+      4: 400016
+    second: Bip001 L Finger1
+  - first:
+      4: 400018
+    second: Bip001 L Finger11
+  - first:
+      4: 400020
+    second: Bip001 L Finger12
+  - first:
+      4: 400022
+    second: Bip001 L Finger2
+  - first:
+      4: 400024
+    second: Bip001 L Finger21
+  - first:
+      4: 400026
+    second: Bip001 L Finger22
+  - first:
+      4: 400028
+    second: Bip001 L Finger3
+  - first:
+      4: 400030
+    second: Bip001 L Finger31
+  - first:
+      4: 400032
+    second: Bip001 L Finger32
+  - first:
+      4: 400034
+    second: Bip001 L Finger4
+  - first:
+      4: 400036
+    second: Bip001 L Finger41
+  - first:
+      4: 400038
+    second: Bip001 L Finger42
+  - first:
+      4: 400040
+    second: Bip001 L Foot
+  - first:
+      4: 400042
+    second: Bip001 L Forearm
+  - first:
+      4: 400044
+    second: Bip001 L ForeTwist
+  - first:
+      4: 400046
+    second: Bip001 L Hand
+  - first:
+      4: 400048
+    second: Bip001 L Thigh
+  - first:
+      4: 400050
+    second: Bip001 L Toe0
+  - first:
+      4: 400052
+    second: Bip001 L UpperArm
+  - first:
+      4: 400054
+    second: Bip001 LCalfTwist
+  - first:
+      4: 400056
+    second: Bip001 LThighTwist
+  - first:
+      4: 400058
+    second: Bip001 LUpArmTwist
+  - first:
+      4: 400060
+    second: Bip001 Neck
+  - first:
+      4: 400062
+    second: Bip001 Pelvis
+  - first:
+      4: 400064
+    second: Bip001 R Calf
+  - first:
+      4: 400066
+    second: Bip001 R Clavicle
+  - first:
+      4: 400068
+    second: Bip001 R Finger0
+  - first:
+      4: 400070
+    second: Bip001 R Finger01
+  - first:
+      4: 400072
+    second: Bip001 R Finger02
+  - first:
+      4: 400074
+    second: Bip001 R Finger1
+  - first:
+      4: 400076
+    second: Bip001 R Finger11
+  - first:
+      4: 400078
+    second: Bip001 R Finger12
+  - first:
+      4: 400080
+    second: Bip001 R Finger2
+  - first:
+      4: 400082
+    second: Bip001 R Finger21
+  - first:
+      4: 400084
+    second: Bip001 R Finger22
+  - first:
+      4: 400086
+    second: Bip001 R Finger3
+  - first:
+      4: 400088
+    second: Bip001 R Finger31
+  - first:
+      4: 400090
+    second: Bip001 R Finger32
+  - first:
+      4: 400092
+    second: Bip001 R Finger4
+  - first:
+      4: 400094
+    second: Bip001 R Finger41
+  - first:
+      4: 400096
+    second: Bip001 R Finger42
+  - first:
+      4: 400098
+    second: Bip001 R Foot
+  - first:
+      4: 400100
+    second: Bip001 R Forearm
+  - first:
+      4: 400102
+    second: Bip001 R ForeTwist
+  - first:
+      4: 400104
+    second: Bip001 R Hand
+  - first:
+      4: 400106
+    second: Bip001 R Thigh
+  - first:
+      4: 400108
+    second: Bip001 R Toe0
+  - first:
+      4: 400110
+    second: Bip001 R UpperArm
+  - first:
+      4: 400112
+    second: Bip001 RCalfTwist
+  - first:
+      4: 400114
+    second: Bip001 RThighTwist
+  - first:
+      4: 400116
+    second: Bip001 RUpArmTwist
+  - first:
+      4: 400118
+    second: Bip001 Spine
+  - first:
+      4: 400120
+    second: Bip001 Spine1
+  - first:
+      4: 400122
+    second: Bip001 Spine2
+  - first:
+      74: 7400000
+    second: male_move_walk_left
+  - first:
+      95: 9500000
+    second: //RootNode
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -147,6 +399,8 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -158,6 +412,7 @@ ModelImporter:
     - serializedVersion: 16
       name: male_move_walk_left
       takeName: Take 001
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -379,16 +634,24 @@ ModelImporter:
     globalScale: 0.1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -399,10 +662,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 1
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: Bip001 Pelvis
       humanName: Hips
@@ -1155,15 +1421,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 1
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 1edf3e6eeaa105d4296ee53dd19ed54d,
     type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 2
   additionalBone: 0
   userData: 
   assetBundleName: 

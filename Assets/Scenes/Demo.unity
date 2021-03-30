@@ -134,7 +134,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15968
+  m_Name: pb_Mesh15966
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1203,7 +1203,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15812
+  m_Name: pb_Mesh15810
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1930,7 +1930,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15914
+  m_Name: pb_Mesh15912
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2126,7 +2126,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16042
+  m_Name: pb_Mesh16038
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2447,13 +2447,13 @@ MonoBehaviour:
     eyes: []
   solvers:
     leftFoot:
-      IKPosition: {x: 29.889557, y: 0.071606696, z: 29.934877}
+      IKPosition: {x: 29.889557, y: 0.071606696, z: 34.93488}
       IKPositionWeight: 0
       root: {fileID: 665783504}
       target: {fileID: 0}
       IKRotationWeight: 0
       IKRotation: {x: -0.47550595, y: -0.47550654, z: -0.5233491, w: -0.52334833}
-      bendNormal: {x: 0.044123, y: -0.00075210736, z: 0.00007495785}
+      bendNormal: {x: 0.044122197, y: -0.00075209356, z: 0.00007495785}
       bone1:
         transform: {fileID: 329444225}
         weight: 1
@@ -2491,13 +2491,13 @@ MonoBehaviour:
       bendModifierWeight: 1
       bendGoal: {fileID: 0}
     rightFoot:
-      IKPosition: {x: 30.110445, y: 0.07160705, z: 29.934877}
+      IKPosition: {x: 30.110445, y: 0.07160705, z: 34.934875}
       IKPositionWeight: 0
       root: {fileID: 665783504}
       target: {fileID: 0}
       IKRotationWeight: 0
       IKRotation: {x: -0.52334726, y: -0.52334803, z: -0.47550768, w: -0.47550696}
-      bendNormal: {x: 0.044121422, y: 0.00075224036, z: -0.00007572562}
+      bendNormal: {x: 0.0441238, y: 0.0007522807, z: -0.00007572562}
       bone1:
         transform: {fileID: 1538968177}
         weight: 1
@@ -2535,13 +2535,13 @@ MonoBehaviour:
       bendModifierWeight: 1
       bendGoal: {fileID: 0}
     leftHand:
-      IKPosition: {x: 29.579784, y: 0.99223435, z: 29.954336}
+      IKPosition: {x: 29.579784, y: 0.99223435, z: 34.954338}
       IKPositionWeight: 0
       root: {fileID: 665783504}
       target: {fileID: 0}
       IKRotationWeight: 0
       IKRotation: {x: 0.7288649, y: 0.57203496, z: -0.3383385, w: -0.16449673}
-      bendNormal: {x: -0.022269161, y: 0.009717667, z: 0.021600775}
+      bendNormal: {x: -0.022270296, y: 0.009718349, z: 0.021600775}
       bone1:
         transform: {fileID: 1805558374}
         weight: 1
@@ -2579,13 +2579,13 @@ MonoBehaviour:
       bendModifierWeight: 1
       bendGoal: {fileID: 0}
     rightHand:
-      IKPosition: {x: 30.420216, y: 0.99223554, z: 29.954338}
+      IKPosition: {x: 30.420216, y: 0.99223554, z: 34.954338}
       IKPositionWeight: 0
       root: {fileID: 665783504}
       target: {fileID: 0}
       IKRotationWeight: 0
       IKRotation: {x: 0.3383402, y: 0.16449931, z: -0.7288645, w: -0.5720336}
-      bendNormal: {x: -0.022269128, y: -0.009717734, z: -0.021601213}
+      bendNormal: {x: -0.022268688, y: -0.009717607, z: -0.021601213}
       bone1:
         transform: {fileID: 1589655534}
         weight: 1
@@ -2623,7 +2623,7 @@ MonoBehaviour:
       bendModifierWeight: 1
       bendGoal: {fileID: 0}
     spine:
-      IKPosition: {x: 30, y: 1.1993135, z: 29.99065}
+      IKPosition: {x: 30, y: 1.1993135, z: 34.99065}
       IKPositionWeight: 0
       root: {fileID: 665783504}
       target: {fileID: 0}
@@ -2634,7 +2634,7 @@ MonoBehaviour:
       bones:
       - transform: {fileID: 283987772}
         weight: 1
-        solverPosition: {x: 30, y: 1.0940392, z: 29.993572}
+        solverPosition: {x: 30, y: 1.0940392, z: 34.993572}
         solverRotation: {x: -0.49321586, y: 0.50669307, z: 0.49321544, w: -0.50669396}
         defaultLocalPosition: {x: -0.10531403, y: -0.00008385659, z: -2.3259054e-10}
         defaultLocalRotation: {x: 4.0745185e-14, y: 0, z: -0, w: 1}
@@ -2643,7 +2643,7 @@ MonoBehaviour:
         axis: {x: -0.10531483, y: -0.000083508254, z: -0.00000013638946}
       - transform: {fileID: 961883654}
         weight: 1
-        solverPosition: {x: 30, y: 1.1993135, z: 29.99065}
+        solverPosition: {x: 30, y: 1.1993135, z: 34.99065}
         solverRotation: {x: -0.49509782, y: 0.5048543, z: 0.49509737, w: -0.5048553}
         defaultLocalPosition: {x: -0.10531482, y: -0.00008385659, z: -2.3258327e-10}
         defaultLocalRotation: {x: -8.096637e-15, y: 0.000000010320556, z: -0.0037209948,
@@ -2652,7 +2652,7 @@ MonoBehaviour:
         sqrMag: 0
         axis: {x: -0.1053113, y: -0.00086723256, z: -0.00000014893914}
     lookAt:
-      IKPosition: {x: 30, y: 1.1993135, z: 32.99065}
+      IKPosition: {x: 30, y: 1.1993135, z: 37.99065}
       IKPositionWeight: 0
       root: {fileID: 665783504}
       target: {fileID: 0}
@@ -2764,7 +2764,7 @@ MonoBehaviour:
       transform: {fileID: 149856586}
       target: {fileID: 0}
       positionOffset: {x: 0, y: 0, z: 0}
-      position: {x: 30, y: 0.89560544, z: 29.996578}
+      position: {x: 30, y: 0.89560544, z: 34.99658}
       positionWeight: 0
       rotationOffset: {x: 0, y: 0, z: 0}
       rotation: {x: -0, y: 269.9998, z: 270}
@@ -2886,7 +2886,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15940
+  m_Name: pb_Mesh15938
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3075,7 +3075,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15842
+  m_Name: pb_Mesh15840
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3238,7 +3238,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16118
+  m_Name: pb_Mesh16116
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6411,7 +6411,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15956
+  m_Name: pb_Mesh15954
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10337,7 +10337,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31, y: 1.5, z: 25}
+  m_LocalPosition: {x: 31, y: 1.5, z: 30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12001,7 +12001,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16004
+  m_Name: pb_Mesh16002
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14397,7 +14397,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15928
+  m_Name: pb_Mesh15926
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14597,11 +14597,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91af2e3feb5a0294cad2f35ad463a94a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
   rotationSpeed: 2
   jumpHeight: 3.5
   gravity: -9.81
   controlAirMovement: 0
+  dashDistance: 0.5
+  dashSpeed: 5
+  controlDashMovement: 0
   body: {fileID: 1177995082}
   lookAt: {fileID: 2090535353}
 --- !u!4 &1538968177 stripped
@@ -14616,7 +14619,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16074
+  m_Name: pb_Mesh16072
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14779,7 +14782,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15992
+  m_Name: pb_Mesh15990
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14948,7 +14951,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16092
+  m_Name: pb_Mesh16090
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16327,7 +16330,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860297906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30, y: 1, z: 30}
+  m_LocalPosition: {x: 30, y: 1, z: 35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1177995082}
@@ -16411,7 +16414,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1955267083}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31, y: 1.5, z: 25}
+  m_LocalPosition: {x: 31, y: 1.5, z: 30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1248841758}

@@ -157,6 +157,10 @@ public abstract class MotionController : Controller
                 Vector3 toTarget = lookAt.position - LookFrom.position;
                 toTarget.y = 0;
                 lookRotation = Quaternion.LookRotation(toTarget.normalized);
+                if (Rate == SpeedRate.Sprint && Velocity.magnitude > 0)
+                {
+                    lookRotation = Quaternion.LookRotation(Velocity.normalized);
+                }
                 break;
         }
         

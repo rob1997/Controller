@@ -52,10 +52,23 @@ public abstract class AnimationController : Controller
         
         float speed = new Vector3(realVelocity.x, 0, realVelocity.z).normalized.magnitude;
 
-        float forward = realInput.y * speed;
-        float right = realInput.x * speed;
+        float forward = 0;
+        float right = 0;
+        
+        switch (_motionController.Mode)
+        {
+            case MotionController.MotionMode.Free:
+                forward = speed;
+                right = 0;
+                break;
+            case MotionController.MotionMode.Strafe:
+                forward = realInput.y * speed;
+                right = realInput.x * speed;
+                break;
+        }
         
         animator.SetFloat(Constants.ForwardHash, forward, .15f, Time.deltaTime);
+
         animator.SetFloat(Constants.RightHash, right, .15f, Time.deltaTime);
         
         animator.SetInteger(Constants.RawSpeedHash, Mathf.RoundToInt(speed));
