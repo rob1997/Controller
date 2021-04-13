@@ -307,7 +307,5 @@ public abstract class MotionController : Controller
         if (!IsGrounded) return;
 
         IsJumping = true;
-
-        IsGrounded = false;
     }
 }
