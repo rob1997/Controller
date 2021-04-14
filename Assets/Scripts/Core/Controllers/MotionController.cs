@@ -92,8 +92,8 @@ public abstract class MotionController : Controller
     private readonly float _extraDownForce = Physics.gravity.y;
     
     public bool IsJumping { get; private set; }
-    
-    public bool IsGrounded { get; protected set; }
+
+    public bool IsGrounded { get; protected set; } = true;
     
     public SpeedRate Rate { get; protected set; } = SpeedRate.Run;
     
