@@ -143,23 +143,25 @@ public abstract class MotionController : Controller
             Velocity = _cachedGroundedVelocity;
         }
 
+        Vector3 lookVelocity = new Vector3(Velocity.x, 0, Velocity.z);
+        
         Quaternion lookRotation = body.rotation;
         
         switch (Mode)
         {
             case MotionMode.Free:
-                if (Velocity.magnitude > 0)
+                if (lookVelocity.magnitude > 0)
                 {
-                    lookRotation = Quaternion.LookRotation(Velocity.normalized);
+                    lookRotation = Quaternion.LookRotation(lookVelocity.normalized);
                 }
                 break;
             case MotionMode.Strafe:
                 Vector3 toTarget = lookAt.position - LookFrom.position;
                 toTarget.y = 0;
                 lookRotation = Quaternion.LookRotation(toTarget.normalized);
-                if (Rate == SpeedRate.Sprint && Velocity.magnitude > 0)
+                if (Rate == SpeedRate.Sprint && lookVelocity.magnitude > 0)
                 {
-                    lookRotation = Quaternion.LookRotation(Velocity.normalized);
+                    lookRotation = Quaternion.LookRotation(lookVelocity.normalized);
                 }
                 break;
         }
@@ -221,7 +223,7 @@ public abstract class MotionController : Controller
     
     private void ApplyGravity()
     {
-        Velocity += new Vector3(0, gravity, 0);
+        Velocity.y = gravity;
     }
     
     private void Jump()
