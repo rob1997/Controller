@@ -83,7 +83,7 @@ public abstract class MotionController : Controller
     
     private float _realSpeed;
     
-    private float _jumpForce;
+    private float _realTimeJumpForce;
     
     private float _verticalDistanceFromGround;
     
@@ -249,16 +249,16 @@ public abstract class MotionController : Controller
     
     private void Jump()
     {
-        Velocity.y = _jumpForce;
+        Velocity.y = _realTimeJumpForce;
             
-        _jumpForce += gravity * Time.deltaTime;
+        _realTimeJumpForce += gravity * Time.deltaTime;
         
         _verticalDistanceFromGround += Mathf.Abs(gravity) * Time.deltaTime;
 
         _verticalDisplacementFromGround = _verticalDistanceFromGround;
         
         //jumpForce depleted
-        if (_jumpForce <= 0)
+        if (_realTimeJumpForce <= 0)
         {
             IsJumping = false;
         }
@@ -338,6 +338,6 @@ public abstract class MotionController : Controller
 
         IsJumping = true;
 
-        _jumpForce = jumpForce;
+        _realTimeJumpForce = jumpForce;
     }
 }
