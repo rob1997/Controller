@@ -60,7 +60,7 @@ public class PlayerMotionController : MotionController
         Vector3 inputDirection = (realInput.x * right + realInput.y * forward).normalized;
 
         Velocity = new Vector3(inputDirection.x, Velocity.y, inputDirection.z);
-        
+
         if (_inputActions.Foot.Jump.triggered)
         {
             TakeAction<JumpAction>();

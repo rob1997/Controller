@@ -83,8 +83,6 @@ public abstract class MotionController : Controller
     
     private float _realSpeed;
     
-    private float _realTimeJumpForce;
-    
     private float _verticalDistanceFromGround;
     
     private float _verticalDisplacementFromGround;
@@ -94,9 +92,9 @@ public abstract class MotionController : Controller
     /// </summary>
     private readonly float _extraDownForce = - 10000f;
     
-    public bool IsJumping { get; private set; }
-
     public bool IsGrounded { get; protected set; } = true;
+    
+    public bool IsJumping { get; protected set; }
     
     public SpeedRate Rate { get; protected set; } = SpeedRate.Run;
     
@@ -125,13 +123,8 @@ public abstract class MotionController : Controller
         Look();
         
         CheckGround();
-        
+
         ApplyGravity();
-        
-        if (IsJumping)
-        {
-            Jump();
-        }
     }
     
     protected virtual void LateUpdate()
@@ -177,25 +170,23 @@ public abstract class MotionController : Controller
     {
         Transform controllerTransform = _characterController.transform;
         
-        Vector3 origin = controllerTransform.TransformPoint(_characterController.center) + Vector3.down * _characterController.height / 2f;
+        Vector3 up = controllerTransform.up.normalized;
+        
+        Vector3 origin = controllerTransform.TransformPoint(_characterController.center) + - up * _characterController.height / 2f;
 
         float stepOffset = _characterController.stepOffset + _characterController.skinWidth;
 
-        Vector3 up = controllerTransform.up.normalized;
-        
         Debug.DrawLine(origin, origin - up * stepOffset, Color.red);
         
         if (IsGrounded)
         {
             bool cast = Physics.Raycast(origin, - up, stepOffset);
-            
-            IsGrounded = _characterController.isGrounded || cast;
+
+            IsGrounded = (_characterController.isGrounded || cast) && Velocity.y <= 0;
             
             //take off/fall
             if (!IsGrounded)
             {
-                Velocity.y = 0;
-                
                 _cachedGroundedVelocity = Velocity;
                 
                 InvokeGroundStateChange();
@@ -204,7 +195,7 @@ public abstract class MotionController : Controller
             //always keep grounded
             else
             {
-                //add extra force if grounded
+                //add extra force if grounded (not on edges/cast only)
                 //useful for moving on slopes and stairs with low gravity
                 if (cast) Velocity.y = _extraDownForce;
 
@@ -223,47 +214,33 @@ public abstract class MotionController : Controller
             //land
             if (IsGrounded)
             {
+                InvokeGroundStateChange();
+                
                 _verticalDistanceFromGround = 0;
 
                 _verticalDisplacementFromGround = 0;
-                
-                InvokeGroundStateChange();
             }
         }
 
-        if (!IsGrounded && !IsJumping)
-        {
-            _verticalDistanceFromGround += Mathf.Abs(gravity) * Time.deltaTime;
-            
-            _verticalDisplacementFromGround += gravity * Time.deltaTime;
-        }
+        //check if vertical leap is from jump or not
+        IsJumping = IsJumping && Velocity.y > 0;
     }
-    
+
     private void ApplyGravity()
     {
         if (!IsGrounded)
         {
-            Velocity.y += gravity * Time.deltaTime;
-        }
-    }
-    
-    private void Jump()
-    {
-        Velocity.y = _realTimeJumpForce;
+            float verticalFrameChange = gravity * Time.deltaTime;
             
-        _realTimeJumpForce += gravity * Time.deltaTime;
-        
-        _verticalDistanceFromGround += Mathf.Abs(gravity) * Time.deltaTime;
+            _verticalDistanceFromGround += Mathf.Abs(gravity) * Time.deltaTime;
 
-        _verticalDisplacementFromGround = _verticalDistanceFromGround;
-        
-        //jumpForce depleted
-        if (_realTimeJumpForce <= 0)
-        {
-            IsJumping = false;
+            //displacement depends if character is moving UP (Velocity.y > 0) or DOWN (Velocity.y <= 0)
+            _verticalDisplacementFromGround += Velocity.y <= 0 ? - verticalFrameChange : verticalFrameChange;
+            
+            Velocity.y += verticalFrameChange;
         }
     }
-    
+
     private void Move()
     {
         if (IsGrounded)
@@ -287,6 +264,8 @@ public abstract class MotionController : Controller
 
         _characterController.Move(Velocity * Time.deltaTime);
     }
+
+    #region Getters
 
     public Vector3 GetVelocity()
     {
@@ -313,6 +292,8 @@ public abstract class MotionController : Controller
         return jumpForce;
     }
 
+    #endregion
+
     public void ChangeSpeedRate(SpeedRate rate)
     {
         if (Rate == rate) return;
@@ -338,6 +319,6 @@ public abstract class MotionController : Controller
 
         IsJumping = true;
 
-        _realTimeJumpForce = jumpForce;
+        Velocity.y = jumpForce;
     }
 }
