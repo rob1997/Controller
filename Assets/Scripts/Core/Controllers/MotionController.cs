@@ -57,6 +57,10 @@ public abstract class MotionController : Controller
 
     #endregion
     
+    [SerializeField] private CharacterController characterController;
+    
+    [Space]
+    
     [SerializeField] private float speed;
     
     [SerializeField] private float rotationSpeed;
@@ -76,8 +80,6 @@ public abstract class MotionController : Controller
     [SerializeField] private Transform lookAt;
     
     protected Vector3 Velocity;
-
-    private CharacterController _characterController;
 
     private Vector3 _cachedGroundedVelocity;
     
@@ -114,8 +116,6 @@ public abstract class MotionController : Controller
             new JumpAction(),
             new MotionModeAction(),
         });
-        
-        _characterController = character.GetComponent<CharacterController>();
     }
     
     protected virtual void Update()
@@ -168,13 +168,13 @@ public abstract class MotionController : Controller
 
     private void CheckGround()
     {
-        Transform controllerTransform = _characterController.transform;
+        Transform controllerTransform = characterController.transform;
         
         Vector3 up = controllerTransform.up.normalized;
         
-        Vector3 origin = controllerTransform.TransformPoint(_characterController.center) + - up * _characterController.height / 2f;
+        Vector3 origin = controllerTransform.TransformPoint(characterController.center) + - up * characterController.height / 2f;
 
-        float stepOffset = _characterController.stepOffset + _characterController.skinWidth;
+        float stepOffset = characterController.stepOffset + characterController.skinWidth;
 
         Debug.DrawLine(origin, origin - up * stepOffset, Color.red);
         
@@ -182,7 +182,7 @@ public abstract class MotionController : Controller
         {
             bool cast = Physics.Raycast(origin, - up, stepOffset);
 
-            IsGrounded = (_characterController.isGrounded || cast) && Velocity.y <= 0;
+            IsGrounded = (characterController.isGrounded || cast) && Velocity.y <= 0;
             
             //take off/fall
             if (!IsGrounded)
@@ -209,7 +209,7 @@ public abstract class MotionController : Controller
 
         else
         {
-            IsGrounded = _characterController.isGrounded;
+            IsGrounded = characterController.isGrounded;
             
             //land
             if (IsGrounded)
@@ -262,7 +262,7 @@ public abstract class MotionController : Controller
         Velocity.x *= _realSpeed;
         Velocity.z *= _realSpeed;
 
-        _characterController.Move(Velocity * Time.deltaTime);
+        characterController.Move(Velocity * Time.deltaTime);
     }
 
     #region Getters

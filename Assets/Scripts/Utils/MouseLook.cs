@@ -7,16 +7,27 @@ public class MouseLook : MonoBehaviour {
 	public float sensitivityX = 15F;
 	public float sensitivityY = 15F;
 	 
+	[Space]
+	
 	public float minimumX = -360F;
 	public float maximumX = 360F;
 	 
+	[Space]
+	
 	public float minimumY = -60F;
 	public float maximumY = 60F;
-	 
+
+	[Tooltip("If true gameObject won't rotate together with parent when parent does")]
+	[Space] public bool parentIndependent = true;
+	
 	float _rotationX = 0F;
 	float _rotationY = 0F;
 	 
-	Quaternion _originalRotation;
+	private Quaternion _initialLocalRotation;
+	private Quaternion _initialRotation;
+	private Vector3 _initialLocalPosition;
+
+	private Transform _parentTransform;
 	
 	private PlayerInputActions _inputActions;
 	
@@ -40,7 +51,11 @@ public class MouseLook : MonoBehaviour {
 			_inputActions = inputManager.InputActions;
 		}
 		
-		_originalRotation = transform.localRotation;
+		_initialLocalRotation = transform.localRotation;
+		_initialRotation = transform.rotation;
+		_initialLocalPosition = transform.localPosition;
+
+		_parentTransform = transform.parent;
 	}
 	
 	void Update()
@@ -56,10 +71,27 @@ public class MouseLook : MonoBehaviour {
 			 
 		Quaternion xQuaternion = Quaternion.AngleAxis(_rotationX, Vector3.up);
 		Quaternion yQuaternion = Quaternion.AngleAxis(_rotationY, -Vector3.right);
-			 
-		transform.localRotation = _originalRotation * xQuaternion * yQuaternion;
+
+		if (parentIndependent)
+		{
+			_initialRotation = _initialLocalRotation * xQuaternion * yQuaternion;
+		}
+
+		else
+		{
+			transform.localRotation = _initialLocalRotation * xQuaternion * yQuaternion;
+		}
 	}
-	 
+
+	private void LateUpdate()
+	{
+		if (parentIndependent)
+		{
+			transform.rotation = _initialRotation;
+			transform.position = _parentTransform.position + _initialLocalPosition;
+		}
+	}
+
 	public static float ClampAngle(float angle, float min, float max)
 	{
 		if (angle < -360F)

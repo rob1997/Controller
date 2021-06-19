@@ -8,6 +8,9 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Playground" t="Include">
+          <e p="Playground.cs" t="Include" />
+        </e>
         <e p="Plugins" t="Include">
           <e p="RootMotion" t="Include">
             <e p="Baker" t="Include">
@@ -377,6 +380,8 @@
             <e p="Constants.cs" t="Include" />
             <e p="IkAdditives.cs" t="Include" />
             <e p="MouseLook.cs" t="Include" />
+            <e p="Pusher.cs" t="Include" />
+            <e p="RagdollHelper.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
           </e>
         </e>
