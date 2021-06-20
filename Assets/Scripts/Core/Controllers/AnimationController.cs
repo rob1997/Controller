@@ -29,15 +29,15 @@ public abstract class AnimationController : Controller
             animator.SetTrigger(grounded ?  Constants.OnGroundedHash : Constants.OnAirHash);
         };
 
-        _motionController.OnMotionModeChange += mode =>
+        _motionController.OnLookModeChange += mode =>
         {
             switch (mode)
             {
-                case MotionController.MotionMode.Free:
+                case MotionController.LookMode.Free:
                     animator.ResetTrigger(Constants.OnStrafeMotionHash);
                     animator.SetTrigger(Constants.OnFreeMotionHash);
                     break;
-                case MotionController.MotionMode.Strafe:
+                case MotionController.LookMode.Strafe:
                     animator.ResetTrigger(Constants.OnFreeMotionHash);
                     animator.SetTrigger(Constants.OnStrafeMotionHash);
                     break;
@@ -55,13 +55,13 @@ public abstract class AnimationController : Controller
         float forward = 0;
         float right = 0;
         
-        switch (_motionController.Mode)
+        switch (_motionController.CurrentLookMode)
         {
-            case MotionController.MotionMode.Free:
+            case MotionController.LookMode.Free:
                 forward = speed;
                 right = 0;
                 break;
-            case MotionController.MotionMode.Strafe:
+            case MotionController.LookMode.Strafe:
                 forward = realInput.y * speed;
                 right = realInput.x * speed;
                 break;
@@ -79,7 +79,7 @@ public abstract class AnimationController : Controller
         animator.SetBool(Constants.IsGroundedHash, _motionController.IsGrounded);
     }
 
-    public float GetSpeedRate()
+    private float GetSpeedRate()
     {
         switch (_motionController.Rate)
         {

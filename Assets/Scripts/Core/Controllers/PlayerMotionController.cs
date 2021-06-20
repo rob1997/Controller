@@ -69,7 +69,7 @@ public class PlayerMotionController : MotionController
 #if UNITY_EDITOR
         if (Keyboard.current.tabKey.wasPressedThisFrame)
         {
-            TakeAction<MotionModeAction>(Mode == MotionMode.Free ? MotionMode.Strafe : MotionMode.Free);
+            TakeAction<LookModeAction>(CurrentLookMode == LookMode.Free ? LookMode.Strafe : LookMode.Free);
         }
 #endif
     }

@@ -2,9 +2,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public abstract class MotionController : Controller
 {
+    [Serializable]
+    public struct Speed
+    {
+        public float walk;
+        public float run;
+        public float sprint;
+    }
+    
     public enum SpeedRate
     {
         Walk,
@@ -12,12 +21,12 @@ public abstract class MotionController : Controller
         Sprint
     }
     
-    public enum MotionMode
+    public enum LookMode
     {
         Free,
         Strafe,
     }
-
+    
     #region GroundStateChange
 
     public delegate void GroundStateChange(bool isGrounded);
@@ -31,19 +40,19 @@ public abstract class MotionController : Controller
 
     #endregion
 
-    #region MotionModeChange
+    #region LookModeChange
 
-    public delegate void MotionModeChange(MotionMode mode);
+    public delegate void LookModeChange(LookMode mode);
 
-    public event MotionModeChange OnMotionModeChange;
+    public event LookModeChange OnLookModeChange;
 
-    private void InvokeMotionModeChange()
+    private void InvokeLookModeChange()
     {
-        OnMotionModeChange?.Invoke(Mode);
+        OnLookModeChange?.Invoke(CurrentLookMode);
     }
 
     #endregion
-
+    
     #region SpeedRateChange
 
     public delegate void SpeedRateChange(SpeedRate rate);
@@ -61,7 +70,7 @@ public abstract class MotionController : Controller
     
     [Space]
     
-    [SerializeField] private float speed;
+    [SerializeField] private Speed speed;
     
     [SerializeField] private float rotationSpeed;
     
@@ -100,7 +109,7 @@ public abstract class MotionController : Controller
     
     public SpeedRate Rate { get; protected set; } = SpeedRate.Run;
     
-    public MotionMode Mode { get; protected set; } = MotionMode.Free;
+    public LookMode CurrentLookMode { get; protected set; } = LookMode.Free;
     
     public Transform LookAt => lookAt;
     
@@ -114,7 +123,7 @@ public abstract class MotionController : Controller
         {
             new SpeedRateAction(),
             new JumpAction(),
-            new MotionModeAction(),
+            new LookModeAction(),
         });
     }
     
@@ -143,15 +152,15 @@ public abstract class MotionController : Controller
         
         Quaternion lookRotation = body.rotation;
         
-        switch (Mode)
+        switch (CurrentLookMode)
         {
-            case MotionMode.Free:
+            case LookMode.Free:
                 if (lookVelocity.magnitude > 0)
                 {
                     lookRotation = Quaternion.LookRotation(lookVelocity.normalized);
                 }
                 break;
-            case MotionMode.Strafe:
+            case LookMode.Strafe:
                 Vector3 toTarget = lookAt.position - LookFrom.position;
                 toTarget.y = 0;
                 lookRotation = Quaternion.LookRotation(toTarget.normalized);
@@ -248,13 +257,13 @@ public abstract class MotionController : Controller
             switch (Rate)
             {
                 case SpeedRate.Walk:
-                    _realSpeed = speed / 2.5f;
+                    _realSpeed = speed.walk;
                     break;
                 case SpeedRate.Run:
-                    _realSpeed = speed;
+                    _realSpeed = speed.run;
                     break;
                 case SpeedRate.Sprint:
-                    _realSpeed = speed * 1.5f;
+                    _realSpeed = speed.sprint;
                     break;
             }
         }
@@ -274,7 +283,18 @@ public abstract class MotionController : Controller
     
     public float GetSpeed()
     {
-        return speed;
+        switch (Rate)
+        {
+            case SpeedRate.Walk:
+                return speed.walk;
+            case SpeedRate.Run:
+                return speed.run;
+            case SpeedRate.Sprint:
+                return speed.sprint;
+            default:
+                Debug.LogError("SpeedRate Not assigned");
+                return 0;
+        }
     }
     
     public float GetGravity()
@@ -303,15 +323,15 @@ public abstract class MotionController : Controller
         InvokeSpeedRateChange();
     }
     
-    public void ChangeMotionMode(MotionMode mode)
+    public void ChangeLookMode(LookMode mode)
     {
-        if (Mode == mode) return;
+        if (CurrentLookMode == mode) return;
 
-        Mode = mode;
+        CurrentLookMode = mode;
         
-        InvokeMotionModeChange();
+        InvokeLookModeChange();
     }
-
+    
     public void TriggerJump()
     {
         //restrict multiple jumps

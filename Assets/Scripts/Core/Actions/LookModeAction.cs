@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MotionModeAction : Action
+public class LookModeAction : Action
 {
     public override void OnAction(params object[] objs)
     {
-        ((MotionController) GetController()).ChangeMotionMode(GetObj<MotionController.MotionMode>(objs[0]));
+        ((MotionController) GetController()).ChangeLookMode(GetObj<MotionController.LookMode>(objs[0]));
     }
 }

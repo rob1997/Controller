@@ -21921,7 +21921,7 @@ MonoBehaviour:
   solver:
     layers:
       serializedVersion: 2
-      m_Bits: 1
+      m_Bits: 513
     maxStep: 0.5
     heightOffset: 0
     footSpeed: 2.5

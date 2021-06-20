@@ -349,7 +349,7 @@
           <e p="Core" t="Include">
             <e p="Actions" t="Include">
               <e p="JumpAction.cs" t="Include" />
-              <e p="MotionModeAction.cs" t="Include" />
+              <e p="LookModeAction.cs" t="Include" />
               <e p="SpeedRateAction.cs" t="Include" />
             </e>
             <e p="Characters" t="Include">
@@ -381,7 +381,6 @@
             <e p="IkAdditives.cs" t="Include" />
             <e p="MouseLook.cs" t="Include" />
             <e p="Pusher.cs" t="Include" />
-            <e p="RagdollHelper.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
           </e>
         </e>
