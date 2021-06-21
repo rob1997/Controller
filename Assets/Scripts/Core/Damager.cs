@@ -4,23 +4,50 @@ using UnityEngine;
 
 public class Damager : MonoBehaviour
 {
-    #region DamageCaused
+    #region Attack
 
-    public delegate void DamageCaused(float damageAmount);
+    public delegate void Attack(Damagable damagable);
 
-    public event DamageCaused OnDamageCaused;
+    public event Attack OnAttack;
 
-    private void InvokeDamageCaused(float damageAmount)
+    private void InvokeAttack(Damagable damagable)
     {
-        OnDamageCaused?.Invoke(damageAmount);
+        OnAttack?.Invoke(damagable);
     }
 
     #endregion
-    
-    public void CauseDamage(Damagable damagable, float damageAmount)
+
+    #region KillingBlow
+
+    public delegate void KillingBlow(Damagable damagable);
+
+    public event KillingBlow OnKillingBlow;
+
+    private void InvokeKillingBlow(Damagable damagable)
     {
-        damagable.TakeDamage(damageAmount);
+        OnKillingBlow?.Invoke(damagable);
+    }
+
+    #endregion
+
+    public float Damage { get; private set; }
+    
+    public void CauseDamage(Damagable damagable)
+    {
+        bool isDead = damagable.IsDead;
         
-        InvokeDamageCaused(damageAmount);
+        damagable.Attack(this);
+        
+        InvokeAttack(damagable);
+        
+        if (!isDead && damagable.IsDead)
+        {
+            InvokeKillingBlow(damagable);
+        }
+    }
+
+    public void SetDamage(float damage)
+    {
+        Damage = damage;
     }
 }

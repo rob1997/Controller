@@ -11,16 +11,29 @@ public class Damagable : MonoBehaviour
     [Space]
     
     public bool invulnerable;
+
+    #region Attacked
+
+    public delegate void Attacked(Damager damager);
+
+    public event Attacked OnAttacked;
+
+    private void InvokeAttacked(Damager damager)
+    {
+        OnAttacked?.Invoke(damager);
+    }
+
+    #endregion
     
     #region DamageDealt
 
-    public delegate void DamageDealt(float damageAmount);
+    public delegate void DamageDealt(float damage);
 
     public event DamageDealt OnDamageDealt;
 
-    private void InvokeDamageDealt(float damageAmount)
+    private void InvokeDamageDealt(float damage)
     {
-        OnDamageDealt?.Invoke(damageAmount);
+        OnDamageDealt?.Invoke(damage);
     }
 
     #endregion
@@ -86,6 +99,13 @@ public class Damagable : MonoBehaviour
         _currentHealth = startingHealth;
     }
 
+    public void Attack(Damager damager)
+    {
+        InvokeAttacked(damager);
+        
+        TakeDamage(damager.Damage);
+    }
+    
     public void TakeDamage(float damageTaken)
     {
         damageTaken = Mathf.Clamp(damageTaken, 0, _currentHealth);

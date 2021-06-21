@@ -5,900 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5407069c-6e12-4a94-abc2-87f6fa3c9899" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Controller/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Controller/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Controller/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Controller/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@female_idle_breath.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@female_idle_breath.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@female_idle_meditate.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@female_idle_meditate.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@female_idle_on_chair.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@female_idle_on_chair.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@female_idle_on_floor.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@female_idle_on_floor.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@female_idle_pant.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@female_idle_pant.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@female_idle_pickup.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@female_idle_pickup.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@female_idle_strafing.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@female_idle_strafing.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@male_idle_breath.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@male_idle_breath.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@male_idle_meditate.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@male_idle_meditate.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@male_idle_on_chair.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@male_idle_on_chair.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@male_idle_on_floor.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@male_idle_on_floor.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@male_idle_pant.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@male_idle_pant.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@male_idle_pickup.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@male_idle_pickup.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@male_idle_strafing.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/@male_idle_strafing.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/female_idle_strafing.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/female_idle_strafing.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/male_idle_strafing.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/01_Idle/male_idle_strafing.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_crawl.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_crawl.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_back.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_back.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_back_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_back_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_back_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_back_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_front.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_front.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_front_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_front_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_front_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_front_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_happy.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_happy.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_jogging.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_jogging.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_jogging_strafing_back.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_jogging_strafing_back.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_jogging_strafing_back_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_jogging_strafing_back_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_jogging_strafing_back_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_jogging_strafing_back_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_jogging_strafing_front.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_jogging_strafing_front.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_jogging_strafing_front_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_jogging_strafing_front_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_jogging_strafing_front_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_jogging_strafing_front_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_jogging_strafing_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_jogging_strafing_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_jogging_strafing_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_jogging_strafing_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_sprint.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_run_sprint.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_swim.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_swim.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_back.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_back.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_back_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_back_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_back_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_back_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_front.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_front.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_front_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_front_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_front_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_front_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_normal.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_normal.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_sad.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_sad.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_sneak.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_sneak.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_stair_stepdown.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_stair_stepdown.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_stair_stepup.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_stair_stepup.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_strafing_back.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_strafing_back.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_strafing_back_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_strafing_back_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_strafing_back_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_strafing_back_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_strafing_front.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_strafing_front.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_strafing_front_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_strafing_front_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_strafing_front_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_strafing_front_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_strafing_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_strafing_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_strafing_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@female_move_walk_strafing_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_crawl.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_crawl.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_back.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_back.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_back_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_back_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_back_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_back_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_front.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_front.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_front_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_front_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_front_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_front_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_happy.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_happy.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_jogging.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_jogging.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_jogging_strafing_back.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_jogging_strafing_back.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_jogging_strafing_back_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_jogging_strafing_back_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_jogging_strafing_back_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_jogging_strafing_back_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_jogging_strafing_front.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_jogging_strafing_front.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_jogging_strafing_front_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_jogging_strafing_front_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_jogging_strafing_front_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_jogging_strafing_front_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_jogging_strafing_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_jogging_strafing_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_jogging_strafing_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_jogging_strafing_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_sprint.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_run_sprint.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_swim.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_swim.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_back.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_back.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_back_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_back_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_back_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_back_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_front.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_front.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_front_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_front_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_front_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_front_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_normal.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_normal.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_sad.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_sad.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_sneak.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_sneak.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_stair_stepdown.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_stair_stepdown.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_stair_stepup.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_stair_stepup.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_strafing_back.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_strafing_back.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_strafing_back_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_strafing_back_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_strafing_back_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_strafing_back_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_strafing_front.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_strafing_front.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_strafing_front_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_strafing_front_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_strafing_front_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_strafing_front_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_strafing_left.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_strafing_left.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_strafing_right.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/@male_move_walk_strafing_right.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_back.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_back.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_back_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_back_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_back_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_back_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_front.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_front.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_front_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_front_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_front_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_front_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_jogging_strafing_back.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_jogging_strafing_back.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_jogging_strafing_back_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_jogging_strafing_back_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_jogging_strafing_back_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_jogging_strafing_back_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_jogging_strafing_front.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_jogging_strafing_front.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_jogging_strafing_front_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_jogging_strafing_front_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_jogging_strafing_front_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_jogging_strafing_front_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_jogging_strafing_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_jogging_strafing_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_jogging_strafing_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_jogging_strafing_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_run_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_back.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_back.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_back_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_back_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_back_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_back_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_front.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_front.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_front_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_front_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_front_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_front_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_strafing_back.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_strafing_back.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_strafing_back_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_strafing_back_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_strafing_back_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_strafing_back_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_strafing_front.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_strafing_front.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_strafing_front_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_strafing_front_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_strafing_front_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_strafing_front_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_strafing_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_strafing_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_strafing_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/female_move_walk_strafing_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_back.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_back.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_back_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_back_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_back_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_back_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_front.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_front.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_front_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_front_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_front_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_front_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_jogging_strafing_back.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_jogging_strafing_back.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_jogging_strafing_back_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_jogging_strafing_back_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_jogging_strafing_back_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_jogging_strafing_back_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_jogging_strafing_front.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_jogging_strafing_front.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_jogging_strafing_front_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_jogging_strafing_front_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_jogging_strafing_front_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_jogging_strafing_front_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_jogging_strafing_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_jogging_strafing_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_jogging_strafing_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_jogging_strafing_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_run_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_back.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_back.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_back_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_back_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_back_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_back_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_front.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_front.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_front_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_front_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_front_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_front_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_strafing_back.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_strafing_back.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_strafing_back_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_strafing_back_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_strafing_back_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_strafing_back_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_strafing_front.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_strafing_front.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_strafing_front_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_strafing_front_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_strafing_front_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_strafing_front_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_strafing_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_strafing_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_strafing_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/male_move_walk_strafing_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_crawl_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_crawl_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_back_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_back_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_back_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_back_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_back_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_back_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_front_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_front_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_front_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_front_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_front_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_front_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_happy_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_happy_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_jogging_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_jogging_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_jogging_strafing_back_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_jogging_strafing_back_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_jogging_strafing_back_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_jogging_strafing_back_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_jogging_strafing_back_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_jogging_strafing_back_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_jogging_strafing_front_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_jogging_strafing_front_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_jogging_strafing_front_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_jogging_strafing_front_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_jogging_strafing_front_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_jogging_strafing_front_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_jogging_strafing_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_jogging_strafing_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_jogging_strafing_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_jogging_strafing_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_sprint_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_run_sprint_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_back_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_back_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_back_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_back_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_back_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_back_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_front_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_front_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_front_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_front_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_front_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_front_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_normal_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_normal_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_sad_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_sad_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_sneak_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_sneak_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_strafing_back_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_strafing_back_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_strafing_back_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_strafing_back_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_strafing_back_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_strafing_back_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_strafing_front_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_strafing_front_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_strafing_front_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_strafing_front_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_strafing_front_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_strafing_front_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_strafing_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_strafing_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_strafing_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@female_move_walk_strafing_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_crawl_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_crawl_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_back_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_back_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_back_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_back_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_back_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_back_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_front_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_front_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_front_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_front_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_front_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_front_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_happy_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_happy_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_joggiing_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_joggiing_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_jogging_strafing_back_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_jogging_strafing_back_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_jogging_strafing_back_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_jogging_strafing_back_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_jogging_strafing_back_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_jogging_strafing_back_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_jogging_strafing_front_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_jogging_strafing_front_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_jogging_strafing_front_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_jogging_strafing_front_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_jogging_strafing_front_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_jogging_strafing_front_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_jogging_strafing_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_jogging_strafing_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_jogging_strafing_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_jogging_strafing_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_sprint_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_run_sprint_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_back_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_back_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_back_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_back_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_back_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_back_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_front_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_front_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_front_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_front_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_front_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_front_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_normal_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_normal_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_sad_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_sad_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_sneak_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_sneak_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_strafing_back_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_strafing_back_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_strafing_back_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_strafing_back_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_strafing_back_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_strafing_back_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_strafing_front_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_strafing_front_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_strafing_front_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_strafing_front_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_strafing_front_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_strafing_front_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_strafing_left_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_strafing_left_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_strafing_right_root_motion.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/@male_move_walk_strafing_right_root_motion.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_back_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_back_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_back_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_back_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_back_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_back_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_front_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_front_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_front_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_front_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_front_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_front_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_jogging_strafing_back_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_jogging_strafing_back_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_jogging_strafing_back_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_jogging_strafing_back_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_jogging_strafing_back_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_jogging_strafing_back_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_jogging_strafing_front_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_jogging_strafing_front_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_jogging_strafing_front_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_jogging_strafing_front_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_jogging_strafing_front_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_jogging_strafing_front_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_jogging_strafing_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_jogging_strafing_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_jogging_strafing_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_jogging_strafing_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_run_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_back_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_back_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_back_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_back_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_back_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_back_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_front_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_front_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_front_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_front_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_front_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_front_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_strafing_back_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_strafing_back_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_strafing_back_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_strafing_back_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_strafing_back_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_strafing_back_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_strafing_front_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_strafing_front_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_strafing_front_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_strafing_front_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_strafing_front_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_strafing_front_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_strafing_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_strafing_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_strafing_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/female_move_walk_strafing_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_back_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_back_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_back_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_back_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_back_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_back_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_front_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_front_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_front_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_front_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_front_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_front_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_jogging_strafing_back_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_jogging_strafing_back_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_jogging_strafing_back_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_jogging_strafing_back_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_jogging_strafing_back_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_jogging_strafing_back_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_jogging_strafing_front_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_jogging_strafing_front_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_jogging_strafing_front_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_jogging_strafing_front_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_jogging_strafing_front_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_jogging_strafing_front_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_jogging_strafing_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_jogging_strafing_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_jogging_strafing_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_jogging_strafing_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_run_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_back_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_back_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_back_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_back_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_back_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_back_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_front_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_front_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_front_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_front_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_front_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_front_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_strafing_back_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_strafing_back_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_strafing_back_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_strafing_back_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_strafing_back_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_strafing_back_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_strafing_front_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_strafing_front_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_strafing_front_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_strafing_front_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_strafing_front_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_strafing_front_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_strafing_left_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_strafing_left_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_strafing_right_root_motion.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/02_Move/root_motion/male_move_walk_strafing_right_root_motion.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@female_emotion_angry.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@female_emotion_angry.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@female_emotion_cry_on_chair.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@female_emotion_cry_on_chair.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@female_emotion_cry_stand.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@female_emotion_cry_stand.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@female_emotion_frustration.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@female_emotion_frustration.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@female_emotion_happy.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@female_emotion_happy.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@female_emotion_laugh_on_chair.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@female_emotion_laugh_on_chair.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@female_emotion_laugh_stand.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@female_emotion_laugh_stand.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@male_emotion_angry.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@male_emotion_angry.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@male_emotion_cry_on_chair.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@male_emotion_cry_on_chair.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@male_emotion_cry_stand.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@male_emotion_cry_stand.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@male_emotion_frustration.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@male_emotion_frustration.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@male_emotion_happy.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@male_emotion_happy.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@male_emotion_laugh_on_chair.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@male_emotion_laugh_on_chair.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@male_emotion_laugh_stand.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/03_Emotion/@male_emotion_laugh_stand.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@female_greet.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@female_greet.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@female_handshake.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@female_handshake.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@female_say_no.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@female_say_no.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@female_say_yes.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@female_say_yes.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@female_talk_sit.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@female_talk_sit.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@female_talk_stand.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@female_talk_stand.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@male_greet.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@male_greet.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@male_handshake.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@male_handshake.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@male_say_no.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@male_say_no.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@male_say_yes.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@male_say_yes.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@male_talk_sit.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@male_talk_sit.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@male_talk_stand.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/04_Interaction/@male_talk_stand.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_dance_01.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_dance_01.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_getup.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_getup.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_jump.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_jump.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_knock.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_knock.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_lie_face_down.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_lie_face_down.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_meditate_end.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_meditate_end.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_meditate_start.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_meditate_start.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_pickup.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_pickup.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_sit_on_chair.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_sit_on_chair.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_standup_chair.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_standup_chair.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_strafing.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_strafing.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_strafing_end.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_strafing_end.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_strafing_ready.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@female_act_strafing_ready.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_dance_01.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_dance_01.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_getup.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_getup.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_jump.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_jump.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_knock.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_knock.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_lie_face_down.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_lie_face_down.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_meditate_end.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_meditate_end.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_meditate_start.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_meditate_start.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_pickup.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_pickup.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_sit_on_chair.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_sit_on_chair.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_standup_chair.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_standup_chair.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_strafing.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_strafing.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_strafing_end.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_strafing_end.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_strafing_ready.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/@male_act_strafing_ready.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/female_act_strafing.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/female_act_strafing.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/female_act_strafing_end.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/female_act_strafing_end.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/female_act_strafing_ready.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/female_act_strafing_ready.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/male_act_strafing.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/male_act_strafing.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/male_act_strafing_end.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/male_act_strafing_end.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/male_act_strafing_ready.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EverydayMotionPack/Motion/05_Act/male_act_strafing_ready.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Materials/Built-in_RP.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Materials/Built-in_RP/M_ArmatureColor_Arms.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Materials/Built-in_RP/M_ArmatureColor_Arms.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Materials/Built-in_RP/M_ArmatureColor_Body.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Materials/Built-in_RP/M_ArmatureColor_Body.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Materials/Built-in_RP/M_ArmatureColor_Legs.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Materials/Built-in_RP/M_ArmatureColor_Legs.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Materials/M_Armature_Arms.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Materials/M_Armature_Arms.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Materials/M_Armature_Body.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Materials/M_Armature_Body.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Materials/M_Armature_Legs.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Materials/M_Armature_Legs.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Models.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Models/Armature.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Models/Armature.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Arms_AlbedoTransparency.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Arms_AlbedoTransparency.tif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Arms_MetallicSmoothness.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Arms_MetallicSmoothness.tif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Arms_Normal.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Arms_Normal.tif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Arms_RGB.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Arms_RGB.tif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Body_AlbedoTransparency.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Body_AlbedoTransparency.tif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Body_MetallicSmoothness.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Body_MetallicSmoothness.tif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Body_Normal.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Body_Normal.tif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Body_RGB.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Body_RGB.tif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Legs_AlbedoTransparency.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Legs_AlbedoTransparency.tif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Legs_MetallicSmoothness.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Legs_MetallicSmoothness.tif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Legs_Normal.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Legs_Normal.tif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Legs_RGB.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Textures/Armature_Legs_RGB.tif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Mesh_Terrain.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Mesh_Terrain.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Terrain_24x24.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Terrain_24x24.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Playground.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Playground/Playground.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Playground/Playground.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Playground/Playground.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Playground/Playground.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Demo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Demo/Prototype Materials Demo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Demo/Prototype Materials Demo.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Demo/Prototype Materials Demo.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Demo/Prototype Materials Demo/Demo Lightmap Parameters.giparams" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Demo/Prototype Materials Demo/Demo Lightmap Parameters.giparams.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Demo/Prototype Materials Demo/GI Blocker.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Demo/Prototype Materials Demo/GI Blocker.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Demo/Prototype Materials Demo/Neon Light.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Demo/Prototype Materials Demo/Neon Light.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Blue1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Blue1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Blue2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Blue2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Blue3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Blue3.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Brown.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Brown.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Cyan.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Cyan.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Green1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Green1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Green2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Green2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Grey1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Grey1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Grey2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Grey2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Grey3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Grey3.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Grey4.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Grey4.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Orange.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Orange.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Purple.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Purple.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_White.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_White.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Yellow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Prototype Grid/Prototype_512x512_Yellow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Skybox.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Skybox/Homogenous.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Skybox/Homogenous.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Skybox/Skybox Blue.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Skybox/Skybox Blue.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Skybox/Skybox Golden.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Skybox/Skybox Golden.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Skybox/Skybox Green.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Skybox/Skybox Green.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Skybox/Skybox Grey.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Skybox/Skybox Grey.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Skybox/Skybox Night.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Skybox/Skybox Night.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Skybox/Skybox Pink.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Materials/Skybox/Skybox Pink.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/ProBuilder Data.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/ProBuilder Data/Prototype Materials.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/ProBuilder Data/Prototype Materials.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_blue1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_blue1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_blue2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_blue2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_blue3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_blue3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_brown.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_brown.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_cyan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_cyan.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_green1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_green1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_green2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_green2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_grey1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_grey1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_grey2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_grey2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_grey3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_grey3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_grey4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_grey4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_orange.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_orange.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_purple.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_purple.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_red.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_white.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_yellow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Gridbox Prototype Materials/Resources/Textures/Prototype Grid/prototype_512x512_yellow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Demo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Controllers/MotionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Controllers/MotionController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Game/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Game/Character.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Managers/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Managers/InputManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/MouseLook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/MouseLook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Damagable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Damagable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Damager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Damager.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -978,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Core/Controllers/DamageController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="30" column="55" lean-forward="true" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+            <state relative-caret-position="480">
+              <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
               <folding>
                 <marker date="1624240928361" expanded="false" signature="6:78" ph="..." />
                 <marker date="1624240928361" expanded="true" signature="122:1329" ph="{...}" />
@@ -1015,29 +123,6 @@
                 <marker date="1624238960339" expanded="true" signature="1766:1847" ph="{...}" />
                 <marker date="1624238960339" expanded="true" signature="1794:1844" ph="{...}" />
                 <marker date="1624238960339" expanded="true" signature="1915:2037" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Core/Game/Controller.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-              <folding>
-                <marker date="1616939948451" expanded="false" signature="6:78" ph="..." />
-                <marker date="1616939948451" expanded="true" signature="128:1315" ph="{...}" />
-                <marker date="1616939948451" expanded="true" signature="282:326" ph="{...}" />
-                <marker date="1616939948451" expanded="true" signature="376:754" ph="{...}" />
-                <marker date="1616939948451" expanded="true" signature="425:746" ph="{...}" />
-                <marker date="1616939948451" expanded="true" signature="503:623" ph="{...}" />
-                <marker date="1616939948451" expanded="true" signature="641:736" ph="{...}" />
-                <marker date="1616939948451" expanded="true" signature="828:932" ph="{...}" />
-                <marker date="1616939948451" expanded="true" signature="871:926" ph="{...}" />
-                <marker date="1616939948451" expanded="true" signature="997:1233" ph="{...}" />
-                <marker date="1616939948451" expanded="true" signature="1105:1187" ph="{...}" />
-                <marker date="1616939948451" expanded="true" signature="1274:1313" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -1098,33 +183,56 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Core/Damagable.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="90" column="66" selection-start-line="90" selection-start-column="66" selection-end-line="90" selection-end-column="66" />
+            <state relative-caret-position="816">
+              <caret line="106" column="5" lean-forward="true" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
               <folding>
-                <marker date="1624238637828" expanded="true" signature="6:92" ph="..." />
-                <marker date="1624238637828" expanded="true" signature="132:3381" ph="{...}" />
-                <marker date="1624238637828" expanded="false" signature="290:542" ph="DamageDealt" />
-                <marker date="1624238637828" expanded="true" signature="469:526" ph="{...}" />
-                <marker date="1624238637828" expanded="false" signature="548:797" ph="HeathGained" />
-                <marker date="1624238637828" expanded="true" signature="725:781" ph="{...}" />
-                <marker date="1624238637828" expanded="false" signature="807:975" ph="Death" />
-                <marker date="1624238637828" expanded="true" signature="920:959" ph="{...}" />
-                <marker date="1624238637828" expanded="false" signature="981:1272" ph="FullHealthChanged" />
-                <marker date="1624238637828" expanded="true" signature="1192:1256" ph="{...}" />
-                <marker date="1624238637828" expanded="true" signature="1278:1596" ph="CurrentHealthChanged" />
-                <marker date="1624238637828" expanded="true" signature="1510:1580" ph="{...}" />
-                <marker date="1624238637828" expanded="true" signature="1713:1766" ph="{...}" />
-                <marker date="1624238637828" expanded="true" signature="1813:2154" ph="{...}" />
-                <marker date="1624238637828" expanded="true" signature="1913:1962" ph="{...}" />
-                <marker date="1624238637828" expanded="true" signature="2101:2148" ph="{...}" />
-                <marker date="1624238637828" expanded="true" signature="2202:2394" ph="{...}" />
-                <marker date="1624238637828" expanded="true" signature="2456:2808" ph="{...}" />
-                <marker date="1624238637828" expanded="true" signature="2530:2669" ph="{...}" />
-                <marker date="1624238637828" expanded="true" signature="2864:3226" ph="{...}" />
-                <marker date="1624238637828" expanded="true" signature="2902:3020" ph="{...}" />
-                <marker date="1624238637828" expanded="true" signature="3065:3129" ph="{...}" />
-                <marker date="1624238637828" expanded="true" signature="3263:3306" ph="{...}" />
-                <marker date="1624238637828" expanded="true" signature="3340:3379" ph="{...}" />
+                <marker date="1624301586178" expanded="true" signature="6:92" ph="..." />
+                <marker date="1624301586178" expanded="true" signature="132:3727" ph="{...}" />
+                <marker date="1624301586178" expanded="true" signature="286:509" ph="Attacked" />
+                <marker date="1624301586178" expanded="true" signature="444:493" ph="{...}" />
+                <marker date="1624301586178" expanded="false" signature="519:753" ph="DamageDealt" />
+                <marker date="1624301586178" expanded="true" signature="686:737" ph="{...}" />
+                <marker date="1624301586178" expanded="false" signature="759:1008" ph="HeathGained" />
+                <marker date="1624301586178" expanded="true" signature="936:992" ph="{...}" />
+                <marker date="1624301586178" expanded="false" signature="1018:1186" ph="Death" />
+                <marker date="1624301586178" expanded="true" signature="1131:1170" ph="{...}" />
+                <marker date="1624301586178" expanded="false" signature="1192:1483" ph="FullHealthChanged" />
+                <marker date="1624301586178" expanded="true" signature="1403:1467" ph="{...}" />
+                <marker date="1624301586178" expanded="false" signature="1489:1807" ph="CurrentHealthChanged" />
+                <marker date="1624301586178" expanded="true" signature="1721:1791" ph="{...}" />
+                <marker date="1624301586178" expanded="true" signature="1924:1977" ph="{...}" />
+                <marker date="1624301586178" expanded="true" signature="2018:2108" ph="{...}" />
+                <marker date="1624301586178" expanded="true" signature="2159:2500" ph="{...}" />
+                <marker date="1624301586178" expanded="true" signature="2259:2308" ph="{...}" />
+                <marker date="1624301586178" expanded="true" signature="2447:2494" ph="{...}" />
+                <marker date="1624301586178" expanded="true" signature="2548:2740" ph="{...}" />
+                <marker date="1624301586178" expanded="true" signature="2802:3154" ph="{...}" />
+                <marker date="1624301586178" expanded="true" signature="2876:3015" ph="{...}" />
+                <marker date="1624301586178" expanded="true" signature="3210:3572" ph="{...}" />
+                <marker date="1624301586178" expanded="true" signature="3248:3366" ph="{...}" />
+                <marker date="1624301586178" expanded="true" signature="3411:3475" ph="{...}" />
+                <marker date="1624301586178" expanded="true" signature="3609:3652" ph="{...}" />
+                <marker date="1624301586178" expanded="true" signature="3686:3725" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Core/Damager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="48" column="11" lean-forward="true" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+              <folding>
+                <marker date="1624301850516" expanded="true" signature="6:78" ph="..." />
+                <marker date="1624301850516" expanded="true" signature="116:1029" ph="{...}" />
+                <marker date="1624301850516" expanded="false" signature="123:344" ph="Attack" />
+                <marker date="1624301850516" expanded="true" signature="279:328" ph="{...}" />
+                <marker date="1624301850516" expanded="false" signature="350:601" ph="KillingBlow" />
+                <marker date="1624301850516" expanded="true" signature="531:585" ph="{...}" />
+                <marker date="1624301850516" expanded="true" signature="702:949" ph="{...}" />
+                <marker date="1624301850516" expanded="true" signature="881:943" ph="{...}" />
+                <marker date="1624301850516" expanded="true" signature="990:1027" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -1249,15 +357,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Game/Action.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/IkAdditives.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Controllers/AnimationController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Damager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Managers/InputManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Game/Character.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Damagable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/MouseLook.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Controllers/MotionController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Controllers/DamageController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/HealthBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/Playground.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Damagable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Damager.cs" />
       </list>
     </option>
   </component>
@@ -1389,7 +497,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167539000" />
+    <option name="totallyTimeSpent" value="171954000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1657,20 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Core/Damager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding>
-            <marker date="1624230189066" expanded="false" signature="6:78" ph="..." />
-            <marker date="1624230189066" expanded="true" signature="116:564" ph="{...}" />
-            <marker date="1624230189066" expanded="true" signature="123:381" ph="DamageCaused" />
-            <marker date="1624230189066" expanded="true" signature="307:365" ph="{...}" />
-            <marker date="1624230189066" expanded="true" signature="455:562" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionAsset.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1791,39 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Core/Damagable.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="90" column="66" selection-start-line="90" selection-start-column="66" selection-end-line="90" selection-end-column="66" />
-          <folding>
-            <marker date="1624238637828" expanded="true" signature="6:92" ph="..." />
-            <marker date="1624238637828" expanded="true" signature="132:3381" ph="{...}" />
-            <marker date="1624238637828" expanded="false" signature="290:542" ph="DamageDealt" />
-            <marker date="1624238637828" expanded="true" signature="469:526" ph="{...}" />
-            <marker date="1624238637828" expanded="false" signature="548:797" ph="HeathGained" />
-            <marker date="1624238637828" expanded="true" signature="725:781" ph="{...}" />
-            <marker date="1624238637828" expanded="false" signature="807:975" ph="Death" />
-            <marker date="1624238637828" expanded="true" signature="920:959" ph="{...}" />
-            <marker date="1624238637828" expanded="false" signature="981:1272" ph="FullHealthChanged" />
-            <marker date="1624238637828" expanded="true" signature="1192:1256" ph="{...}" />
-            <marker date="1624238637828" expanded="true" signature="1278:1596" ph="CurrentHealthChanged" />
-            <marker date="1624238637828" expanded="true" signature="1510:1580" ph="{...}" />
-            <marker date="1624238637828" expanded="true" signature="1713:1766" ph="{...}" />
-            <marker date="1624238637828" expanded="true" signature="1813:2154" ph="{...}" />
-            <marker date="1624238637828" expanded="true" signature="1913:1962" ph="{...}" />
-            <marker date="1624238637828" expanded="true" signature="2101:2148" ph="{...}" />
-            <marker date="1624238637828" expanded="true" signature="2202:2394" ph="{...}" />
-            <marker date="1624238637828" expanded="true" signature="2456:2808" ph="{...}" />
-            <marker date="1624238637828" expanded="true" signature="2530:2669" ph="{...}" />
-            <marker date="1624238637828" expanded="true" signature="2864:3226" ph="{...}" />
-            <marker date="1624238637828" expanded="true" signature="2902:3020" ph="{...}" />
-            <marker date="1624238637828" expanded="true" signature="3065:3129" ph="{...}" />
-            <marker date="1624238637828" expanded="true" signature="3263:3306" ph="{...}" />
-            <marker date="1624238637828" expanded="true" signature="3340:3379" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Utils/MouseLook.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -1934,8 +995,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Core/Controllers/DamageController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="30" column="55" lean-forward="true" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+        <state relative-caret-position="480">
+          <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
           <folding>
             <marker date="1624240928361" expanded="false" signature="6:78" ph="..." />
             <marker date="1624240928361" expanded="true" signature="122:1329" ph="{...}" />
@@ -1944,6 +1005,60 @@
             <marker date="1624240928361" expanded="true" signature="868:1310" ph="{...}" />
             <marker date="1624240928361" expanded="true" signature="917:1296" ph="{...}" />
             <marker date="1624240928361" expanded="true" signature="1109:1278" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Core/Damagable.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="106" column="5" lean-forward="true" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+          <folding>
+            <marker date="1624301586178" expanded="true" signature="6:92" ph="..." />
+            <marker date="1624301586178" expanded="true" signature="132:3727" ph="{...}" />
+            <marker date="1624301586178" expanded="true" signature="286:509" ph="Attacked" />
+            <marker date="1624301586178" expanded="true" signature="444:493" ph="{...}" />
+            <marker date="1624301586178" expanded="false" signature="519:753" ph="DamageDealt" />
+            <marker date="1624301586178" expanded="true" signature="686:737" ph="{...}" />
+            <marker date="1624301586178" expanded="false" signature="759:1008" ph="HeathGained" />
+            <marker date="1624301586178" expanded="true" signature="936:992" ph="{...}" />
+            <marker date="1624301586178" expanded="false" signature="1018:1186" ph="Death" />
+            <marker date="1624301586178" expanded="true" signature="1131:1170" ph="{...}" />
+            <marker date="1624301586178" expanded="false" signature="1192:1483" ph="FullHealthChanged" />
+            <marker date="1624301586178" expanded="true" signature="1403:1467" ph="{...}" />
+            <marker date="1624301586178" expanded="false" signature="1489:1807" ph="CurrentHealthChanged" />
+            <marker date="1624301586178" expanded="true" signature="1721:1791" ph="{...}" />
+            <marker date="1624301586178" expanded="true" signature="1924:1977" ph="{...}" />
+            <marker date="1624301586178" expanded="true" signature="2018:2108" ph="{...}" />
+            <marker date="1624301586178" expanded="true" signature="2159:2500" ph="{...}" />
+            <marker date="1624301586178" expanded="true" signature="2259:2308" ph="{...}" />
+            <marker date="1624301586178" expanded="true" signature="2447:2494" ph="{...}" />
+            <marker date="1624301586178" expanded="true" signature="2548:2740" ph="{...}" />
+            <marker date="1624301586178" expanded="true" signature="2802:3154" ph="{...}" />
+            <marker date="1624301586178" expanded="true" signature="2876:3015" ph="{...}" />
+            <marker date="1624301586178" expanded="true" signature="3210:3572" ph="{...}" />
+            <marker date="1624301586178" expanded="true" signature="3248:3366" ph="{...}" />
+            <marker date="1624301586178" expanded="true" signature="3411:3475" ph="{...}" />
+            <marker date="1624301586178" expanded="true" signature="3609:3652" ph="{...}" />
+            <marker date="1624301586178" expanded="true" signature="3686:3725" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Core/Damager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="48" column="11" lean-forward="true" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+          <folding>
+            <marker date="1624301850516" expanded="true" signature="6:78" ph="..." />
+            <marker date="1624301850516" expanded="true" signature="116:1029" ph="{...}" />
+            <marker date="1624301850516" expanded="false" signature="123:344" ph="Attack" />
+            <marker date="1624301850516" expanded="true" signature="279:328" ph="{...}" />
+            <marker date="1624301850516" expanded="false" signature="350:601" ph="KillingBlow" />
+            <marker date="1624301850516" expanded="true" signature="531:585" ph="{...}" />
+            <marker date="1624301850516" expanded="true" signature="702:949" ph="{...}" />
+            <marker date="1624301850516" expanded="true" signature="881:943" ph="{...}" />
+            <marker date="1624301850516" expanded="true" signature="990:1027" ph="{...}" />
           </folding>
         </state>
       </provider>
