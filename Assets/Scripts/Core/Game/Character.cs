@@ -36,6 +36,10 @@ public abstract class Character : MonoBehaviour
     [TextArea]
     public string description;
 
+    [Space] 
+    
+    public Damagable damagable;
+    
     private List<Controller> _controllers;
     
     protected virtual void Start()
@@ -54,6 +58,12 @@ public abstract class Character : MonoBehaviour
     public virtual void Initialize()
     {
         _controllers = new List<Controller>(GetComponentsInChildren<Controller>());
+
+        if (damagable == null)
+        {
+            damagable = GetComponent<Damagable>();
+            if (damagable == null) damagable = GetComponentInChildren<Damagable>();
+        }
         
         _controllers.ForEach(c => 
         {

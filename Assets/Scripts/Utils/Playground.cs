@@ -21,6 +21,6 @@ public class Playground : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.LogError(_root.position);
+//        Debug.LogError(_root.position);
     }
 }

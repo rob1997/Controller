@@ -312,6 +312,11 @@ public abstract class MotionController : Controller
         return jumpForce;
     }
 
+    public CharacterController GetCharacterController()
+    {
+        return characterController;
+    }
+    
     #endregion
 
     public void ChangeSpeedRate(SpeedRate rate)
