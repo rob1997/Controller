@@ -8,10 +8,79 @@ namespace RootMotion {
 	/// </summary>
 	public static class QuaTools {
 
-		/// <summary>
-		/// Optimized Quaternion.Lerp
-		/// </summary>
-		public static Quaternion Lerp(Quaternion fromRotation, Quaternion toRotation, float weight) {
+        /// <summary>
+        /// Returns yaw angle (-180 - 180) of 'forward' vector relative to rotation space defined by spaceForward and spaceUp axes.
+        /// </summary>
+        public static float GetYaw(Quaternion space, Vector3 forward)
+        {
+            Vector3 dirLocal = Quaternion.Inverse(space) * forward;
+            return Mathf.Atan2(dirLocal.x, dirLocal.z) * Mathf.Rad2Deg;
+        }
+
+        /// <summary>
+        /// Returns pitch angle (-90 - 90) of 'forward' vector relative to rotation space defined by spaceForward and spaceUp axes.
+        /// </summary>
+        public static float GetPitch(Quaternion space, Vector3 forward)
+        {
+            forward = forward.normalized;
+            Vector3 dirLocal = Quaternion.Inverse(space) * forward;
+            return -Mathf.Asin(dirLocal.y) * Mathf.Rad2Deg;
+        }
+
+        /// <summary>
+        /// Returns bank angle (-180 - 180) of 'forward' and 'up' vectors relative to rotation space defined by spaceForward and spaceUp axes.
+        /// </summary>
+        public static float GetBank(Quaternion space, Vector3 forward, Vector3 up)
+        {
+            Vector3 spaceUp = space * Vector3.up;
+
+            Quaternion invSpace = Quaternion.Inverse(space);
+            forward = invSpace * forward;
+            up = invSpace * up;
+
+            Quaternion q = Quaternion.Inverse(Quaternion.LookRotation(spaceUp, forward));
+            up = q * up;
+            return Mathf.Atan2(up.x, up.z) * Mathf.Rad2Deg;
+        }
+
+        /// <summary>
+        /// Returns yaw angle (-180 - 180) of 'forward' vector relative to rotation space defined by spaceForward and spaceUp axes.
+        /// </summary>
+        public static float GetYaw(Quaternion space, Quaternion rotation)
+        {
+            Vector3 dirLocal = Quaternion.Inverse(space) * (rotation * Vector3.forward);
+            return Mathf.Atan2(dirLocal.x, dirLocal.z) * Mathf.Rad2Deg;
+        }
+
+        /// <summary>
+        /// Returns pitch angle (-90 - 90) of 'forward' vector relative to rotation space defined by spaceForward and spaceUp axes.
+        /// </summary>
+        public static float GetPitch(Quaternion space, Quaternion rotation)
+        {
+            Vector3 dirLocal = Quaternion.Inverse(space) * (rotation * Vector3.forward);
+            return -Mathf.Asin(dirLocal.y) * Mathf.Rad2Deg;
+        }
+
+        /// <summary>
+        /// Returns bank angle (-180 - 180) of 'forward' and 'up' vectors relative to rotation space defined by spaceForward and spaceUp axes.
+        /// </summary>
+        public static float GetBank(Quaternion space, Quaternion rotation)
+        {
+            Vector3 spaceUp = space * Vector3.up;
+            
+            Quaternion invSpace = Quaternion.Inverse(space);
+            Vector3 forward = invSpace * (rotation * Vector3.forward);
+            Vector3 up = invSpace * (rotation * Vector3.up);
+
+            Quaternion q = Quaternion.Inverse(Quaternion.LookRotation(spaceUp, forward));
+            up = q * up;
+            return Mathf.Atan2(up.x, up.z) * Mathf.Rad2Deg;
+        }
+
+        /// <summary>
+        /// Optimized Quaternion.Lerp
+        /// </summary>
+        public static Quaternion Lerp(Quaternion fromRotation, Quaternion toRotation, float weight) {
 			if (weight <= 0f) return fromRotation;
 			if (weight >= 1f) return toRotation;
 

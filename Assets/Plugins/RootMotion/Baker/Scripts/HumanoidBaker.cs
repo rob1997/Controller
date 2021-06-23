@@ -158,11 +158,11 @@ namespace RootMotion
             rootQT.SetKeyframes(time, bodyPosition, bodyRotation);
 
             Vector3 bodyPositionScaled = bodyPosition * animator.humanScale;
-            leftFootQT.SetIKKeyframes(time, animator.avatar, animator.humanScale, bodyPositionScaled, bodyRotation);
-            rightFootQT.SetIKKeyframes(time, animator.avatar, animator.humanScale, bodyPositionScaled, bodyRotation);
+            leftFootQT.SetIKKeyframes(time, animator.avatar, animator.transform, animator.humanScale, bodyPositionScaled, bodyRotation);
+            rightFootQT.SetIKKeyframes(time, animator.avatar, animator.transform, animator.humanScale, bodyPositionScaled, bodyRotation);
 
-            leftHandQT.SetIKKeyframes(time, animator.avatar, animator.humanScale, bodyPositionScaled, bodyRotation);
-            rightHandQT.SetIKKeyframes(time, animator.avatar, animator.humanScale, bodyPositionScaled, bodyRotation);
+            leftHandQT.SetIKKeyframes(time, animator.avatar, animator.transform, animator.humanScale, bodyPositionScaled, bodyRotation);
+            rightHandQT.SetIKKeyframes(time, animator.avatar, animator.transform, animator.humanScale, bodyPositionScaled, bodyRotation);
         }
 
         private void UpdateHumanPose()

@@ -13,24 +13,24 @@ public class HealthBar : MonoBehaviour
     
     [Space]
     
-    [SerializeField] private Damagable damagable;
+    [SerializeField] private Player player;
 
     [Space] public float value;
     
     private void Start()
     {
+        Damagable damagable = player.Damagable;
+        
         fillImage.fillAmount = damagable.GetCurrentHealth() / damagable.GetFullHealth();
+        
         SetHealthText();
         
-        if (!damagable.invulnerable)
+        damagable.OnDamageTaken += damage =>
         {
-            damagable.OnDamageDealt += amount =>
-            {
-                fillImage.fillAmount -= amount / damagable.GetFullHealth();
+            fillImage.fillAmount -= damage.DamageDealt / damagable.GetFullHealth();
 
-                SetHealthText();
-            };
-        }
+            SetHealthText();
+        };
         
         damagable.OnHeathGained += amount =>
         {
@@ -44,17 +44,20 @@ public class HealthBar : MonoBehaviour
     {
         if (Keyboard.current.numpadMinusKey.wasPressedThisFrame)
         {
-            damagable.TakeDamage(value);
+            Damage fallDamage = new Damage
+                (value, Damage.DamageType.Fall, player.Damagable);
+                        
+            player.Damager.DealDamage(fallDamage);
         }
         
         else if (Keyboard.current.numpadPlusKey.wasPressedThisFrame)
         {
-            damagable.GainHealth(value);
+            player.Damagable.GainHealth(value);
         }
     }
 
     private void SetHealthText()
     {
-        healthAmount.text = $"{Math.Round(damagable.GetCurrentHealth(), 2)}";
+        healthAmount.text = $"{Math.Round(player.Damagable.GetCurrentHealth(), 2)}";
     }
 }

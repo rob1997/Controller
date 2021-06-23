@@ -6,7 +6,6 @@ namespace RootMotion.Demos {
 	/// <summary>
 	/// Contols animation for a simple Mecanim character
 	/// </summary>
-	[RequireComponent(typeof(Animator))]
 	public class CharacterAnimationSimple: CharacterAnimationBase {
 
         public CharacterThirdPerson characterController;

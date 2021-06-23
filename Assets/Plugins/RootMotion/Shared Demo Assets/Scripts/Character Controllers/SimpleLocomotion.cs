@@ -4,7 +4,6 @@ using System.Collections;
 namespace RootMotion.Demos {
 
 	// The simplest multi-purpose locomotion controller for demo purposes. Can use root motion, simple procedural motion or the CharacterController
-	[RequireComponent(typeof(Animator))]
 	public class SimpleLocomotion : MonoBehaviour {
 
 		// The character rotation mode

@@ -5,9 +5,13 @@
     <e p="C:\Users\robel\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_Controller.1394105858.00" t="ExcludeRecursive" />
     <e p="C:\Users\robel\Documents\Unity\Controller" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Editor" t="Include">
+          <e p="GenericDictionaryPropertyDrawer.cs" t="Include" />
+        </e>
         <e p="Plugins" t="Include">
           <e p="RootMotion" t="Include">
             <e p="Baker" t="Include">
@@ -357,9 +361,11 @@
               <e p="DamageController.cs" t="Include" />
               <e p="MotionController.cs" t="Include" />
               <e p="PlayerAnimationController.cs" t="Include" />
+              <e p="PlayerDamageController.cs" t="Include" />
               <e p="PlayerMotionController.cs" t="Include" />
             </e>
             <e p="Damagable.cs" t="Include" />
+            <e p="Damage.cs" t="Include" />
             <e p="Damager.cs" t="Include" />
             <e p="Game" t="Include">
               <e p="Action.cs" t="Include" />
@@ -381,11 +387,13 @@
           <e p="Utils" t="Include">
             <e p="BasicRigidBodyPush.cs" t="Include" />
             <e p="Constants.cs" t="Include" />
+            <e p="GenericDictionary.cs" t="Include" />
             <e p="IkAdditives.cs" t="Include" />
             <e p="MouseLook.cs" t="Include" />
             <e p="Playground.cs" t="Include" />
             <e p="Pusher.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
+            <e p="Utils.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">
@@ -420,6 +428,24 @@
           </e>
         </e>
         <e p="UMotionEditor" t="Include">
+          <e p="Plugins" t="Include">
+            <e p="MacOS" t="Include">
+              <e p="Editor" t="Include">
+                <e p="x64" t="Include">
+                  <e p="AutodeskFbxSdkLicense.txt" t="Include" />
+                  <e p="UnityFbxSdkNativeLicense.txt" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Windows" t="Include">
+              <e p="Editor" t="Include">
+                <e p="x64" t="Include">
+                  <e p="AutodeskFbxSdkLicense.txt" t="Include" />
+                  <e p="UnityFbxSdkNativeLicense.txt" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
           <e p="Scripts" t="Include">
             <e p="Application" t="Include">
               <e p="AssetResourcesFile.cs" t="Include" />

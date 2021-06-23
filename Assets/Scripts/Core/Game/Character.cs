@@ -38,9 +38,12 @@ public abstract class Character : MonoBehaviour
 
     [Space] 
     
-    public Damagable damagable;
+    [SerializeField] private Damagable damagable;
     
     private List<Controller> _controllers;
+    
+    public Damager Damager { get; } = new Damager();
+    public Damagable Damagable => damagable;
     
     protected virtual void Start()
     {
@@ -59,12 +62,6 @@ public abstract class Character : MonoBehaviour
     {
         _controllers = new List<Controller>(GetComponentsInChildren<Controller>());
 
-        if (damagable == null)
-        {
-            damagable = GetComponent<Damagable>();
-            if (damagable == null) damagable = GetComponentInChildren<Damagable>();
-        }
-        
         _controllers.ForEach(c => 
         {
             c.Initialize(this);

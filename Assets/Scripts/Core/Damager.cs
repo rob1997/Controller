@@ -1,53 +1,40 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Damager : MonoBehaviour
+public class Damager
 {
-    #region Attack
+    #region DamageDealt
 
-    public delegate void Attack(Damagable damagable);
+    public delegate void DamageDealt(Damage damage);
 
-    public event Attack OnAttack;
+    public event DamageDealt OnDamageDealt;
 
-    private void InvokeAttack(Damagable damagable)
+    public void InvokeDamageDealt(Damage damage)
     {
-        OnAttack?.Invoke(damagable);
+        OnDamageDealt?.Invoke(damage);
     }
 
     #endregion
 
     #region KillingBlow
 
-    public delegate void KillingBlow(Damagable damagable);
+    public delegate void KillingBlow(Damage damage);
 
     public event KillingBlow OnKillingBlow;
 
-    private void InvokeKillingBlow(Damagable damagable)
+    public void InvokeKillingBlow(Damage damage)
     {
-        OnKillingBlow?.Invoke(damagable);
+        OnKillingBlow?.Invoke(damage);
     }
 
     #endregion
-
-    public float Damage { get; private set; }
     
-    public void CauseDamage(Damagable damagable)
+    public void DealDamage(Damage damage)
     {
-        bool isDead = damagable.IsDead;
+        damage.Damager = this;
         
-        damagable.Attack(this);
-        
-        InvokeAttack(damagable);
-        
-        if (!isDead && damagable.IsDead)
-        {
-            InvokeKillingBlow(damagable);
-        }
-    }
-
-    public void SetDamage(float damage)
-    {
-        Damage = damage;
+        damage.Damagable.TakeDamage(damage);
     }
 }

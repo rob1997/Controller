@@ -113,8 +113,8 @@ namespace RootMotion
         public bool isBaking { get; private set; }
         public float bakingProgress { get; private set; }
 
-        [SerializeField] [HideInInspector] public Animator animator;
-        [SerializeField] [HideInInspector] public PlayableDirector director;
+        [HideInInspector] public Animator animator;
+        [HideInInspector] public PlayableDirector director;
 
         protected abstract Transform GetCharacterRoot();
         protected abstract void OnStartBaking();
@@ -328,7 +328,6 @@ namespace RootMotion
             {
                 if (setKeyframes)
                 {
-
                     OnSetKeyframes(clipFrameNo * clipFrameInterval, clipFrameNo >= clipFrames);
 
                     clipFrameNo++;
@@ -443,6 +442,7 @@ namespace RootMotion
                 {
                     // Overwrite with existing settings
                     AnimationClipSettings existingSettings = AnimationUtility.GetAnimationClipSettings(existing);
+                    existingSettings.stopTime = clips[i].length;
                     AnimationUtility.SetAnimationClipSettings(clips[i], existingSettings);
                     EditorUtility.CopySerialized(clips[i], existing);
                 }

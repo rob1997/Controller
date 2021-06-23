@@ -1,43 +1,34 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Damagable : MonoBehaviour
 {
-    [SerializeField] private float fullHealth;
-    [SerializeField] private float startingHealth;
-
-    [Space]
-    
-    public bool invulnerable;
-
-    #region Attacked
-
-    public delegate void Attacked(Damager damager);
-
-    public event Attacked OnAttacked;
-
-    private void InvokeAttacked(Damager damager)
+    [Serializable]
+    public struct Resistance
     {
-        OnAttacked?.Invoke(damager);
+        public bool invulnerable;
+        
+        [Range(0, 1)]
+        [Tooltip("0 being will take all the damage sent 1 being invulnerable to damage")]
+        public float value;
+    }
+
+    #region DamageTaken
+
+    public delegate void DamageTaken(Damage damage);
+
+    public event DamageTaken OnDamageTaken;
+
+    private void InvokeDamageTaken(Damage damage)
+    {
+        OnDamageTaken?.Invoke(damage);
     }
 
     #endregion
     
-    #region DamageDealt
-
-    public delegate void DamageDealt(float damage);
-
-    public event DamageDealt OnDamageDealt;
-
-    private void InvokeDamageDealt(float damage)
-    {
-        OnDamageDealt?.Invoke(damage);
-    }
-
-    #endregion
-
     #region HeathGained
 
     public delegate void HeathGained(float gainedValue);
@@ -50,78 +41,62 @@ public class Damagable : MonoBehaviour
     }
 
     #endregion
-    
+
     #region Death
 
-    public delegate void Death();
+    public delegate void Death(Damage damage);
 
     public event Death OnDeath;
 
-    private void InvokeDeath()
+    private void InvokeDeath(Damage damage)
     {
-        OnDeath?.Invoke();
-    }
-
-    #endregion
-
-    #region FullHealthChanged
-
-    public delegate void FullHealthChanged(float newFullHealth);
-
-    public event FullHealthChanged OnFullHealthChanged;
-
-    private void InvokeFullHealthChanged(float newFullHealth)
-    {
-        OnFullHealthChanged?.Invoke(newFullHealth);
-    }
-
-    #endregion
-
-    #region CurrentHealthChanged
-
-    public delegate void CurrentHealthChanged(float newCurrentHealth);
-
-    public event CurrentHealthChanged OnCurrentHealthChanged;
-
-    private void InvokeCurrentHealthChanged(float newCurrentHealth)
-    {
-        OnCurrentHealthChanged?.Invoke(newCurrentHealth);
+        OnDeath?.Invoke(damage);
     }
 
     #endregion
     
+    [SerializeField] private float fullHealth;
+    [SerializeField] private float startingHealth;
+
+    [Space]
+    
+    public GenericDictionary<Damage.DamageType, Resistance> resistance = new GenericDictionary<Damage.DamageType, Resistance>();
+
     private float _currentHealth;
     
     public bool IsDead => _currentHealth <= 0;
 
-    private void Start()
+    private void Awake()
     {
         _currentHealth = startingHealth;
     }
 
-    public void Attack(Damager damager)
+    private void Start()
     {
-        InvokeAttacked(damager);
-        
-        TakeDamage(damager.Damage);
-    }
-    
-    public void TakeDamage(float damageTaken)
-    {
-        damageTaken = Mathf.Clamp(damageTaken, 0, _currentHealth);
-
-        if (invulnerable)
+        Utils.GetEnumValues<Damage.DamageType>().ToList().ForEach(type =>
         {
-            damageTaken = 0;
-        }
-        
+            if (!resistance.ContainsKey(type))
+            {
+                resistance.Add(type, new Resistance());
+            }
+        });
+    }
+
+    public void TakeDamage(Damage damageReceived)
+    {
+        float damageTaken = Mathf.Clamp(damageReceived.DamageDealt, 0, _currentHealth);
+
         _currentHealth -= damageTaken;
+
+        InvokeDamageTaken(damageReceived);
         
-        InvokeDamageDealt(damageTaken);
+        damageReceived.Damager.InvokeDamageDealt(damageReceived);
         
         if (_currentHealth <= 0)
         {
-            InvokeDeath();
+            InvokeDeath(damageReceived);
+            
+            damageReceived.Damager.InvokeKillingBlow(damageReceived);
         }
     }
 
@@ -132,39 +107,6 @@ public class Damagable : MonoBehaviour
         _currentHealth += healthGained;
         
         InvokeHeathGained(healthGained);
-    }
-    
-    public void SetCurrentHealth(float newCurrentHealth)
-    {
-        if (newCurrentHealth <= 0 || newCurrentHealth > fullHealth)
-        {
-            Debug.LogError($"{newCurrentHealth} can't be <= zero or > {fullHealth}");
-            
-            return;
-        }
-
-        _currentHealth = Mathf.Clamp(newCurrentHealth, 0, fullHealth);
-        
-        InvokeCurrentHealthChanged(_currentHealth);
-    }
-    
-    public void SetFullHealth(float newFullHealth)
-    {
-        if (newFullHealth <= 0)
-        {
-            Debug.LogError($"{newFullHealth} can't be <= zero");
-            
-            return;
-        }
-
-        if (newFullHealth < _currentHealth)
-        {
-            _currentHealth = newFullHealth;
-        }
-
-        fullHealth = newFullHealth;
-        
-        InvokeFullHealthChanged(fullHealth);
     }
 
     public float GetCurrentHealth()

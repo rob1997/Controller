@@ -179,10 +179,18 @@ namespace RootMotion
             lastQSet = false;
         }
 
-        public void SetIKKeyframes(float time, Avatar avatar, float humanScale, Vector3 bodyPosition, Quaternion bodyRotation)
+        public void SetIKKeyframes(float time, Avatar avatar, Transform root, float humanScale, Vector3 bodyPosition, Quaternion bodyRotation)
         {
-            // TODO Use character scale
-            TQ IKTQ = AvatarUtility.GetIKGoalTQ(avatar, humanScale, goal, new TQ(bodyPosition, bodyRotation), new TQ(transform.position, transform.rotation));
+            Vector3 bonePos = transform.position;
+            Quaternion boneRot = transform.rotation;
+
+            if (root.parent != null)
+            {
+                bonePos = root.parent.InverseTransformPoint(bonePos);
+                boneRot = Quaternion.Inverse(root.parent.rotation) * boneRot;
+            }
+
+            TQ IKTQ = AvatarUtility.GetIKGoalTQ(avatar, humanScale, goal, new TQ(bodyPosition, bodyRotation), new TQ(bonePos, boneRot));
 
             Quaternion rot = IKTQ.q;
             if (lastQSet) rot = BakerUtilities.EnsureQuaternionContinuity(lastQ, IKTQ.q);

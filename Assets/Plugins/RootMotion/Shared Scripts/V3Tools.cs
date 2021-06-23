@@ -8,10 +8,71 @@ namespace RootMotion {
 	/// </summary>
 	public static class V3Tools {
 
-		/// <summary>
-		/// Optimized Vector3.Lerp
-		/// </summary>
-		public static Vector3 Lerp(Vector3 fromVector, Vector3 toVector, float weight) {
+        /// <summary>
+        /// Returns yaw angle (-180 - 180) of 'forward' vector.
+        /// </summary>
+        public static float GetYaw(Vector3 forward)
+        {
+            return Mathf.Atan2(forward.x, forward.z) * Mathf.Rad2Deg;
+        }
+
+        /// <summary>
+        /// Returns pitch angle (-90 - 90) of 'forward' vector.
+        /// </summary>
+        public static float GetPitch(Vector3 forward)
+        {
+            forward = forward.normalized; // Asin range -1 - 1
+            return -Mathf.Asin(forward.y) * Mathf.Rad2Deg;
+        }
+
+        /// <summary>
+        /// Returns bank angle (-180 - 180) of 'forward' and 'up' vectors.
+        /// </summary>
+        public static float GetBank(Vector3 forward, Vector3 up)
+        {
+            Quaternion q = Quaternion.Inverse(Quaternion.LookRotation(Vector3.up, forward));
+            up = q * up;
+            return Mathf.Atan2(up.x, up.z) * Mathf.Rad2Deg;
+        }
+
+        /// <summary>
+        /// Returns yaw angle (-180 - 180) of 'forward' vector relative to rotation space defined by spaceForward and spaceUp axes.
+        /// </summary>
+        public static float GetYaw(Vector3 spaceForward, Vector3 spaceUp, Vector3 forward)
+        {
+            Quaternion space = Quaternion.Inverse(Quaternion.LookRotation(spaceForward, spaceUp));
+            Vector3 dirLocal = space * forward;
+            return Mathf.Atan2(dirLocal.x, dirLocal.z) * Mathf.Rad2Deg;
+        }
+
+        /// <summary>
+        /// Returns pitch angle (-90 - 90) of 'forward' vector relative to rotation space defined by spaceForward and spaceUp axes.
+        /// </summary>
+        public static float GetPitch(Vector3 spaceForward, Vector3 spaceUp, Vector3 forward)
+        {
+            Quaternion space = Quaternion.Inverse(Quaternion.LookRotation(spaceForward, spaceUp));
+            Vector3 dirLocal = space * forward;
+            return -Mathf.Asin(dirLocal.y) * Mathf.Rad2Deg;
+        }
+
+        /// <summary>
+        /// Returns bank angle (-180 - 180) of 'forward' and 'up' vectors relative to rotation space defined by spaceForward and spaceUp axes.
+        /// </summary>
+        public static float GetBank(Vector3 spaceForward, Vector3 spaceUp, Vector3 forward, Vector3 up)
+        {
+            Quaternion space = Quaternion.Inverse(Quaternion.LookRotation(spaceForward, spaceUp));
+            forward = space * forward;
+            up = space * up;
+
+            Quaternion q = Quaternion.Inverse(Quaternion.LookRotation(spaceUp, forward));
+            up = q * up;
+            return Mathf.Atan2(up.x, up.z) * Mathf.Rad2Deg;
+        }
+
+        /// <summary>
+        /// Optimized Vector3.Lerp
+        /// </summary>
+        public static Vector3 Lerp(Vector3 fromVector, Vector3 toVector, float weight) {
 			if (weight <= 0f) return fromVector;
 			if (weight >= 1f) return toVector;
 
@@ -197,5 +258,29 @@ namespace RootMotion {
         {
             return Quaternion.Inverse(t.rotation) * (point - t.position);
         }
-	}
+
+        /// <summary>
+        /// Same as Transform.InverseTransformPoint();
+        /// </summary>
+        public static Vector3 InverseTransformPoint(Vector3 tPos, Quaternion tRot, Vector3 tScale, Vector3 point)
+        {
+            return Div(Quaternion.Inverse(tRot) * (point - tPos), tScale);
+        }
+
+        /// <summary>
+        /// Same as Transform.TransformPoint()
+        /// </summary>
+        public static Vector3 TransformPoint(Vector3 tPos, Quaternion tRot, Vector3 tScale, Vector3 point)
+        {
+            return tPos + Vector3.Scale(tRot * point, tScale);
+        }
+
+        /// <summary>
+        /// Divides the values of v1 by the values of v2.
+        /// </summary>
+        public static Vector3 Div(Vector3 v1, Vector3 v2)
+        {
+            return new Vector3(v1.x / v2.x, v1.y / v2.y, v1.z / v2.z);
+        }
+    }
 }

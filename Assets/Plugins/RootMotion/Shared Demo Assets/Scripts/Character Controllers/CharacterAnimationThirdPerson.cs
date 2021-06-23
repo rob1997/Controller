@@ -6,11 +6,10 @@ namespace RootMotion.Demos {
 	/// <summary>
 	/// Contols animation for a third person person controller.
 	/// </summary>
-	[RequireComponent(typeof(Animator))]
 	public class CharacterAnimationThirdPerson: CharacterAnimationBase {
 		
 		public CharacterThirdPerson characterController;
-		[SerializeField] float turnSensitivity = 0.2f; // Animator turning sensitivity
+		[SerializeField]  float turnSensitivity = 0.2f; // Animator turning sensitivity
 		[SerializeField]  float turnSpeed = 5f; // Animator turning interpolation speed
 		[SerializeField]  float runCycleLegOffset = 0.2f; // The offset of leg positions in the running cycle
 		[Range(0.1f,3f)] [SerializeField] float animSpeedMultiplier = 1; // How much the animation of the character will be multiplied by
@@ -19,8 +18,10 @@ namespace RootMotion.Demos {
 		private Vector3 lastForward;
 		private const string groundedDirectional = "Grounded Directional", groundedStrafe = "Grounded Strafe";
 		private float deltaAngle;
+        private float jumpLeg;
+        private bool lastJump;
 
-		protected override void Start() {
+        protected override void Start() {
 			base.Start();
 
 			animator = GetComponent<Animator>();
@@ -46,12 +47,17 @@ namespace RootMotion.Demos {
 			animatePhysics = animator.updateMode == AnimatorUpdateMode.AnimatePhysics;
 
 			// Jumping
+            
 			if (characterController.animState.jump) {
-				float runCycle = Mathf.Repeat (animator.GetCurrentAnimatorStateInfo (0).normalizedTime + runCycleLegOffset, 1);
-				float jumpLeg = (runCycle < 0 ? 1 : -1) * characterController.animState.moveDirection.z;
-				
-				animator.SetFloat ("JumpLeg", jumpLeg);
+                if (!lastJump)
+                {
+                    float runCycle = Mathf.Repeat(animator.GetCurrentAnimatorStateInfo(0).normalizedTime + runCycleLegOffset, 1);
+                    float jumpLeg = (runCycle < 0.5f ? 1 : -1) * characterController.animState.moveDirection.z;
+                    
+                    animator.SetFloat("JumpLeg", jumpLeg);
+                }
 			}
+            lastJump = characterController.animState.jump;
 			
 			// Calculate the angular delta in character rotation
 			float angle = -GetAngleFromForward(lastForward) - deltaAngle;

@@ -6,8 +6,6 @@ namespace RootMotion.Demos {
 	/// <summary>
 	/// The base abstract class for all character controllers, provides common functionality.
 	/// </summary>
-	[RequireComponent(typeof(Rigidbody))]
-	[RequireComponent(typeof(CapsuleCollider))]
 	public abstract class CharacterBase: MonoBehaviour {
 
 		[Header("Base Parameters")]
