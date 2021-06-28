@@ -125,6 +125,8 @@ public abstract class MotionController : Controller
             new JumpAction(),
             new LookModeAction(),
         });
+        
+//        Physics.gravity = Vector3.up * gravity;
     }
     
     protected virtual void Update()
@@ -241,7 +243,7 @@ public abstract class MotionController : Controller
         {
             float verticalFrameChange = gravity * Time.deltaTime;
             
-            _verticalDistanceFromGround += Mathf.Abs(gravity) * Time.deltaTime;
+            _verticalDistanceFromGround += Mathf.Abs(verticalFrameChange);
 
             //displacement depends if character is moving UP (Velocity.y > 0) or DOWN (Velocity.y <= 0)
             _verticalDisplacementFromGround += Velocity.y <= 0 ? - verticalFrameChange : verticalFrameChange;

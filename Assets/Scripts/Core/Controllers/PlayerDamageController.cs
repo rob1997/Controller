@@ -8,11 +8,6 @@ public class PlayerDamageController : DamageController
     {
         base.Initialize(character);
         
-        character.Damagable.OnDeath += damage =>
-        {
-            GameManager.Instance.GetManager(out InputManager inputManager);
-            
-            inputManager.DisableAsset();
-        };
+        
     }
 }

@@ -12,13 +12,22 @@ public abstract class DamageController : Controller
     [Tooltip("How much damage character takes based on velocity units exceeding fallDamageVelocityThreshold")]
     [SerializeField] protected float fallDamagePerUnit = 2f;
 
-    private MotionController _motionController;
+    [Space]
     
+    [SerializeField] protected Ragdoll ragdoll;
+    
+    private MotionController _motionController;
+
     public override void Initialize(Character character)
     {
         base.Initialize(character);
 
         character.GetController(out _motionController);
+
+        character.Damagable.OnDeath += damage =>
+        {
+            ragdoll.Activate();
+        };
 
         _motionController.OnGroundStateChange += grounded =>
         {

@@ -26,6 +26,8 @@ public class MouseLook : MonoBehaviour {
 	private Quaternion _initialLocalRotation;
 	private Quaternion _initialRotation;
 	
+	private Vector3 _initialLocalPosition;
+	
 	private PlayerInputActions _inputActions;
 	
 	protected virtual void Start()
@@ -50,6 +52,8 @@ public class MouseLook : MonoBehaviour {
 		
 		_initialLocalRotation = transform.localRotation;
 		_initialRotation = transform.rotation;
+		
+		_initialLocalPosition = transform.localPosition;
 	}
 	
 	void Update()
@@ -82,6 +86,8 @@ public class MouseLook : MonoBehaviour {
 		if (parentIndependent)
 		{
 			transform.rotation = _initialRotation;
+
+			transform.position = transform.parent.position + _initialLocalPosition;
 		}
 	}
 
