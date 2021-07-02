@@ -45,7 +45,10 @@ public class HealthBar : MonoBehaviour
         if (Keyboard.current.numpadMinusKey.wasPressedThisFrame)
         {
             Damage fallDamage = new Damage
-                (value, Damage.DamageType.Fall, player.Damagable);
+            (new Dictionary<Damage.DamageType, float>
+            {
+                {Damage.DamageType.Fall, value} 
+            }, player.Damagable);
                         
             player.Damager.DealDamage(fallDamage);
         }

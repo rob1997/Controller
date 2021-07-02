@@ -10,14 +10,26 @@ public class IkAdditives : MonoBehaviour
     [SerializeField] private MotionController motionController;
     
     private GrounderBipedIK _grounderBipedIk;
+
+    private float _cachedWeight;
     
     private void Start()
     {
         _grounderBipedIk = GetComponent<GrounderBipedIK>();
-    }
 
-    private void Update()
-    {
-        _grounderBipedIk.weight = motionController.IsGrounded ? 1f : 0f;
+        motionController.OnGroundStateChange += grounded =>
+        {
+            if (grounded)
+            {
+                _grounderBipedIk.weight = _cachedWeight;
+            }
+
+            else
+            {
+                _cachedWeight = _grounderBipedIk.weight;
+
+                _grounderBipedIk.weight = 0;
+            }
+        };
     }
 }

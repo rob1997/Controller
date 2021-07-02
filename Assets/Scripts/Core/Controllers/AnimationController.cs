@@ -6,12 +6,31 @@ using UnityEngine.InputSystem;
 
 public abstract class AnimationController : Controller
 {
+    #region StateCompleted
+
+    public delegate void StateCompleted(AnimatorStateInfo stateInfo);
+
+    public event StateCompleted OnStateCompleted;
+
+    public void InvokeStateCompleted(AnimatorStateInfo stateInfo)
+    {
+        OnStateCompleted?.Invoke(stateInfo);
+    }
+
+    #endregion
+    
     [SerializeField] private Animator animator;
+    
+    [Space]
+    
+    [SerializeField] private bool trackStates;
 
     private MotionController _motionController;
     
     private PlayerInputActions _inputActions;
 
+    private AnimatorStateInfo[] _allStates;
+    
     public override void Initialize(Character character)
     {
         base.Initialize(character);
@@ -25,8 +44,8 @@ public abstract class AnimationController : Controller
 
         _motionController.OnGroundStateChange += grounded =>
         {
-            animator.ResetTrigger(grounded ? Constants.OnAirHash : Constants.OnGroundedHash);
-            animator.SetTrigger(grounded ?  Constants.OnGroundedHash : Constants.OnAirHash);
+            animator.ResetTrigger(grounded ? Constants.Animation.OnAirHash : Constants.Animation.OnGroundedHash);
+            animator.SetTrigger(grounded ?  Constants.Animation.OnGroundedHash : Constants.Animation.OnAirHash);
         };
 
         _motionController.OnLookModeChange += mode =>
@@ -34,15 +53,22 @@ public abstract class AnimationController : Controller
             switch (mode)
             {
                 case MotionController.LookMode.Free:
-                    animator.ResetTrigger(Constants.OnStrafeMotionHash);
-                    animator.SetTrigger(Constants.OnFreeMotionHash);
+                    animator.ResetTrigger(Constants.Animation.OnStrafeMotionHash);
+                    animator.SetTrigger(Constants.Animation.OnFreeMotionHash);
                     break;
                 case MotionController.LookMode.Strafe:
-                    animator.ResetTrigger(Constants.OnFreeMotionHash);
-                    animator.SetTrigger(Constants.OnStrafeMotionHash);
+                    animator.ResetTrigger(Constants.Animation.OnFreeMotionHash);
+                    animator.SetTrigger(Constants.Animation.OnStrafeMotionHash);
                     break;
             }
         };
+        
+        _allStates = new AnimatorStateInfo[animator.layerCount];
+        
+        for (int i = 0; i < animator.layerCount; i++)
+        {
+            _allStates[i] = animator.GetCurrentAnimatorStateInfo(i);
+        }
     }
 
     private void Update()
@@ -67,18 +93,36 @@ public abstract class AnimationController : Controller
                 break;
         }
         
-        animator.SetFloat(Constants.ForwardHash, forward, .15f, Time.deltaTime);
+        animator.SetFloat(Constants.Animation.ForwardHash, forward, .15f, Time.deltaTime);
 
-        animator.SetFloat(Constants.RightHash, right, .15f, Time.deltaTime);
+        animator.SetFloat(Constants.Animation.RightHash, right, .15f, Time.deltaTime);
         
-        animator.SetInteger(Constants.RawSpeedHash, Mathf.RoundToInt(speed));
-        animator.SetFloat(Constants.SpeedHash, speed * GetSpeedRate(), .15f, Time.deltaTime);
+        animator.SetInteger(Constants.Animation.RawSpeedHash, Mathf.RoundToInt(speed));
+        animator.SetFloat(Constants.Animation.SpeedHash, speed * GetSpeedRate(), .15f, Time.deltaTime);
         
-        animator.SetFloat(Constants.VerticalDisplacementHash, - _motionController.GetVerticalDisplacement() / _motionController.GetJumpForce());
+        animator.SetFloat(Constants.Animation.VerticalDisplacementHash, - _motionController.GetVerticalDisplacement() / _motionController.GetJumpForce());
         
-        animator.SetBool(Constants.IsGroundedHash, _motionController.IsGrounded);
+        animator.SetBool(Constants.Animation.IsGroundedHash, _motionController.IsGrounded);
+        
+        if (trackStates)
+        {
+            UpdateStates();
+        }
     }
 
+    private void UpdateStates()
+    {
+        for (int i = 0; i < animator.layerCount; i++)
+        {
+            if (animator.GetCurrentAnimatorStateInfo(i).fullPathHash != _allStates[i].fullPathHash)
+            {
+                if (Constants.Animation.HasState(_allStates[i].shortNameHash)) InvokeStateCompleted(_allStates[i]);
+            }
+            
+            _allStates[i] = animator.GetCurrentAnimatorStateInfo(i);
+        }
+    }
+    
     private float GetSpeedRate()
     {
         switch (_motionController.Rate)

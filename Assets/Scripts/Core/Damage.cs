@@ -14,12 +14,10 @@ public class Damage
     }
 
     /// <summary>
-    /// Raw damage amount sent
+    /// Damage type and Raw damage amount sent
     /// </summary>
-    public float Amount { get; private set; }
+    public Dictionary<DamageType, float> Hits { get; set; }
     
-    public DamageType Type { get; private set; }
-
     public Damager Damager { get; set; }
 
     public Damagable Damagable
@@ -38,19 +36,19 @@ public class Damage
     
     public float DamageDealt { get; private set; }
 
-    public Damage(float amount, DamageType type, Damagable damagable)
+    public Damage(Dictionary<DamageType, float> hits, Damagable damagable)
     {
-        Amount = amount;
-        Type = type;
+        Hits = hits;
         Damagable = damagable;
     }
     
     private void CalculateDamageDealt()
     {
-        Damagable.Resistance resistance = _damagable.resistance[Type];
-        
-        if (resistance.invulnerable) DamageDealt = 0;
+        foreach (KeyValuePair<DamageType, float> hit in Hits)
+        {
+            Damagable.Resistance resistance = _damagable.resistance[hit.Key];
 
-        else DamageDealt = Amount - (resistance.value * Amount);
+            if (!resistance.invulnerable) DamageDealt += hit.Value - (resistance.value * hit.Value);
+        }
     }
 }
