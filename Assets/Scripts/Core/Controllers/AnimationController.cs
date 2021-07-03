@@ -12,9 +12,22 @@ public abstract class AnimationController : Controller
 
     public event StateCompleted OnStateCompleted;
 
-    public void InvokeStateCompleted(AnimatorStateInfo stateInfo)
+    private void InvokeStateCompleted(AnimatorStateInfo stateInfo)
     {
         OnStateCompleted?.Invoke(stateInfo);
+    }
+
+    #endregion
+
+    #region StateStarted
+
+    public delegate void StateStarted(AnimatorStateInfo stateInfo);
+
+    public event StateStarted OnStateStarted;
+
+    private void InvokeStateStarted(AnimatorStateInfo stateInfo)
+    {
+        OnStateStarted?.Invoke(stateInfo);
     }
 
     #endregion
@@ -23,13 +36,13 @@ public abstract class AnimationController : Controller
     
     [Space]
     
-    [SerializeField] private bool trackStates;
+    [SerializeField] private bool trackAnimatorStates;
 
     private MotionController _motionController;
     
     private PlayerInputActions _inputActions;
 
-    private AnimatorStateInfo[] _allStates;
+    private AnimatorStateInfo[] _currentStates;
     
     public override void Initialize(Character character)
     {
@@ -63,11 +76,11 @@ public abstract class AnimationController : Controller
             }
         };
         
-        _allStates = new AnimatorStateInfo[animator.layerCount];
+        _currentStates = new AnimatorStateInfo[animator.layerCount];
         
         for (int i = 0; i < animator.layerCount; i++)
         {
-            _allStates[i] = animator.GetCurrentAnimatorStateInfo(i);
+            _currentStates[i] = animator.GetCurrentAnimatorStateInfo(i);
         }
     }
 
@@ -104,7 +117,7 @@ public abstract class AnimationController : Controller
         
         animator.SetBool(Constants.Animation.IsGroundedHash, _motionController.IsGrounded);
         
-        if (trackStates)
+        if (trackAnimatorStates)
         {
             UpdateStates();
         }
@@ -114,12 +127,14 @@ public abstract class AnimationController : Controller
     {
         for (int i = 0; i < animator.layerCount; i++)
         {
-            if (animator.GetCurrentAnimatorStateInfo(i).fullPathHash != _allStates[i].fullPathHash)
+            if (animator.GetCurrentAnimatorStateInfo(i).fullPathHash != _currentStates[i].fullPathHash)
             {
-                if (Constants.Animation.HasState(_allStates[i].shortNameHash)) InvokeStateCompleted(_allStates[i]);
+                if (Constants.Animation.HasState(_currentStates[i].shortNameHash)) InvokeStateCompleted(_currentStates[i]);
+                
+                _currentStates[i] = animator.GetCurrentAnimatorStateInfo(i);
+                
+                if (Constants.Animation.HasState(_currentStates[i].shortNameHash)) InvokeStateStarted(_currentStates[i]);
             }
-            
-            _allStates[i] = animator.GetCurrentAnimatorStateInfo(i);
         }
     }
     

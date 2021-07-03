@@ -14,76 +14,36 @@ public abstract class DamageController : Controller
 
     [Space]
     
-    public Ragdoll ragdoll;
-    
     private MotionController _motionController;
-    private AnimationController _animationController;
-    
-    private bool _getUpAnimationCompleted;
-    private bool _balanceRegained;
     
     public override void Initialize(Character character)
     {
         base.Initialize(character);
 
-        GameManager.Instance.GetManager(out InputManager inputManager);
+        #region Fall Damage
 
         character.GetController(out _motionController);
-        character.GetController(out _animationController);
-
-        _animationController.OnStateCompleted += info =>
-        {
-            if (info.IsName(Constants.Animation.GetUpProneStateShortName) || info.IsName(Constants.Animation.GetUpSupineStateShortName))
-            {
-                _getUpAnimationCompleted = true;
                 
-                if (_balanceRegained)
+                _motionController.OnGroundStateChange += grounded =>
                 {
-                    inputManager.EnableAsset();
-                }
-            }
-        };
-        
-        character.Damagable.OnDeath += damage =>
-        {
-            ragdoll.Activate();
-        };
-
-        ragdoll.OnActivated += delegate
-        {
-            _getUpAnimationCompleted = false;
-            _balanceRegained = false;
-            
-            inputManager.DisableAsset();
-        };
-        
-        ragdoll.OnBalanceRegained += delegate
-        {
-            _balanceRegained = true;
-
-            if (_getUpAnimationCompleted)
-            {
-                inputManager.EnableAsset();
-            }
-        };
-        
-        _motionController.OnGroundStateChange += grounded =>
-        {
-            if (grounded && takeFallDamage)
-            {
-                float landingVelocity =  - _motionController.GetVelocity().y;
-                    
-                if (landingVelocity > fallDamageVelocityThreshold)
-                {
-                    Damage fallDamage = new Damage
-                        (new Dictionary<Damage.DamageType, float>
+                    if (grounded && takeFallDamage)
                     {
-                        {Damage.DamageType.Fall, (landingVelocity - fallDamageVelocityThreshold) * fallDamagePerUnit}
-                    }, character.Damagable);
-                        
-                    character.Damager.DealDamage(fallDamage);
-                }
-            }
-        };
+                        float landingVelocity =  - _motionController.GetVelocity().y;
+                            
+                        if (landingVelocity > fallDamageVelocityThreshold)
+                        {
+                            Damage fallDamage = new Damage
+                                (new Dictionary<Damage.DamageType, float>
+                            {
+                                //Square fall damage so it increases exponentially
+                                {Damage.DamageType.Fall, Mathf.Pow((landingVelocity - fallDamageVelocityThreshold) * fallDamagePerUnit, 2)}
+                            }, character.Damagable);
+                                
+                            character.Damager.DealDamage(fallDamage);
+                        }
+                    }
+                };
+
+        #endregion
     }
 }

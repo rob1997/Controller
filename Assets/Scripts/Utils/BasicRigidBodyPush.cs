@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,7 +27,7 @@ public class BasicRigidBodyPush : MonoBehaviour
 
         // We dont want to push objects below us
         if (hit.moveDirection.y < -0.3f) return;
-
+        
         // Calculate push direction from move direction, horizontal motion only
         Vector3 pushDir = new Vector3(hit.moveDirection.x, 0.0f, hit.moveDirection.z);
 

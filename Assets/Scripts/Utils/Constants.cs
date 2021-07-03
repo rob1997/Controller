@@ -23,8 +23,6 @@ public static class Constants
         public static readonly string MotionStateShortName = "MotionTree";
         public static readonly string AirborneStateShortName = "Airborne";
         public static readonly string EmptyStateShortName = "Empty";
-        public static readonly string GetUpProneStateShortName = "GetUpProne";
-        public static readonly string GetUpSupineStateShortName = "GetUpSupine";
     
         public static readonly Dictionary<string, int> StateHashes = new Dictionary<string, int>
         {
@@ -32,8 +30,6 @@ public static class Constants
             {MotionStateShortName, Animator.StringToHash(MotionStateShortName)},
             {AirborneStateShortName, Animator.StringToHash(AirborneStateShortName)},
             {EmptyStateShortName, Animator.StringToHash(EmptyStateShortName)},
-            {GetUpProneStateShortName, Animator.StringToHash(GetUpProneStateShortName)},
-            {GetUpSupineStateShortName, Animator.StringToHash(GetUpSupineStateShortName)},
         };
 
         public static bool HasState(int hash)
