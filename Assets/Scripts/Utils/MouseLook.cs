@@ -58,7 +58,7 @@ public class MouseLook : MonoBehaviour {
 	
 	void Update()
 	{
-		Vector2 lookDelta = _inputActions.Foot.Look.ReadValue<Vector2>();
+		Vector2 lookDelta = _inputActions.View.Look.ReadValue<Vector2>();
 		
 		// Read the mouse input axis
 		_rotationX += lookDelta.x * sensitivityX;

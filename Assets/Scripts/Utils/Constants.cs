@@ -14,15 +14,17 @@ public static class Constants
         public static readonly int RightHash = Animator.StringToHash("Right");
         public static readonly int IsGroundedHash = Animator.StringToHash("IsGrounded");
         public static readonly int OnAirHash = Animator.StringToHash("OnAir");
-        public static readonly int OnGroundedHash = Animator.StringToHash("OnGrounded");
+        public static readonly int OnLandHash = Animator.StringToHash("OnLand");
         public static readonly int OnStrafeMotionHash = Animator.StringToHash("OnStrafeMotion");
         public static readonly int OnFreeMotionHash = Animator.StringToHash("OnFreeMotion");
-        public static readonly int VerticalDisplacementHash = Animator.StringToHash("VerticalDisplacement");
+        public static readonly int NormalizedVerticalDisplacementHash = Animator.StringToHash("NormalizedVerticalDisplacement");
+        public static readonly int CachedLandingVelocityHash = Animator.StringToHash("CachedLandingVelocity");
 
         public static readonly string IdleStateShortName = "Idle";
         public static readonly string MotionStateShortName = "MotionTree";
         public static readonly string AirborneStateShortName = "Airborne";
         public static readonly string EmptyStateShortName = "Empty";
+        public static readonly string LandStateShortName = "Land";
     
         public static readonly Dictionary<string, int> StateHashes = new Dictionary<string, int>
         {
@@ -30,6 +32,7 @@ public static class Constants
             {MotionStateShortName, Animator.StringToHash(MotionStateShortName)},
             {AirborneStateShortName, Animator.StringToHash(AirborneStateShortName)},
             {EmptyStateShortName, Animator.StringToHash(EmptyStateShortName)},
+            {LandStateShortName, Animator.StringToHash(LandStateShortName)},
         };
 
         public static bool HasState(int hash)

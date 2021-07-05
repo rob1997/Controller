@@ -485,13 +485,12 @@
               <e p="AnimationController.cs" t="Include" />
               <e p="DamageController.cs" t="Include" />
               <e p="MotionController.cs" t="Include" />
-              <e p="PlayerAnimationController.cs" t="Include" />
-              <e p="PlayerDamageController.cs" t="Include" />
-              <e p="PlayerMotionController.cs" t="Include" />
+              <e p="Player" t="Include">
+                <e p="PlayerAnimationController.cs" t="Include" />
+                <e p="PlayerDamageController.cs" t="Include" />
+                <e p="PlayerMotionController.cs" t="Include" />
+              </e>
             </e>
-            <e p="Damagable.cs" t="Include" />
-            <e p="Damage.cs" t="Include" />
-            <e p="Damager.cs" t="Include" />
             <e p="Game" t="Include">
               <e p="Action.cs" t="Include" />
               <e p="Character.cs" t="Include" />
@@ -502,7 +501,13 @@
             <e p="Managers" t="Include">
               <e p="InputManager.cs" t="Include" />
             </e>
-            <e p="Ragdoll.cs" t="Include" />
+            <e p="Systems" t="Include">
+              <e p="Damage" t="Include">
+                <e p="Damagable.cs" t="Include" />
+                <e p="Damage.cs" t="Include" />
+                <e p="Damager.cs" t="Include" />
+              </e>
+            </e>
           </e>
           <e p="Input" t="Include">
             <e p="PlayerInputActions.cs" t="Include" />
@@ -513,11 +518,11 @@
           <e p="Utils" t="Include">
             <e p="BasicRigidBodyPush.cs" t="Include" />
             <e p="Constants.cs" t="Include" />
+            <e p="ExtDebug.cs" t="Include" />
             <e p="GenericDictionary.cs" t="Include" />
             <e p="IkAdditives.cs" t="Include" />
             <e p="MouseLook.cs" t="Include" />
             <e p="Playground.cs" t="Include" />
-            <e p="Pusher.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
             <e p="Utils.cs" t="Include" />
           </e>

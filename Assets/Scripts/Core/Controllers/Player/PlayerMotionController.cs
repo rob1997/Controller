@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class PlayerMotionController : MotionController
 {
     private PlayerInputActions _inputActions;
-    
+
     public override void Initialize(Character character)
     {
         base.Initialize(character);

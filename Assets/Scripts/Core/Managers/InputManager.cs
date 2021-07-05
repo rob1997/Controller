@@ -42,6 +42,16 @@ public class InputManager : Manager
         InputActions.Enable();
     }
 
+    public void EnableFoot()
+    {
+        InputActions.Foot.Enable();
+    }
+    
+    public void DisableFoot()
+    {
+        InputActions.Foot.Disable();
+    }
+    
     public void EnableAsset()
     {
         InputActions.asset.Enable();

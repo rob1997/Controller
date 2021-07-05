@@ -27,6 +27,12 @@ public abstract class MotionController : Controller
         Strafe,
     }
     
+    public enum MotionMode
+    {
+        Static,
+        Dynamic,
+    }
+    
     #region GroundStateChange
 
     public delegate void GroundStateChange(bool isGrounded);
@@ -40,6 +46,19 @@ public abstract class MotionController : Controller
 
     #endregion
 
+    #region MotionModeChange
+
+    public delegate void MotionModeChange(MotionMode mode);
+
+    public event MotionModeChange OnMotionModeChange;
+
+    private void InvokeMotionModeChange()
+    {
+        OnMotionModeChange?.Invoke(CurrentMotionMode);
+    }
+
+    #endregion
+    
     #region LookModeChange
 
     public delegate void LookModeChange(LookMode mode);
@@ -111,6 +130,8 @@ public abstract class MotionController : Controller
     
     public LookMode CurrentLookMode { get; protected set; } = LookMode.Free;
     
+    public MotionMode CurrentMotionMode { get; protected set; } = MotionMode.Dynamic;
+    
     public Transform LookAt => lookAt;
     
     public Transform LookFrom { get; protected set; }
@@ -145,7 +166,7 @@ public abstract class MotionController : Controller
 
     private void Look()
     {
-        if (!controlAirMovement && !IsGrounded)
+        if (!IsGrounded && !controlAirMovement)
         {
             Velocity = new Vector3(_cachedGroundedVelocity.x, Velocity.y, _cachedGroundedVelocity.z);
         }
@@ -273,7 +294,10 @@ public abstract class MotionController : Controller
         Velocity.x *= _realSpeed;
         Velocity.z *= _realSpeed;
 
-        characterController.Move(Velocity * Time.deltaTime);
+        if (CurrentMotionMode == MotionMode.Dynamic)
+        {
+            characterController.Move(Velocity * Time.deltaTime);
+        }
     }
 
     #region Getters
@@ -337,6 +361,15 @@ public abstract class MotionController : Controller
         CurrentLookMode = mode;
         
         InvokeLookModeChange();
+    }
+    
+    public void ChangeMotionMode(MotionMode mode)
+    {
+        if (CurrentMotionMode == mode) return;
+
+        CurrentMotionMode = mode;
+        
+        InvokeMotionModeChange();
     }
     
     public void TriggerJump()

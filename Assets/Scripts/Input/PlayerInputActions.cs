@@ -27,14 +27,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Look"",
-                    ""type"": ""Value"",
-                    ""id"": ""5bc852ef-c085-4a30-8d94-4d3bbe11d3c8"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
                     ""name"": ""Walk"",
                     ""type"": ""Button"",
                     ""id"": ""0eebf7a7-8109-4853-80eb-9976f9520472"",
@@ -117,17 +109,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""cd5094c9-a19a-4ecf-aaca-00feb5fbad6a"",
-                    ""path"": ""<Mouse>/delta"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""f0a6ce18-c9e9-48cb-98c7-958207fc016b"",
                     ""path"": ""<Keyboard>/leftCtrl"",
                     ""interactions"": """",
@@ -160,6 +141,33 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""View"",
+            ""id"": ""49bb0ee8-15d7-41c5-aa61-2d7639fbeb07"",
+            ""actions"": [
+                {
+                    ""name"": ""Look"",
+                    ""type"": ""Value"",
+                    ""id"": ""359cd185-7ce9-411f-8611-f746942b648d"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""555552db-7c63-4e17-b325-25583fe901c8"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -167,10 +175,12 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         // Foot
         m_Foot = asset.FindActionMap("Foot", throwIfNotFound: true);
         m_Foot_Move = m_Foot.FindAction("Move", throwIfNotFound: true);
-        m_Foot_Look = m_Foot.FindAction("Look", throwIfNotFound: true);
         m_Foot_Walk = m_Foot.FindAction("Walk", throwIfNotFound: true);
         m_Foot_Sprint = m_Foot.FindAction("Sprint", throwIfNotFound: true);
         m_Foot_Jump = m_Foot.FindAction("Jump", throwIfNotFound: true);
+        // View
+        m_View = asset.FindActionMap("View", throwIfNotFound: true);
+        m_View_Look = m_View.FindAction("Look", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -221,7 +231,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private readonly InputActionMap m_Foot;
     private IFootActions m_FootActionsCallbackInterface;
     private readonly InputAction m_Foot_Move;
-    private readonly InputAction m_Foot_Look;
     private readonly InputAction m_Foot_Walk;
     private readonly InputAction m_Foot_Sprint;
     private readonly InputAction m_Foot_Jump;
@@ -230,7 +239,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         private @PlayerInputActions m_Wrapper;
         public FootActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Foot_Move;
-        public InputAction @Look => m_Wrapper.m_Foot_Look;
         public InputAction @Walk => m_Wrapper.m_Foot_Walk;
         public InputAction @Sprint => m_Wrapper.m_Foot_Sprint;
         public InputAction @Jump => m_Wrapper.m_Foot_Jump;
@@ -246,9 +254,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Move.started -= m_Wrapper.m_FootActionsCallbackInterface.OnMove;
                 @Move.performed -= m_Wrapper.m_FootActionsCallbackInterface.OnMove;
                 @Move.canceled -= m_Wrapper.m_FootActionsCallbackInterface.OnMove;
-                @Look.started -= m_Wrapper.m_FootActionsCallbackInterface.OnLook;
-                @Look.performed -= m_Wrapper.m_FootActionsCallbackInterface.OnLook;
-                @Look.canceled -= m_Wrapper.m_FootActionsCallbackInterface.OnLook;
                 @Walk.started -= m_Wrapper.m_FootActionsCallbackInterface.OnWalk;
                 @Walk.performed -= m_Wrapper.m_FootActionsCallbackInterface.OnWalk;
                 @Walk.canceled -= m_Wrapper.m_FootActionsCallbackInterface.OnWalk;
@@ -265,9 +270,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
-                @Look.started += instance.OnLook;
-                @Look.performed += instance.OnLook;
-                @Look.canceled += instance.OnLook;
                 @Walk.started += instance.OnWalk;
                 @Walk.performed += instance.OnWalk;
                 @Walk.canceled += instance.OnWalk;
@@ -281,12 +283,48 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         }
     }
     public FootActions @Foot => new FootActions(this);
+
+    // View
+    private readonly InputActionMap m_View;
+    private IViewActions m_ViewActionsCallbackInterface;
+    private readonly InputAction m_View_Look;
+    public struct ViewActions
+    {
+        private @PlayerInputActions m_Wrapper;
+        public ViewActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Look => m_Wrapper.m_View_Look;
+        public InputActionMap Get() { return m_Wrapper.m_View; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(ViewActions set) { return set.Get(); }
+        public void SetCallbacks(IViewActions instance)
+        {
+            if (m_Wrapper.m_ViewActionsCallbackInterface != null)
+            {
+                @Look.started -= m_Wrapper.m_ViewActionsCallbackInterface.OnLook;
+                @Look.performed -= m_Wrapper.m_ViewActionsCallbackInterface.OnLook;
+                @Look.canceled -= m_Wrapper.m_ViewActionsCallbackInterface.OnLook;
+            }
+            m_Wrapper.m_ViewActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Look.started += instance.OnLook;
+                @Look.performed += instance.OnLook;
+                @Look.canceled += instance.OnLook;
+            }
+        }
+    }
+    public ViewActions @View => new ViewActions(this);
     public interface IFootActions
     {
         void OnMove(InputAction.CallbackContext context);
-        void OnLook(InputAction.CallbackContext context);
         void OnWalk(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+    }
+    public interface IViewActions
+    {
+        void OnLook(InputAction.CallbackContext context);
     }
 }

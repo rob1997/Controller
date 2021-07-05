@@ -14,14 +14,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Look",
-                    "type": "Value",
-                    "id": "5bc852ef-c085-4a30-8d94-4d3bbe11d3c8",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "Walk",
                     "type": "Button",
                     "id": "0eebf7a7-8109-4853-80eb-9976f9520472",
@@ -104,17 +96,6 @@
                 },
                 {
                     "name": "",
-                    "id": "cd5094c9-a19a-4ecf-aaca-00feb5fbad6a",
-                    "path": "<Mouse>/delta",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "f0a6ce18-c9e9-48cb-98c7-958207fc016b",
                     "path": "<Keyboard>/leftCtrl",
                     "interactions": "",
@@ -143,6 +124,33 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "View",
+            "id": "49bb0ee8-15d7-41c5-aa61-2d7639fbeb07",
+            "actions": [
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "359cd185-7ce9-411f-8611-f746942b648d",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "555552db-7c63-4e17-b325-25583fe901c8",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
