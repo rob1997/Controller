@@ -57,11 +57,6 @@ public abstract class AnimationController : Controller
 
         _motionController.OnGroundStateChange += grounded =>
         {
-            if (grounded)
-            {
-                animator.SetFloat(Constants.Animation.CachedLandingVelocityHash, _motionController.GetVelocity().y / _motionController.GetJumpForce());
-            }
-            
             animator.ResetTrigger(grounded ? Constants.Animation.OnAirHash : Constants.Animation.OnLandHash);
             animator.SetTrigger(grounded ?  Constants.Animation.OnLandHash : Constants.Animation.OnAirHash);
         };
@@ -87,22 +82,6 @@ public abstract class AnimationController : Controller
         {
             _currentStates[i] = animator.GetCurrentAnimatorStateInfo(i);
         }
-
-        OnStateStarted += info =>
-        {
-            if (info.IsName(Constants.Animation.LandStateShortName))
-            {
-                _motionController.ChangeMotionMode(MotionController.MotionMode.Static);
-            }
-        };
-        
-        OnStateCompleted += info =>
-        {
-            if (info.IsName(Constants.Animation.LandStateShortName))
-            {
-                _motionController.ChangeMotionMode(MotionController.MotionMode.Dynamic);
-            }
-        };
     }
 
     private void Update()
@@ -135,6 +114,7 @@ public abstract class AnimationController : Controller
         animator.SetFloat(Constants.Animation.SpeedHash, speed * GetSpeedRate(), .15f, Time.deltaTime);
         
         animator.SetFloat(Constants.Animation.NormalizedVerticalDisplacementHash, - _motionController.GetVerticalDisplacement() / _motionController.GetJumpForce());
+        animator.SetFloat(Constants.Animation.VerticalDistanceHash, _motionController.GetVerticalDistance());
         
         animator.SetBool(Constants.Animation.IsGroundedHash, _motionController.IsGrounded);
         

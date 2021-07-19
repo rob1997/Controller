@@ -18,7 +18,7 @@ public static class Constants
         public static readonly int OnStrafeMotionHash = Animator.StringToHash("OnStrafeMotion");
         public static readonly int OnFreeMotionHash = Animator.StringToHash("OnFreeMotion");
         public static readonly int NormalizedVerticalDisplacementHash = Animator.StringToHash("NormalizedVerticalDisplacement");
-        public static readonly int CachedLandingVelocityHash = Animator.StringToHash("CachedLandingVelocity");
+        public static readonly int VerticalDistanceHash = Animator.StringToHash("VerticalDistance");
 
         public static readonly string IdleStateShortName = "Idle";
         public static readonly string MotionStateShortName = "MotionTree";

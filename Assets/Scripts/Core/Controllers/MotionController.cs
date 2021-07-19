@@ -294,10 +294,7 @@ public abstract class MotionController : Controller
         Velocity.x *= _realSpeed;
         Velocity.z *= _realSpeed;
 
-        if (CurrentMotionMode == MotionMode.Dynamic)
-        {
-            characterController.Move(Velocity * Time.deltaTime);
-        }
+        characterController.Move(Velocity * Time.deltaTime);
     }
 
     #region Getters
@@ -331,6 +328,11 @@ public abstract class MotionController : Controller
     public float GetVerticalDisplacement()
     {
         return _verticalDisplacementFromGround;
+    }
+    
+    public float GetVerticalDistance()
+    {
+        return _verticalDistanceFromGround;
     }
     
     public float GetJumpForce()
