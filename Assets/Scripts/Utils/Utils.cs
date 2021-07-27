@@ -11,11 +11,4 @@ public class Utils
         }
         return (T[])Enum.GetValues(typeof(T));
     }
-
-    public static float Normalize(float minValue, float maxValue, float value)
-    {
-        float diff = maxValue - minValue;
-
-        return (value - minValue) / maxValue;
-    }
 }

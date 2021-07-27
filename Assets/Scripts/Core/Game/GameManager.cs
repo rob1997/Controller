@@ -10,6 +10,7 @@ public class GameManager : Singleton<GameManager>
 
     public delegate void Ready();
 
+    //all Managers have been initialized
     public event Ready OnReady;
 
     public bool IsReady { get; private set; }
