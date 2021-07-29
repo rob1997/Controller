@@ -9,7 +9,6 @@ public class MouseLook : MonoBehaviour {
 	 
 	public float sensitivityX = 15F;
 	public float sensitivityY = 15F;
-	
 	[Space]
 	
 	public float toTargetSensitivityX = .05f;
@@ -25,13 +24,16 @@ public class MouseLook : MonoBehaviour {
 	public float minimumY = -60F;
 	public float maximumY = 60F;
 
-	[FormerlySerializedAs("target")] [Space]
-	public Transform testTarget;
+	[Space]
 	
 	float _rotationX = 0F;
 	float _rotationY = 0F;
 	 
 	private PlayerInputActions _inputActions;
+	
+	private Transform _target;
+	
+	private bool _lockOnTarget = false;
 	
 	public Transform Target 
 	{
@@ -41,24 +43,22 @@ public class MouseLook : MonoBehaviour {
 		{
 			if (value == null)
 			{
-				_lookAtTarget = false;
+				_lockOnTarget = false;
 			}
 
 			else
 			{
-				_lookAtTarget = true;
+				_lockOnTarget = true;
 			}
 
 			_target = value;
 		} 
 	}
-
+	
 	public bool HasTarget => Target != null;
-	
-	private Transform _target;
-	
-	private bool _lookAtTarget = false;
 
+	public bool LockVertically { get; set; }
+	
 	protected virtual void Start()
 	{
 		if (GameManager.Instance.IsReady)
@@ -82,51 +82,45 @@ public class MouseLook : MonoBehaviour {
 	
 	void Update()
 	{
-		if (Keyboard.current.xKey.wasPressedThisFrame)
-		{
-			Target = HasTarget ? null : testTarget;
-		}
-		
 		Vector2 lookDelta = _inputActions.View.Look.ReadValue<Vector2>();
-		
-		// Read the mouse input axis
-		_rotationX += _lookAtTarget && Target != null ? 0 : lookDelta.x * sensitivityX;
-		_rotationY += lookDelta.y * sensitivityY;
+
+		if (_lockOnTarget)
+		{
+			Vector3 lookAtDirection = _target.position - transform.position;
+
+			float xTarget = Quaternion.LookRotation(lookAtDirection).eulerAngles.y;
+
+			_rotationX = Mathf.LerpAngle(_rotationX, xTarget, toTargetSensitivityX);
+
+			if (LockVertically)
+			{
+				float yTarget = - Quaternion.LookRotation(lookAtDirection).eulerAngles.x;
+                
+				_rotationY = Mathf.LerpAngle(_rotationY, yTarget, toTargetSensitivityY);
+			}
+
+			else
+			{
+				_rotationY += lookDelta.y * sensitivityY;
+			}
+		}
+
+		else
+		{
+			// Read the mouse input axis
+			_rotationX += lookDelta.x * sensitivityX;
+			_rotationY += lookDelta.y * sensitivityY;
+		}
 		
 		_rotationX = ClampAngle(_rotationX, minimumX, maximumX);
 		_rotationY = ClampAngle(_rotationY, minimumY, maximumY);
 			 
-		Quaternion xQuaternion = Quaternion.AngleAxis(_rotationX, Vector3.up);
-		Quaternion yQuaternion = Quaternion.AngleAxis(_rotationY, - Vector3.right);
+		Quaternion xQuaternion = Quaternion.Euler(Vector3.up * _rotationX);
+		Quaternion yQuaternion = Quaternion.Euler(- Vector3.right * _rotationY);
 		
 		transform.rotation = xQuaternion * yQuaternion;
-
-		if (_lookAtTarget)
-		{
-			LookAtTarget();
-		}
 	}
 
-	private void LookAtTarget()
-	{
-		if (Target == null)
-		{
-			_lookAtTarget = false;
-				
-			return;
-		}
-			
-		Vector3 forward = transform.forward;
-		Vector3 position = transform.position;
-			
-		Vector3 targetPosition = Target.position;
-			
-		float toTargetAngleX = Vector3.SignedAngle(forward.GetXz(),
-			(targetPosition - position).GetXz(), Vector3.up);
-
-		_rotationX = Mathf.Lerp(_rotationX, _rotationX + toTargetAngleX, toTargetSensitivityX);
-	}
-	
 	public static float ClampAngle(float angle, float min, float max)
 	{
 		if (angle < -360F) angle += 360F;

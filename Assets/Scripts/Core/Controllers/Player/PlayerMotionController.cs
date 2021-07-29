@@ -6,6 +6,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerMotionController : MotionController
 {
+    [Space]
+    
+    public MouseLook mouseLook;
+
     private PlayerInputActions _inputActions;
 
     public override void Initialize(Character character)
@@ -35,7 +39,7 @@ public class PlayerMotionController : MotionController
             }
         };
         
-        LookFrom = Camera.main.transform;
+        LookFrom = mouseLook.transform;
     }
     
     protected override void Update()
@@ -72,5 +76,20 @@ public class PlayerMotionController : MotionController
             TakeAction<LookModeAction>(CurrentLookMode == LookMode.Free ? LookMode.Strafe : LookMode.Free);
         }
 #endif
+    }
+
+    public void Lock(Transform target, bool lockVertically = false)
+    {
+        LookAt = target;
+        
+        mouseLook.Target = target;
+        mouseLook.LockVertically = lockVertically;
+    }
+
+    public void ClearLock()
+    {
+        LookAt = null;
+
+        mouseLook.Target = null;
     }
 }

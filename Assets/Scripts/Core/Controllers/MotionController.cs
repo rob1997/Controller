@@ -104,12 +104,12 @@ public abstract class MotionController : Controller
     [Space]
     
     [SerializeField] private Transform body;
-    
-    [SerializeField] private Transform lookAt;
-    
+
     protected Vector3 Velocity;
 
     private Vector3 _cachedGroundedVelocity;
+
+    private Transform _lookAt;
     
     private float _realSpeed;
     
@@ -132,9 +132,9 @@ public abstract class MotionController : Controller
     
     public MotionMode CurrentMotionMode { get; protected set; } = MotionMode.Dynamic;
     
-    public Transform LookAt => lookAt;
-    
-    public Transform LookFrom { get; protected set; }
+    public Transform LookAt { get; set; }
+
+    protected Transform LookFrom { get; set; }
     
     public override void Initialize(Character character)
     {
@@ -146,8 +146,8 @@ public abstract class MotionController : Controller
             new JumpAction(),
             new LookModeAction(),
         });
-        
-//        Physics.gravity = Vector3.up * gravity;
+
+        LookFrom = body.transform;
     }
     
     protected virtual void Update()
@@ -184,9 +184,9 @@ public abstract class MotionController : Controller
                 }
                 break;
             case LookMode.Strafe:
-                Vector3 toTarget = lookAt.position - LookFrom.position;
+                Vector3 toTarget = LookAt != null ? LookAt.position - LookFrom.position : LookFrom.forward;
                 toTarget.y = 0;
-                lookRotation = Quaternion.LookRotation(toTarget.normalized);
+                lookRotation = Quaternion.LookRotation(toTarget);
                 if (Rate == SpeedRate.Sprint && lookVelocity.magnitude > 0)
                 {
                     lookRotation = Quaternion.LookRotation(lookVelocity.normalized);
@@ -319,7 +319,7 @@ public abstract class MotionController : Controller
                 return 0;
         }
     }
-    
+
     public float GetGravity()
     {
         return gravity;
