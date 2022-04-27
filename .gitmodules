@@ -1,0 +1,12 @@
+[submodule "Packages/Ekaka/Locomotion"]
+	path = Packages/Ekaka/Locomotion
+	url = https://github.com/rob1997/Locomotion
+[submodule "Packages/Ekaka/Damage"]
+	path = Packages/Ekaka/Damage
+	url = https://github.com/rob1997/Damage
+[submodule "Packages/Ekaka/Core"]
+	path = Packages/Ekaka/Core
+	url = https://github.com/rob1997/Core
+[submodule "Packages/Ekaka/Player"]
+	path = Packages/Ekaka/Player
+	url = https://github.com/rob1997/Player

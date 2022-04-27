@@ -1,5 +1,49 @@
 {
   "dependencies": {
+    "com.ekaka.core": {
+      "version": "file:Ekaka/Core",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.inputsystem": "1.0.2"
+      }
+    },
+    "com.ekaka.damage": {
+      "version": "file:Ekaka/Damage",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.ekaka.core": "0.0.1",
+        "com.ekaka.locomotion": "0.0.1"
+      }
+    },
+    "com.ekaka.locomotion": {
+      "version": "file:Ekaka/Locomotion",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.ekaka.core": "0.0.1"
+      }
+    },
+    "com.ekaka.player": {
+      "version": "file:Ekaka/Player",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.ekaka.core": "0.0.1",
+        "com.ekaka.locomotion": "0.0.1",
+        "com.ekaka.damage": "0.0.1",
+        "com.unity.inputsystem": "1.0.2",
+        "com.unity.cinemachine": "2.6.0"
+      }
+    },
+    "com.unity.cinemachine": {
+      "version": "2.6.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.collab-proxy": {
       "version": "1.9.0",
       "depth": 0,
@@ -35,6 +79,13 @@
     "com.unity.ide.vscode": {
       "version": "1.2.4",
       "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.inputsystem": {
+      "version": "1.0.2",
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
