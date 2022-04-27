@@ -1,8 +1,0 @@
-{
-    "name": "UMotionSourceApplication",
-    "references": [],
-    "includePlatforms": [
-        "Editor"
-    ],
-    "excludePlatforms": []
-}
