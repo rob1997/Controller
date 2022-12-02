@@ -69,3 +69,10 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Umotion Files
+/[Aa]ssets/UMotionEditor*
+/[Aa]ssets/UMotionProj*
+
+#Rider Files
+/.idea*
