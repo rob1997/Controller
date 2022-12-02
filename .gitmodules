@@ -10,3 +10,9 @@
 [submodule "Packages/Ekaka/Player"]
 	path = Packages/Ekaka/Player
 	url = https://github.com/rob1997/Player
+[submodule "Packages/Ekaka/Inventory"]
+	path = Packages/Ekaka/Inventory
+	url = https://github.com/rob1997/Inventory
+[submodule "Packages/Ekaka/Weapon"]
+	path = Packages/Ekaka/Weapon
+	url = https://github.com/rob1997/Weapon
