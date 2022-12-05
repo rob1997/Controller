@@ -206,7 +206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6086808131573598312}
   m_Layer: 0
-  m_Name: TwoHandDock
+  m_Name: DockT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -535,7 +535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4248422524141732821}
   m_Layer: 0
-  m_Name: LeftHandDock
+  m_Name: DockL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1255,7 +1255,7 @@ MonoBehaviour:
   pelvis: {fileID: 8971974542959315905}
   footForwardL: {fileID: 8971974542669549238}
   footForwardR: {fileID: 8971974543591414666}
-  pelvisOffset: -0.065
+  ankleHeight: 0.1
   minStepHeight: 0.05
   maxStepHeight: 0.5
   pelvisMoveSpeed: 25
@@ -1386,7 +1386,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6416883130426251946}
   - component: {fileID: 3451814885883608338}
-  - component: {fileID: 3680956390039827732}
   m_Layer: 0
   m_Name: InventoryController
   m_TagString: Untagged
@@ -1421,14 +1420,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactRadius: 1.5
-  usables:
+  Usables:
     serializedList:
     - Key: 0
       Value:
         <EquipBone>k__BackingField: {fileID: 5701421604731891667}
         <State>k__BackingField: 0
         controller: {fileID: 3451814885883608338}
-        _value: {fileID: 0}
         <Dependencies>k__BackingField: 02000000
         <UnEquipBone>k__BackingField: {fileID: 9090886272940229905}
     - Key: 1
@@ -1436,7 +1434,6 @@ MonoBehaviour:
         <EquipBone>k__BackingField: {fileID: 1917757508195701472}
         <State>k__BackingField: 0
         controller: {fileID: 3451814885883608338}
-        _value: {fileID: 0}
         <Dependencies>k__BackingField: 02000000
         <UnEquipBone>k__BackingField: {fileID: 7239653556339343770}
     - Key: 2
@@ -1444,65 +1441,21 @@ MonoBehaviour:
         <EquipBone>k__BackingField: {fileID: 7172195135095818335}
         <State>k__BackingField: 0
         controller: {fileID: 3451814885883608338}
-        _value: {fileID: 0}
         <Dependencies>k__BackingField: 0000000001000000
         <UnEquipBone>k__BackingField: {fileID: 592657576047498193}
-  wearables:
+  Wearables:
     serializedList:
     - Key: 0
       Value:
         <EquipBone>k__BackingField: {fileID: 0}
         <State>k__BackingField: 0
         controller: {fileID: 3451814885883608338}
-        _value: {fileID: 0}
     - Key: 1
       Value:
         <EquipBone>k__BackingField: {fileID: 0}
         <State>k__BackingField: 0
         controller: {fileID: 3451814885883608338}
-        _value: {fileID: 0}
-  <Bag>k__BackingField: {fileID: 11400000, guid: 40ccfdf950d35c743adb98b8ecffaa8e, type: 2}
---- !u!114 &3680956390039827732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2703106475677080974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 931cd6b919557854c9eaa14f07b57628, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Docks:
-    serializedList:
-    - Key: 0
-      Value: {fileID: 4248422524141732821}
-    - Key: 1
-      Value: {fileID: 2273239122545532273}
-    - Key: 2
-      Value: {fileID: 6086808131573598312}
-  Hands:
-  - Target: {fileID: 0}
-    <Constraint>k__BackingField: {fileID: 116438807855068181}
-    Dependencies:
-      serializedList:
-      - Key: 0
-        Value: 1
-      - Key: 1
-        Value: 0
-      - Key: 2
-        Value: 1
-  - Target: {fileID: 0}
-    <Constraint>k__BackingField: {fileID: 1308395288719983834}
-    Dependencies:
-      serializedList:
-      - Key: 0
-        Value: 0
-      - Key: 1
-        Value: 1
-      - Key: 2
-        Value: 1
+  <Bag>k__BackingField: {fileID: 0}
 --- !u!1 &2777212365335797447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,7 +1662,7 @@ CharacterController:
   m_StepOffset: 0.5
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 0.9, z: 0}
+  m_Center: {x: 0, y: 0.95, z: 0}
 --- !u!114 &2597089403928404551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2561,7 +2514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2273239122545532273}
   m_Layer: 0
-  m_Name: RightHandDock
+  m_Name: DockR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
