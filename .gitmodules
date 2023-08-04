@@ -1,27 +1,30 @@
-[submodule "Packages/Ekaka/Locomotion"]
-	path = Packages/Ekaka/Locomotion
-	url = https://github.com/rob1997/Locomotion
-[submodule "Packages/Ekaka/Damage"]
-	path = Packages/Ekaka/Damage
-	url = https://github.com/rob1997/Damage
 [submodule "Packages/Ekaka/Core"]
 	path = Packages/Ekaka/Core
 	url = https://github.com/rob1997/Core
+[submodule "Packages/Ekaka/Damage"]
+	path = Packages/Ekaka/Damage
+	url = https://github.com/rob1997/Damage
+[submodule "Packages/Ekaka/Sensors"]
+	path = Packages/Ekaka/Sensors
+	url = https://github.com/rob1997/Sensors
+[submodule "Packages/Ekaka/Data"]
+	path = Packages/Ekaka/Data
+	url = https://github.com/rob1997/Data
 [submodule "Packages/Ekaka/Character"]
 	path = Packages/Ekaka/Character
 	url = https://github.com/rob1997/Character
-[submodule "Packages/Ekaka/Player"]
-	path = Packages/Ekaka/Player
-	url = https://github.com/rob1997/Player
+[submodule "Packages/Ekaka/Locomotion"]
+	path = Packages/Ekaka/Locomotion
+	url = https://github.com/rob1997/Locomotion
 [submodule "Packages/Ekaka/Inventory"]
 	path = Packages/Ekaka/Inventory
 	url = https://github.com/rob1997/Inventory
 [submodule "Packages/Ekaka/Weapon"]
 	path = Packages/Ekaka/Weapon
 	url = https://github.com/rob1997/Weapon
-[submodule "Packages/Ekaka/Sensors"]
-	path = Packages/Ekaka/Sensors
-	url = https://github.com/rob1997/Sensors
 [submodule "Packages/Ekaka/NPC"]
 	path = Packages/Ekaka/NPC
 	url = https://github.com/rob1997/NPC
+[submodule "Packages/Ekaka/Player"]
+	path = Packages/Ekaka/Player
+	url = https://github.com/rob1997/Player
