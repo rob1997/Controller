@@ -13,6 +13,6 @@
     "com.unity.nuget.newtonsoft-json": "3.0.2"
   },
   "gitDependencies": {
-    "com.ekaka.core": "https://github.com/rob1997/Core.git"
+    "com.ekaka.core": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.core"
   }
 }
