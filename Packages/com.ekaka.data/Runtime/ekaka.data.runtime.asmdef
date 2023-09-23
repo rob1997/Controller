@@ -1,0 +1,16 @@
+{
+    "name": "ekaka.persitence.runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3be229e312724024eabae057db50ba7f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

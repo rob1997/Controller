@@ -1,0 +1,19 @@
+{
+  "name": "com.ekaka.npc",
+  "displayName": "NPC",
+  "version": "0.0.1",
+  "unity": "2020.3",
+  "description": "NPC Library.",
+  "keywords": [
+    "NPC",
+    "npc",
+    "basic"
+  ],
+  "category": "Unity",
+  "gitDependencies": {
+    "com.ekaka.core": "https://github.com/rob1997/Core.git",
+    "com.ekaka.sensors": "https://github.com/rob1997/Sensors.git",
+    "com.ekaka.damage": "https://github.com/rob1997/Damage.git",
+    "com.ekaka.character": "https://github.com/rob1997/Character.git"
+  }
+}

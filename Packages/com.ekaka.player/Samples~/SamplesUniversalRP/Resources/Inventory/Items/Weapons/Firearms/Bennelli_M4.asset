@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35728d483d0246346b5f704a048bd0ea, type: 3}
+  m_Name: Bennelli_M4
+  m_EditorClassIdentifier: 
+  <Title>k__BackingField: Bennelli_M4
+  <Description>k__BackingField: Rifle
+  <Icon>k__BackingField: {fileID: 2800000, guid: bb5fa99d6e9434c9ebf101c956021ee1, type: 3}
+  <Weight>k__BackingField: 2
+  <Prefab>k__BackingField: {fileID: 340497594743059820, guid: 2c669088220878249898c732559a7c8c, type: 3}
+  <SlotType>k__BackingField: 2
+  ClipOverride:
+    selectedClipIndex: 0
+    selectedClip: {fileID: 0}
+    <Overrides>k__BackingField:
+      serializedList:
+      - Key: EquipTwoHand
+        Value: {fileID: 7400000, guid: 28ad1d787ab1a2242af2d0c179a3457b, type: 2}
+      - Key: UnEquipTwoHand
+        Value: {fileID: 7400000, guid: 4b846b092ff188a4e8e596f03f9c2fc4, type: 2}
+      - Key: IdleTwoHand
+        Value: {fileID: 7400000, guid: f6e7ca3fe114d6c428f77ac8899ea3ef, type: 2}
+  <Damage>k__BackingField:
+  - <Type>k__BackingField: 5
+    <Value>k__BackingField: 25
+  <Recoil>k__BackingField: {x: 0, y: 0.1, z: -0.075}
+  <RecoilEulerRotation>k__BackingField: {x: 22.5, y: 0, z: 0}
+  <RecoilPattern>k__BackingField:
+  - {x: -16, y: 64}
+  - {x: 8.2, y: 51}
+  - {x: -13.8, y: 70}
+  - {x: 14.8, y: 54}
+  - {x: -4.6, y: 61}
+  <RecoilPatternTimeout>k__BackingField: 1.5
+  <SingleFire>k__BackingField: 1
+  <DownSightFactor>k__BackingField: 0.5
+  <FireDuration>k__BackingField: 0.025
+  <CooldownDuration>k__BackingField: 0.075
+  <CameraShake>k__BackingField: {x: 0, y: 0.15, z: 0.15}

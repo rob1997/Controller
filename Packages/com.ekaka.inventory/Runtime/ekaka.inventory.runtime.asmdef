@@ -1,0 +1,17 @@
+{
+    "name": "ekaka.inventory.runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3be229e312724024eabae057db50ba7f",
+        "GUID:d1e66324454f731409c70e53251bd0de"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

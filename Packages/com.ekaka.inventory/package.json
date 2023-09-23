@@ -1,0 +1,16 @@
+{
+  "name": "com.ekaka.inventory",
+  "displayName": "Inventory",
+  "version": "0.0.1",
+  "unity": "2020.3",
+  "description": "Inventory Library.",
+  "keywords": [
+    "inventory",
+    "items"
+  ],
+  "category": "Unity",
+  "gitDependencies": {
+    "com.ekaka.core": "https://github.com/rob1997/Core.git",
+    "com.ekaka.character": "https://github.com/rob1997/Character.git"
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "ekaka.damage.runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3be229e312724024eabae057db50ba7f",
+        "GUID:7e8d34396255d3f4186f13bc70906c72"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

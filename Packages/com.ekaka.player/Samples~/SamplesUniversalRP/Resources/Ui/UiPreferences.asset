@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa0fecfabf88bda499a256f035fba03b, type: 3}
+  m_Name: UiPreferences
+  m_EditorClassIdentifier: 
+  <MenuCacheTimeOut>k__BackingField: 5
+  <DefaultUiTransition>k__BackingField: {fileID: 11400000, guid: fbb98464004a81b489727eb7be863460, type: 2}
+  <DefaultUiModalPadding>k__BackingField:
+    m_Left: 450
+    m_Right: 450
+    m_Top: 350
+    m_Bottom: 350

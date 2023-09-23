@@ -1,0 +1,22 @@
+{
+    "name": "ekaka.weapon.editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3be229e312724024eabae057db50ba7f",
+        "GUID:3f6aa83a8f00ae44197412a21f0d4f7a",
+        "GUID:3cbcf7dfb20f9a443b246a30df636330",
+        "GUID:cd8627c69f1c5984188a8a442ca3417c",
+        "GUID:7f7d1af65c2641843945d409d28f2e20"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

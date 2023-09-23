@@ -1,0 +1,21 @@
+{
+  "name": "com.ekaka.ui",
+  "displayName": "UI",
+  "version": "0.0.1",
+  "unity": "2018.1",
+  "description": "User Interface Library.",
+  "keywords": [
+    "UI",
+    "User Interface",
+    "basic"
+  ],
+  "category": "Unity",
+  "dependencies": {
+    "com.unity.inputsystem": "1.0.2",
+    "com.unity.textmeshpro": "3.0.6",
+    "com.unity.addressables": "1.18.19"
+    },
+  "gitDependencies": {
+    "com.ekaka.core": "https://github.com/rob1997/Core.git"
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "com.ekaka.resolver",
+  "displayName": "Git Resolver",
+  "version": "0.0.1",
+  "unity": "2020.3",
+  "description": "Git Resolver Library.",
+  "keywords": [
+    "git",
+    "resolve",
+    "resolver"
+  ],
+  "category": "Unity",
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.0.2"
+  }
+}

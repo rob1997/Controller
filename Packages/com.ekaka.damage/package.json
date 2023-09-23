@@ -1,0 +1,16 @@
+{
+  "name": "com.ekaka.damage",
+  "displayName": "Damage",
+  "version": "0.0.1",
+  "unity": "2020.3",
+  "description": "Damage Library.",
+  "keywords": [
+    "damage",
+    "basic"
+  ],
+  "category": "Unity",
+  "gitDependencies": {
+    "com.ekaka.core": "https://github.com/rob1997/Core.git",
+    "com.ekaka.sensors": "https://github.com/rob1997/Sensors.git"
+  }
+}

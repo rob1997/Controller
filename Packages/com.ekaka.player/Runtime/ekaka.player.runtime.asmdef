@@ -1,0 +1,27 @@
+{
+    "name": "ekaka.player.runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3be229e312724024eabae057db50ba7f",
+        "GUID:7e8d34396255d3f4186f13bc70906c72",
+        "GUID:d959c1011e3c2964393f48bb9bddc50a",
+        "GUID:d1e66324454f731409c70e53251bd0de",
+        "GUID:ec2732877d51eac4caf328e021a29077",
+        "GUID:9c0e8882e83b16f448963e4e84bcecc6",
+        "GUID:012bb4514f5348141a5eaaedd5527905",
+        "GUID:cd8627c69f1c5984188a8a442ca3417c",
+        "GUID:3cbcf7dfb20f9a443b246a30df636330",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:4307f53044263cf4b835bd812fc161a4",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

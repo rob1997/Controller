@@ -1,0 +1,16 @@
+{
+  "name": "com.ekaka.core",
+  "displayName": "Core",
+  "version": "0.0.1",
+  "unity": "2020.3",
+  "description": "Core Library.",
+  "keywords": [
+    "core",
+    "basic"
+  ],
+  "category": "Unity",
+  "dependencies": {
+    "com.unity.inputsystem": "1.0.2",
+    "com.unity.addressables": "1.18.19"
+  }
+}

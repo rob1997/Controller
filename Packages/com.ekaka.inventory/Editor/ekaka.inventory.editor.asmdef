@@ -1,0 +1,21 @@
+{
+    "name": "ekaka.inventory.editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3be229e312724024eabae057db50ba7f",
+        "GUID:3f6aa83a8f00ae44197412a21f0d4f7a",
+        "GUID:d1e66324454f731409c70e53251bd0de",
+        "GUID:cd8627c69f1c5984188a8a442ca3417c"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

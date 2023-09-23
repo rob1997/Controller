@@ -1,0 +1,19 @@
+{
+    "name": "ekaka.persistence.editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ec2732877d51eac4caf328e021a29077",
+        "GUID:3f6aa83a8f00ae44197412a21f0d4f7a"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

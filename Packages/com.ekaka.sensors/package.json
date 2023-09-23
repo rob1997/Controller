@@ -1,0 +1,22 @@
+{
+  "name": "com.ekaka.sensors",
+  "displayName": "Sensors",
+  "version": "0.0.1",
+  "unity": "2018.1",
+  "description": "Sensors Library.",
+  "keywords": [
+    "sensors",
+    "detection",
+    "target",
+    "viewer",
+    "beamer",
+    "ray",
+    "raycast",
+    "unity",
+    "basic"
+  ],
+  "category": "Unity",
+  "gitDependencies": {
+    "com.ekaka.core": "https://github.com/rob1997/Core.git"
+  }
+}

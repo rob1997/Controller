@@ -1,0 +1,20 @@
+{
+  "name": "com.ekaka.locomotion",
+  "displayName": "Locomotion",
+  "version": "0.0.1",
+  "unity": "2020.3",
+  "description": "Locomotion Library.",
+  "keywords": [
+    "locomotion",
+    "basic"
+  ],
+  "category": "Unity",
+  "dependencies": {
+    "com.unity.animation.rigging": "1.0.3"
+  },
+  "gitDependencies": {
+    "com.ekaka.core": "https://github.com/rob1997/Core.git",
+    "com.ekaka.sensors": "https://github.com/rob1997/Sensors.git",
+    "com.ekaka.character": "https://github.com/rob1997/Character.git"
+  }
+}
