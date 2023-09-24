@@ -17,6 +17,6 @@
   ],
   "category": "Unity",
   "dependencies": {
-    "com.ekaka.core": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.core"
+    "com.ekaka.core": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.core#main"
   }
 }

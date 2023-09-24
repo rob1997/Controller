@@ -15,16 +15,16 @@
     "com.unity.postprocessing": "3.1.1",
     "com.unity.render-pipelines.universal": "10.6.0",
     "com.unity.textmeshpro": "3.0.6",
-    "com.ekaka.core": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.core",
-    "com.ekaka.data": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.data",
-    "com.ekaka.sensors": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.sensors",
-    "com.ekaka.damage": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.damage",
-    "com.ekaka.character": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.character",
-    "com.ekaka.ui": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.ui",
-    "com.ekaka.locomotion": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.locomotion",
-    "com.ekaka.inventory": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.inventory",
-    "com.ekaka.weapon": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.weapon",
-    "com.ekaka.npc": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.npc"
+    "com.ekaka.core": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.core#main",
+    "com.ekaka.data": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.data#main",
+    "com.ekaka.sensors": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.sensors#main",
+    "com.ekaka.damage": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.damage#main",
+    "com.ekaka.character": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.character#main",
+    "com.ekaka.ui": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.ui#main",
+    "com.ekaka.locomotion": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.locomotion#main",
+    "com.ekaka.inventory": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.inventory#main",
+    "com.ekaka.weapon": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.weapon#main",
+    "com.ekaka.npc": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.npc#main"
   },
   "samples": [
     {
