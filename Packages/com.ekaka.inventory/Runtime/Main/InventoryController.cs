@@ -92,6 +92,12 @@ namespace Inventory.Main
         {
             base.Initialize(actor);
 
+            // TODO initialize from file or persistent source
+            if (!Bag.Initialized)
+            {
+                Bag.Initialize();
+            }
+            
             _characterTransform = actor.transform;
 
             try

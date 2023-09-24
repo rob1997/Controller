@@ -19,6 +19,6 @@ namespace Data.Persistence
         
         bool LoadData();
         
-        bool ResetData();
+        bool ResetData(bool newFile = true);
     }
 }

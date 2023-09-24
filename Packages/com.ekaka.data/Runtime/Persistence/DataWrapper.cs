@@ -95,7 +95,7 @@ namespace Data.Persistence
             }
         }
 
-        public bool ResetData()
+        public bool ResetData(bool newFile = true)
         {
             if (!string.IsNullOrEmpty(Id))
             {
@@ -122,7 +122,8 @@ namespace Data.Persistence
                 }
             }
 
-            Id = Guid.NewGuid().ToString();
+            if (newFile)
+                Id = Guid.NewGuid().ToString();
             
             DataModel = new TDataModel();
             

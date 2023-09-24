@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35728d483d0246346b5f704a048bd0ea, type: 3}
+  m_Name: M1911
+  m_EditorClassIdentifier: 
+  <Title>k__BackingField: M1911
+  <Description>k__BackingField: Pistol
+  <Icon>k__BackingField: {fileID: 2800000, guid: bb5fa99d6e9434c9ebf101c956021ee1, type: 3}
+  <Weight>k__BackingField: 1
+  <Prefab>k__BackingField: {fileID: 4023909532146515733, guid: 9c554a95042ea344db3d952f13e1e020, type: 3}
+  <SlotType>k__BackingField: 1
+  ClipOverride:
+    selectedClipIndex: 0
+    selectedClip: {fileID: 0}
+    <Overrides>k__BackingField:
+      serializedList:
+      - Key: EquipRightHand
+        Value: {fileID: 7400000, guid: fb7e41bc308ee0140938504866a230c7, type: 2}
+      - Key: UnEquipRightHand
+        Value: {fileID: 7400000, guid: bd72bb505b3c03544a63f0b18cda15a7, type: 2}
+      - Key: IdleRightHand
+        Value: {fileID: 7400000, guid: 3ef5387d477dffc43a345cdba119d87e, type: 2}
+  <Damage>k__BackingField:
+  - <Type>k__BackingField: 5
+    <Value>k__BackingField: 25
+  <Recoil>k__BackingField: {x: 0, y: 0.1, z: -0.075}
+  <RecoilEulerRotation>k__BackingField: {x: 22.5, y: 0, z: 0}
+  <RecoilPattern>k__BackingField:
+  - {x: 0, y: 6}
+  <RecoilPatternTimeout>k__BackingField: 0
+  <SingleFire>k__BackingField: 1
+  <DownSightFactor>k__BackingField: 0.5
+  <FireDuration>k__BackingField: 0.05
+  <CooldownDuration>k__BackingField: 0.15
+  <CameraShake>k__BackingField: {x: 0, y: 0.025, z: 0.05}

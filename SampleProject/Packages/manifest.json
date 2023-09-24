@@ -1,5 +1,16 @@
 {
   "dependencies": {
+    "com.ekaka.character": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.character",
+    "com.ekaka.core": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.core",
+    "com.ekaka.damage": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.damage",
+    "com.ekaka.data": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.data",
+    "com.ekaka.inventory": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.inventory",
+    "com.ekaka.locomotion": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.locomotion",
+    "com.ekaka.npc": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.npc",
+    "com.ekaka.player": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.player",
+    "com.ekaka.sensors": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.sensors",
+    "com.ekaka.ui": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.ui",
+    "com.ekaka.weapon": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.weapon",
     "com.unity.collab-proxy": "1.17.7",
     "com.unity.feature.development": "1.0.1",
     "com.unity.ide.rider": "3.0.16",

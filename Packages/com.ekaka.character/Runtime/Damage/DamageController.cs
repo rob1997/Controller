@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 
 namespace Character.Damage
 {
-    public abstract class DamageController : Controller
+    public class DamageController : Controller
     {
         [Tooltip("A velocity threshold if exceeded during falling will damage the character on landing")]
         [SerializeField] private float _fallDamageVelocityThreshold = 10f;

@@ -30,6 +30,15 @@ namespace Data.Main
                 
                 //only initialize Storable that wasn't initialized before
                 if (wrapper.Initialized) continue;
+
+                // check if file exists before loading
+                if (!wrapper.FileExists)
+                {
+                    // create new file if it doesn't exist
+                    wrapper.ResetData(false);
+                    
+                    return;
+                }
                 
                 //load data from file
                 wrapper.LoadData();
