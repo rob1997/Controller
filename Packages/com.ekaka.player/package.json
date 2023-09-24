@@ -14,7 +14,9 @@
     "com.unity.cinemachine": "2.6.0",
     "com.unity.postprocessing": "3.1.1",
     "com.unity.render-pipelines.universal": "10.6.0",
-    "com.unity.textmeshpro": "3.0.6",
+    "com.unity.textmeshpro": "3.0.6"
+  },
+  "gitDependencies": {
     "com.ekaka.core": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.core#main",
     "com.ekaka.data": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.data#main",
     "com.ekaka.sensors": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.sensors#main",

@@ -9,7 +9,7 @@
     "basic"
   ],
   "category": "Unity",
-  "dependencies": {
+  "gitDependencies": {
     "com.unity.nuget.newtonsoft-json": "3.0.2",
     "com.ekaka.core": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.core#main"
   }
