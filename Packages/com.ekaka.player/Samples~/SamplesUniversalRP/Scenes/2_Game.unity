@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.1796089, g: 0.22489224, b: 0.30646396, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: cf0d4b49947255c4484c4c37d14f1252, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 82902d27866cd8e4096c5e8fd7ad9c35, type: 2}
   m_LightingSettings: {fileID: 464965172}
 --- !u!196 &4
 NavMeshSettings:
@@ -17291,7 +17291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <References>k__BackingField:
-  - <Id>k__BackingField: 95505599-68e2-4c70-89bd-f6d769ccb95c
+  - <Id>k__BackingField: aab3ef51-1014-400e-af08-976b5a0c6a6f
     <TypeName>k__BackingField: Player.Character.Player, ekaka.player.runtime, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     <Reference>k__BackingField: {fileID: 584418624}

@@ -909,7 +909,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e9a4deeda10c0d469c107bb09ae0e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collider: {fileID: 3088743851970066082}
   <Priority>k__BackingField: 1
 --- !u!65 &3088743851970066082
 BoxCollider:
@@ -1848,7 +1847,7 @@ MonoBehaviour:
   <Targeter>k__BackingField: {fileID: 0}
   <Vitality>k__BackingField: {fileID: 2597089403928404544}
   SerializedData:
-    <Id>k__BackingField: 9b3b313d-71c2-4acc-91e3-9c41f7c181a9
+    <Id>k__BackingField: afb21571-27bf-4629-8668-1e5bf6ae4f89
     <DataModel>k__BackingField:
       Position:
         X: 0
@@ -2325,7 +2324,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e9a4deeda10c0d469c107bb09ae0e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collider: {fileID: 3870193229724041064}
   <Priority>k__BackingField: 0.5
 --- !u!65 &3870193229724041064
 BoxCollider:
@@ -3426,7 +3424,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e9a4deeda10c0d469c107bb09ae0e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collider: {fileID: 8440814997325670555}
   <Priority>k__BackingField: 0.75
 --- !u!65 &8440814997325670555
 BoxCollider:
