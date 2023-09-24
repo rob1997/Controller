@@ -11,7 +11,7 @@
     "basic"
   ],
   "category": "Unity",
-  "gitDependencies": {
+  "dependencies": {
     "com.ekaka.core": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.core",
     "com.ekaka.sensors": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.sensors",
     "com.ekaka.damage": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.damage"

@@ -4,7 +4,11 @@
       "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.character",
       "depth": 0,
       "source": "local",
-      "dependencies": {}
+      "dependencies": {
+        "com.ekaka.core": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.core",
+        "com.ekaka.sensors": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.sensors",
+        "com.ekaka.damage": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.damage"
+      }
     },
     "com.ekaka.core": {
       "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.core",
@@ -19,35 +23,50 @@
       "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.damage",
       "depth": 0,
       "source": "local",
-      "dependencies": {}
+      "dependencies": {
+        "com.ekaka.core": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.core",
+        "com.ekaka.sensors": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.sesnors"
+      }
     },
     "com.ekaka.data": {
       "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.data",
       "depth": 0,
       "source": "local",
       "dependencies": {
-        "com.unity.nuget.newtonsoft-json": "3.0.2"
+        "com.unity.nuget.newtonsoft-json": "3.0.2",
+        "com.ekaka.core": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.core"
       }
     },
     "com.ekaka.inventory": {
       "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.inventory",
       "depth": 0,
       "source": "local",
-      "dependencies": {}
+      "dependencies": {
+        "com.ekaka.core": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.core",
+        "com.ekaka.character": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.character"
+      }
     },
     "com.ekaka.locomotion": {
       "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.locomotion",
       "depth": 0,
       "source": "local",
       "dependencies": {
-        "com.unity.animation.rigging": "1.0.3"
+        "com.unity.animation.rigging": "1.0.3",
+        "com.ekaka.core": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.core",
+        "com.ekaka.sensors": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.sensors",
+        "com.ekaka.character": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.character"
       }
     },
     "com.ekaka.npc": {
       "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.npc",
       "depth": 0,
       "source": "local",
-      "dependencies": {}
+      "dependencies": {
+        "com.ekaka.core": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.core",
+        "com.ekaka.sensors": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.sensors",
+        "com.ekaka.damage": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.damage",
+        "com.ekaka.character": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.character"
+      }
     },
     "com.ekaka.player": {
       "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.player",
@@ -58,14 +77,26 @@
         "com.unity.cinemachine": "2.6.0",
         "com.unity.postprocessing": "3.1.1",
         "com.unity.render-pipelines.universal": "10.6.0",
-        "com.unity.textmeshpro": "3.0.6"
+        "com.unity.textmeshpro": "3.0.6",
+        "com.ekaka.core": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.core",
+        "com.ekaka.data": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.data",
+        "com.ekaka.sensors": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.sensors",
+        "com.ekaka.damage": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.damage",
+        "com.ekaka.character": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.character",
+        "com.ekaka.ui": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.ui",
+        "com.ekaka.locomotion": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.locomotion",
+        "com.ekaka.inventory": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.inventory",
+        "com.ekaka.weapon": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.weapon",
+        "com.ekaka.npc": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.npc"
       }
     },
     "com.ekaka.sensors": {
       "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.sensors",
       "depth": 0,
       "source": "local",
-      "dependencies": {}
+      "dependencies": {
+        "com.ekaka.core": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.core"
+      }
     },
     "com.ekaka.ui": {
       "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.ui",
@@ -74,7 +105,8 @@
       "dependencies": {
         "com.unity.inputsystem": "1.0.2",
         "com.unity.textmeshpro": "3.0.6",
-        "com.unity.addressables": "1.18.19"
+        "com.unity.addressables": "1.18.19",
+        "com.ekaka.core": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.core"
       }
     },
     "com.ekaka.weapon": {
@@ -83,7 +115,13 @@
       "source": "local",
       "dependencies": {
         "com.unity.inputsystem": "1.0.2",
-        "com.unity.animation.rigging": "1.0.3"
+        "com.unity.animation.rigging": "1.0.3",
+        "com.ekaka.core": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.core",
+        "com.ekaka.sensors": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.sensors",
+        "com.ekaka.damage": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.damage",
+        "com.ekaka.character": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.character",
+        "com.ekaka.locomotion": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.locomotion",
+        "com.ekaka.inventory": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.inventory"
       }
     },
     "com.unity.addressables": {
@@ -291,22 +329,6 @@
         "com.unity.searcher": "4.9.1"
       }
     },
-    "com.unity.sysroot": {
-      "version": "2.0.7",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.sysroot.linux-x86_64": {
-      "version": "2.0.6",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.sysroot": "2.0.7"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.test-framework": {
       "version": "1.1.31",
       "depth": 0,
@@ -346,16 +368,6 @@
         "com.unity.modules.animation": "1.0.0",
         "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.toolchain.win-x86_64-linux-x86_64": {
-      "version": "2.0.6",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.sysroot": "2.0.7",
-        "com.unity.sysroot.linux-x86_64": "2.0.6"
       },
       "url": "https://packages.unity.com"
     },

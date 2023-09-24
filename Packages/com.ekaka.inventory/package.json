@@ -9,7 +9,7 @@
     "items"
   ],
   "category": "Unity",
-  "gitDependencies": {
+  "dependencies": {
     "com.ekaka.core": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.core",
     "com.ekaka.character": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.character"
   }

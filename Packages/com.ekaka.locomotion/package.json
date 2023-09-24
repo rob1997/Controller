@@ -10,9 +10,7 @@
   ],
   "category": "Unity",
   "dependencies": {
-    "com.unity.animation.rigging": "1.0.3"
-  },
-  "gitDependencies": {
+    "com.unity.animation.rigging": "1.0.3",
     "com.ekaka.core": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.core",
     "com.ekaka.sensors": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.sensors",
     "com.ekaka.character": "https://github.com/rob1997/Controller.git?path=/Packages/com.ekaka.character"
