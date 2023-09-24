@@ -1,0 +1,31 @@
+name: Duplicate Package Sample Workflow
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  duplicate:
+    name: Duplicate Project Samples
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Run duplicate script file
+        run: |
+          export SOURCE_DIRECTORY="${GITHUB_WORKSPACE}/SampleProject/Assets/Samples/Player/0.0.1/Universal RP Demo/"
+          export DESTINATION_DIRECTORY="${GITHUB_WORKSPACE}/Packages/com.ekaka.player/Samples~/SamplesUniversalRP/"
+          rm -r "$DESTINATION_DIRECTORY"
+          cp -r "$SOURCE_DIRECTORY" "$DESTINATION_DIRECTORY"
+
+      - name: Commit and Push
+        run: |
+          git config user.email $git_email
+          git config user.name "${{ github.actor }}"
+          git add ./Packages/com.ekaka.player/Samples~/SamplesUniversalRP/. -f
+          git diff-index --cached --quiet HEAD || git commit -m "Auto-duplicate Package Samples"
+          git push
+        env:
+          git_email: "${{ github.actor }}@users.noreply.github.com"
