@@ -22,6 +22,9 @@ namespace Player.Controllers
 
         public override void Initialize(Actor actor)
         {
+            // load bag from saved/persistent data before initializing
+            Bag = ((Character.Player) actor).SerializedData.DataModel.Bag ?? new Bag();
+
             base.Initialize(actor);
             
             _input = InputManager.Instance.InputActions;

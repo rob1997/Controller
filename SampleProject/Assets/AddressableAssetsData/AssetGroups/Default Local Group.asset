@@ -45,6 +45,22 @@ MonoBehaviour:
     m_Address: Assets/Samples/Player/0.0.1/Universal RP Demo/Prefabs/Ui/UiRoot.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: d73dd513aa6df7e4592c370676ebdb6b
+    m_Address: Assets/Samples/Player/0.0.1/Universal RP Demo/Resources/Inventory/Items/Weapons/Firearms/Uzi.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5f7c866fd253a8144a2bfc5779eadc02
+    m_Address: Assets/Samples/Player/0.0.1/Universal RP Demo/Resources/Inventory/Items/Weapons/Firearms/M1911.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1278cc6b296ad384e84e44614537732a
+    m_Address: Assets/Samples/Player/0.0.1/Universal RP Demo/Resources/Inventory/Items/Weapons/Firearms/Ak74.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9d8c7d622d78bdb49be0dc75ddccd771
+    m_Address: Assets/Samples/Player/0.0.1/Universal RP Demo/Resources/Inventory/Items/Weapons/Firearms/Bennelli_M4.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 4a276f2cfca8a394b80efc790ee29ee3, type: 2}
   m_SchemaSet:

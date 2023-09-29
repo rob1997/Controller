@@ -183,7 +183,7 @@ namespace Ui.Main
                         
                         catch (Exception e)
                         {
-                            Core.Utils.Utils.LogException(e);
+                            e.LogToUnity();
                         }
                         
                         //check and load next/queued modal
@@ -236,7 +236,7 @@ namespace Ui.Main
                             
                 catch (Exception e)
                 {
-                    Core.Utils.Utils.LogException(e);
+                    e.LogToUnity();
                 }
                             
                 //unload onClick after action

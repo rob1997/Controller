@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using Core.Utils;
+using Data.Utils;
+using Newtonsoft.Json;
 using UnityEngine;
 
 namespace Inventory.Main.Item
@@ -14,6 +16,7 @@ namespace Inventory.Main.Item
 
         [SerializeField] [HideInInspector] private string id = Utils.NewGuid();
 
+        [JsonProperty]
         public string Id
         {
             get
@@ -31,9 +34,15 @@ namespace Inventory.Main.Item
             private set => id = value;
         }
 
-        public string Title => reference.Title;
+        public string Title => Reference.Title;
 
-        public ItemReference Reference => reference;
+        [JsonProperty] [JsonConverter(typeof(ASO_JsonConverter<ItemReference>))]
+        public ItemReference Reference
+        {
+            get => reference;
+
+            private set => reference = (T) value;
+        }
 
         public TItem Clone<TItem>() where TItem : IItem
         {

@@ -181,7 +181,7 @@ namespace Data.GlobalReference
 
                 catch (Exception e)
                 {
-                    Utils.LogException(e);
+                    e.LogToUnity();
 
                     return false;
                 }
@@ -209,7 +209,7 @@ namespace Data.GlobalReference
 
             catch (Exception e)
             {
-                Utils.LogException(e);
+                e.LogToUnity();
 
                 return false;
             }
@@ -236,7 +236,7 @@ namespace Data.GlobalReference
 
             catch (Exception e)
             {
-                Utils.LogException(e);
+                e.LogToUnity();
 
                 return false;
             }

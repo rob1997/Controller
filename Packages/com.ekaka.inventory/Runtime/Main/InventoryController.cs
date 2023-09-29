@@ -74,7 +74,7 @@ namespace Inventory.Main
         [HideInInspector] public GenericDictionary<WearableSlotType, WearableSlot> Wearables = GenericDictionary<WearableSlotType, WearableSlot>
             .ToGenericDictionary(Utils.GetEnumValues<WearableSlotType>().ToDictionary(s => s, s => new WearableSlot()));
 
-        [field: SerializeField] public Bag Bag { get; private set; }
+        [field: SerializeField] public Bag Bag { get; protected set; } = new Bag();
         
         private Transform _characterTransform;
 

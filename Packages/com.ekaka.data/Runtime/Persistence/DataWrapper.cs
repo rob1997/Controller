@@ -48,7 +48,10 @@ namespace Data.Persistence
 
             try
             {
-                File.WriteAllText(DataPath, JsonConvert.SerializeObject(DataModel));
+                File.WriteAllText(DataPath, JsonConvert.SerializeObject(DataModel, new JsonSerializerSettings
+                {
+                    TypeNameHandling = TypeNameHandling.Auto
+                }));
                 
                 Debug.Log($"file saved at {DataPath}");
 
@@ -57,7 +60,7 @@ namespace Data.Persistence
             
             catch (Exception e)
             {
-                Utils.LogException(e);
+                e.LogToUnity();
                 
                 return false;
             }
@@ -76,7 +79,10 @@ namespace Data.Persistence
             {
                 string jsonText = File.ReadAllText(DataPath);
                 //assign DataModel
-                DataModel = JsonConvert.DeserializeObject<TDataModel>(jsonText);
+                DataModel = JsonConvert.DeserializeObject<TDataModel>(jsonText, new JsonSerializerSettings
+                {
+                    TypeNameHandling = TypeNameHandling.Auto
+                });
 
                 //set initialized to true
                 if (!Initialized)
@@ -89,7 +95,7 @@ namespace Data.Persistence
             
             catch (Exception e)
             {
-                Utils.LogException(e);
+                e.LogToUnity();
 
                 return false;
             }
@@ -110,7 +116,7 @@ namespace Data.Persistence
                     
                     catch (Exception e)
                     {
-                        Utils.LogException(e);
+                        e.LogToUnity();
                         
                         return false;
                     }

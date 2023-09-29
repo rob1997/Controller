@@ -21,7 +21,7 @@ namespace Core.Utils
                     Debug.LogError($"Can't load {typeof(T)} asset at {address}");
                     
                     //in case of exception
-                    LogException(handle.OperationException);
+                    handle.OperationException.LogToUnity();
                     
                     return;
                 }
@@ -52,7 +52,7 @@ namespace Core.Utils
             });
         }
 
-        public static void LogException(Exception exception)
+        public static void LogToUnity(this Exception exception)
         {
             Debug.LogError($"{exception?.Message} {exception?.StackTrace} {exception}");
         }

@@ -38,7 +38,10 @@ namespace Inventory.Editor
             {
                 if (GUILayout.Button(new GUIContent(nameof(Bag), "Opens Bag Window")))
                 {
-                    _controller.Bag.Initialize();
+                    if (!_controller.Bag.Initialized)
+                    {
+                        _controller.Bag.Initialize();
+                    }
 
                     BagWindow.Initialize(_controller);
                 }

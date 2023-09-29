@@ -4,34 +4,41 @@ using Core.Game;
 using Core.Utils;
 using UnityEngine;
 using Inventory.Main.Item;
+using Newtonsoft.Json;
 
 namespace Inventory.Main
 {
-    [CreateAssetMenu(order = 0, fileName = nameof(Bag), menuName = GameManager.StudioPrefix + "/Inventory/Bag")]
-    public class Bag : ScriptableObject
+    [Serializable]
+    public class Bag
     {
-        [field: SerializeField] public int SupplementSlotCount { get; private set; } = 15;
+        [JsonProperty] [field: SerializeField]
+        public int SupplementSlotCount { get; private set; } = 15;
         
-        [field: SerializeField] public int GearSlotCount { get; private set; } = 25;
+        [JsonProperty] [field: SerializeField]
+        public int GearSlotCount { get; private set; } = 25;
         
-        [field: SerializeField] public float Limit { get; private set; } = 50f;
+        [JsonProperty] [field: SerializeField]
+        public float Limit { get; private set; } = 50f;
         
-        [field: SerializeField] public bool Initialized { get; private set; }
+        [JsonIgnore] public bool Initialized { get; private set; }
 
-        public float Weight => GetTotalSupplementWeight() + GetTotalGearWeight();
+        [JsonIgnore] public float Weight => GetTotalSupplementWeight() + GetTotalGearWeight();
 
-        [field: SerializeReference] public IGear[] Gears { get; private set; }
+        [JsonProperty] [field: HideInInspector] [field: SerializeReference]
+        public IGear[] Gears { get; private set; }
         
-        [field: SerializeReference] public ISupplement[] Supplements { get; private set; }
+        [JsonProperty] [field: HideInInspector] [field: SerializeReference]
+        public ISupplement[] Supplements { get; private set; }
         
         public void Initialize()
         {
             if (Initialized) return;
 
-            Supplements = new ISupplement[SupplementSlotCount];
+            //if null initialize
+            Supplements ??= new ISupplement[SupplementSlotCount];
 
-            Gears = new IGear[GearSlotCount];
-
+            Gears ??= new IGear[GearSlotCount];
+            
             Initialized = true;
 
             Debug.Log("Initialized Bag...");
@@ -182,12 +189,22 @@ namespace Inventory.Main
 
         public void ResizeGearSlots(int slots)
         {
-            GearSlotCount = Mathf.Clamp(slots, 0, int.MaxValue);
+            Gears = Resize(slots, Gears);
         }
         
         public void ResizeSupplementSlots(int slots)
         {
-            SupplementSlotCount = Mathf.Clamp(slots, 0, int.MaxValue);
+            Supplements = Resize(slots, Supplements);
+        }
+
+        // resizes items collection
+        private T[] Resize<T>(int newSlots, T[] arrayToResize) where T : IItem
+        {
+            newSlots = Mathf.Clamp(newSlots, 0, int.MaxValue);
+            
+            Array.Resize(ref arrayToResize, newSlots);
+
+            return arrayToResize;
         }
         
         public void ResizeLimit(float limit)
