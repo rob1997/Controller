@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace Character.Main
 {
-    public abstract class Actor : MonoBehaviour, ITargetable, IDamagable
+    public abstract class Actor : MonoBehaviour, IDamagable
     {
         #region Ready
 

@@ -52,9 +52,16 @@ namespace Core.Utils
             });
         }
 
-        public static void LogToUnity(this Exception exception)
+        public static void LogToUnity(this Exception exception, string prefix = default)
         {
-            Debug.LogError($"{exception?.Message} {exception?.StackTrace} {exception}");
+            string message = $"{exception?.Message} {exception?.StackTrace} {exception}";
+
+            if (!string.IsNullOrEmpty(prefix))
+            {
+                message = $"{prefix} : {message}";
+            }
+            
+            Debug.LogError(message);
         }
         
         public static T[] GetEnumValues<T>() where T : struct, Enum
