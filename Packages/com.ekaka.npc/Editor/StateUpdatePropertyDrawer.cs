@@ -7,8 +7,8 @@ using UnityEngine;
 
 namespace NPC.Editor
 {
-    [CustomPropertyDrawer(typeof(FunctionRunMode))]
-    public class FunctionRunModePropertyDrawer : PropertyDrawer
+    [CustomPropertyDrawer(typeof(StateUpdate))]
+    public class StateUpdatePropertyDrawer : PropertyDrawer
     {
         private const float Space = 10f;
         
@@ -28,13 +28,13 @@ namespace NPC.Editor
             {
                 MoveRectDown();
                 
-                SerializedProperty runModeTypeProperty = property.FindPropertyRelative(nameof(FunctionRunMode.RunModeType).GetPropertyName());
+                SerializedProperty updateTypeProperty = property.FindPropertyRelative(nameof(StateUpdate.UpdateType).GetPropertyName());
 
-                EditorGUI.PropertyField(_position, runModeTypeProperty, new GUIContent(runModeTypeProperty.displayName, runModeTypeProperty.tooltip));
+                EditorGUI.PropertyField(_position, updateTypeProperty, new GUIContent(updateTypeProperty.displayName, updateTypeProperty.tooltip));
                 
-                if (runModeTypeProperty.GetEnumValue(out FunctionRunModeType runModeType) && runModeType == FunctionRunModeType.Custom)
+                if (updateTypeProperty.GetEnumValue(out StateUpdateType updateType) && updateType == StateUpdateType.Custom)
                 {
-                    DrawCustomRunModeTypeFields(property);
+                    DrawCustomUpdateTypeFields(property);
                 }
             }
 
@@ -55,14 +55,14 @@ namespace NPC.Editor
                 new GUIContent(relativeProperty.displayName, relativeProperty.tooltip));
         }
         
-        private void DrawCustomRunModeTypeFields(SerializedProperty runModeProperty)
+        private void DrawCustomUpdateTypeFields(SerializedProperty stateUpdateProperty)
         {
             
-            DrawRelativeProperty(runModeProperty, nameof(FunctionRunMode.Delay));
+            DrawRelativeProperty(stateUpdateProperty, nameof(StateUpdate.Delay));
             
-            DrawRelativeProperty(runModeProperty, nameof(FunctionRunMode.Interval));
+            DrawRelativeProperty(stateUpdateProperty, nameof(StateUpdate.Interval));
             
-            DrawRelativeProperty(runModeProperty, nameof(FunctionRunMode.Frequency));
+            DrawRelativeProperty(stateUpdateProperty, nameof(StateUpdate.Frequency));
         }
 
         private void MoveRectDown()

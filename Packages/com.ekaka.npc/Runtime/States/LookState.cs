@@ -8,9 +8,9 @@ using NPC.Main;
 using Sensors.Main;
 using UnityEngine;
 
-namespace NPC.Functions
+namespace NPC.States
 {
-    public class LookFunction : Function
+    public class LookState : State
     {
         [field: Tooltip("Vision viewCast per how many seconds? 0 means every frame")]
         [field: SerializeField]
@@ -81,9 +81,9 @@ namespace NPC.Functions
             Targeter = controller.Actor.Targeter;
         }
 
-        protected override void EnableFunction()
+        protected override void EnableState()
         {
-            base.EnableFunction();
+            base.EnableState();
 
             //reset values
             _index = 0;
@@ -93,7 +93,7 @@ namespace NPC.Functions
             WayPointIndexUpdated();
         }
 
-        public override void Run()
+        public override void UpdateState()
         {
             //finished rotating to wayPoint and is now waiting
             if (_isWaiting)

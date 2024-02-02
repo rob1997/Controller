@@ -175,6 +175,7 @@ ParentConstraint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437313607789798}
   m_Enabled: 1
+  serializedVersion: 2
   m_Weight: 1
   m_TranslationAtRest: {x: 0, y: 1.1999999, z: 0}
   m_RotationAtRest: {x: 0, y: 0, z: 0}
@@ -188,7 +189,7 @@ ParentConstraint:
   m_AffectRotationX: 0
   m_AffectRotationY: 1
   m_AffectRotationZ: 0
-  m_IsContraintActive: 1
+  m_Active: 1
   m_IsLocked: 0
   m_Sources:
   - sourceTransform: {fileID: 4597034265451690}
@@ -323,7 +324,7 @@ GameObject:
   - component: {fileID: 6823452317137947041}
   - component: {fileID: 5567617704220118938}
   - component: {fileID: 1892325345848220918}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,9 +377,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875090778556656}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 3, y: 2.5, z: 3.5}
   m_Center: {x: 0, y: 1, z: 0.5}
 --- !u!114 &5567617704220118938
@@ -485,7 +494,7 @@ MonoBehaviour:
   <Muzzle>k__BackingField: {fileID: 4703932692914808}
   <TargetLayerMask>k__BackingField:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 64
   <IgnoreTagMask>k__BackingField:
     <SelectedTags>k__BackingField: []
   <VerticalFov>k__BackingField: 60
@@ -547,7 +556,7 @@ GameObject:
   - component: {fileID: 2170474423713601288}
   - component: {fileID: 5142137972580915441}
   m_Layer: 0
-  m_Name: ShootFunction
+  m_Name: ShootState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -702,7 +711,7 @@ GameObject:
   - component: {fileID: 6679653882964224338}
   - component: {fileID: 4323851292615867839}
   m_Layer: 0
-  m_Name: TargetFunction
+  m_Name: TargetState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -736,18 +745,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ed4cc931fd390b4d8b9272152b88179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <IsUnique>k__BackingField: 0
-  <RunOnInitialize>k__BackingField: 0
+  <IsUnique>k__BackingField: 1
+  <EnableOnInitialize>k__BackingField: 0
   <BreakFunctions>k__BackingField:
   - {fileID: 7163921774270724331}
   <NextFunctions>k__BackingField: []
-  <RunMode>k__BackingField:
-    <RunModeType>k__BackingField: 0
+  <StateUpdate>k__BackingField:
+    <UpdateType>k__BackingField: 0
     <Interval>k__BackingField: 0
     <Delay>k__BackingField: 0
     <Frequency>k__BackingField: 0
-  _subFunctions:
-  - <Value>k__BackingField: {fileID: 5142137972580915441}
+  <SubStates>k__BackingField:
+  - {fileID: 5142137972580915441}
   <LookFrom>k__BackingField: {fileID: 4597034265451690}
   <LookSpeed>k__BackingField: 25
   <LookSpeedMultiplier>k__BackingField: 5
@@ -757,7 +766,7 @@ MonoBehaviour:
   <MaxLookLimit>k__BackingField: {x: 45, y: 45}
   <LookLayerMask>k__BackingField:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 64
   <IgnoreMask>k__BackingField:
     <SelectedTags>k__BackingField: []
 --- !u!1 &6051623270660360232
@@ -802,7 +811,7 @@ GameObject:
   - component: {fileID: 2576144122142555255}
   - component: {fileID: 7163921774270724331}
   m_Layer: 0
-  m_Name: LookFunction
+  m_Name: LookState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -837,13 +846,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d767ee51b25d3cf4584336e8a47060d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <IsUnique>k__BackingField: 0
-  <RunOnInitialize>k__BackingField: 1
+  <IsUnique>k__BackingField: 1
+  <EnableOnInitialize>k__BackingField: 1
   <BreakFunctions>k__BackingField:
   - {fileID: 4323851292615867839}
   <NextFunctions>k__BackingField: []
-  <RunMode>k__BackingField:
-    <RunModeType>k__BackingField: 0
+  <StateUpdate>k__BackingField:
+    <UpdateType>k__BackingField: 0
     <Interval>k__BackingField: 0
     <Delay>k__BackingField: 0
     <Frequency>k__BackingField: 0
@@ -858,7 +867,7 @@ MonoBehaviour:
   <LookFrom>k__BackingField: {fileID: 4597034265451690}
   <LookForLayerMask>k__BackingField:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 64
   <IgnoreTagMask>k__BackingField:
     <SelectedTags>k__BackingField: []
 --- !u!1 &8272840132795850125
@@ -902,9 +911,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8272840132795850125}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 2.5, y: 2, z: 3}
   m_Center: {x: 0, y: 1, z: 0.5}
 --- !u!114 &9209220298300681814

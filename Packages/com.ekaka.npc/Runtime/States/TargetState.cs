@@ -8,7 +8,7 @@ using Sensors.Main;
 using Sensors.Utils;
 using UnityEngine;
 
-public class TargetFunction : ContainerFunction<TargetFunction>
+public class TargetState : ContainerState<TargetState>
 {
     [field: SerializeField] public Transform LookFrom { get; private set; }
 
@@ -49,7 +49,7 @@ public class TargetFunction : ContainerFunction<TargetFunction>
         Targeter = controller.Actor.Targeter;
     }
 
-    protected override void EnableContainerFunction()
+    protected override void EnableContainerState()
     {
         ITargetable[] results = Targeter.FindTargets<ITargetable>();
         
@@ -71,7 +71,7 @@ public class TargetFunction : ContainerFunction<TargetFunction>
         }
     }
 
-    protected override void RunContainerFunction()
+    protected override void UpdateContainerState()
     {
         Vector3 origin = LookFrom.position;
 
@@ -96,9 +96,9 @@ public class TargetFunction : ContainerFunction<TargetFunction>
         CheckForTarget();
     }
 
-    protected override void DisableContainerFunction()
+    protected override void DisableContainerState()
     {
-        Debug.Log($"Disabling {nameof(TargetFunction)}...");
+        Debug.Log($"Disabling {nameof(TargetState)}...");
     }
 
     private void CheckForTarget()

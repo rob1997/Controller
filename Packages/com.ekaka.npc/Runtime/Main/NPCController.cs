@@ -9,74 +9,74 @@ namespace NPC.Main
 {
     public class NPCController : Controller
     {
-        private Function[] _functions = { };
+        private State[] _states = { };
 
-        private Function[] EnabledFunctions => _functions.Where(f => f.State == FunctionState.Enabled).ToArray();
+        private State[] EnabledStates => _states.Where(f => f.Status == StateStatus.Enabled).ToArray();
         
         public override void Initialize(Actor actor)
         {
             base.Initialize(actor);
 
-            Function[] functions = GetComponentsInChildren<Function>();
+            State[] states = GetComponentsInChildren<State>();
         
-            foreach (Function function in functions)
+            foreach (State state in states)
             {
-                if (AddFunction(function))
+                if (AddState(state))
                 {
-                    function.Initialize(this);
+                    state.Initialize(this);
                 }
             }
         }
 
-        protected bool AddFunction<T>(T function) where T : Function
+        protected bool AddState<T>(T state) where T : State
         {
-            Type type = function.GetType();
+            Type type = state.GetType();
         
-            //function already exists
-            if (_functions.Any(f => f.GetType() == type && f.IsUnique))
+            //state already exists
+            if (_states.Any(f => f.GetType() == type && f.IsUnique))
             {
-                Debug.LogWarning($"can't add, {type.Name} is a unique {nameof(Function)}");
+                Debug.LogWarning($"can't add, {type.Name} is a unique {nameof(State)}");
             
                 return false;
             }
         
-            _functions = _functions.Append(function).ToArray();
+            _states = _states.Append(state).ToArray();
 
             return true;
         }
 
         private void Update()
         {
-            RunFunctions(FunctionRunModeType.Update);
-            //update custom functions in update to make update time more accurate
-            RunFunctions(FunctionRunModeType.Custom);
+            UpdateStates(StateUpdateType.Update);
+            //update custom states in update to make update time more accurate
+            UpdateStates(StateUpdateType.Custom);
         }
         
         private void FixedUpdate()
         {
-            RunFunctions(FunctionRunModeType.FixedUpdate);
+            UpdateStates(StateUpdateType.FixedUpdate);
         }
 
         private void LateUpdate()
         {
-            RunFunctions(FunctionRunModeType.LateUpdate);
+            UpdateStates(StateUpdateType.LateUpdate);
         }
 
-        private void RunFunctions(FunctionRunModeType runModeType)
+        private void UpdateStates(StateUpdateType updateType)
         {
-            foreach (Function function in EnabledFunctions.Where(f => f.RunMode.RunModeType == runModeType))
+            foreach (State state in EnabledStates.Where(f => f.StateUpdate.UpdateType == updateType))
             {
-                switch (runModeType)
+                switch (updateType)
                 {
-                    case FunctionRunModeType.Custom:
+                    case StateUpdateType.Custom:
                         
-                        if (function.RunMode.UpdateTime())
+                        if (state.StateUpdate.UpdateTime())
                         {
-                            function.Run();
-                            //check if function is completed/run frequency times
-                            if (function.RunMode.Completed)
+                            state.UpdateState();
+                            //check if state is completed/update frequency times
+                            if (state.StateUpdate.Completed)
                             {
-                                function.CompleteFunction();
+                                state.CompleteFunction();
                             }
                         }
                         
@@ -84,7 +84,7 @@ namespace NPC.Main
                 
                     default:
                         
-                        function.Run();
+                        state.UpdateState();
                         
                         break;
                 }

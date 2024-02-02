@@ -5,9 +5,9 @@ using Damage.Main;
 using NPC.Main;
 using Sensors.Main;
 
-namespace NPC.Functions
+namespace NPC.States
 {
-    public class ShootFunction : SubFunction<TargetFunction>
+    public class ShootState : SubState<TargetState>
     {
         [Tooltip("How many shots per second")]
         [SerializeField] private float _fireRate;
@@ -16,20 +16,20 @@ namespace NPC.Functions
 
         private float _time;
 
-        private Targeter Targeter => ContainerFunction.Targeter;
+        private Targeter Targeter => ContainerState.Targeter;
 
         private IDamagable _damagable;
         
-        protected override void EnableFunction()
+        protected override void EnableState()
         {
-            base.EnableFunction();
+            base.EnableState();
             
-            _damagable = ContainerFunction.Target.Targetable as IDamagable;
+            _damagable = ContainerState.Target.Targetable as IDamagable;
             
             _time = Time.realtimeSinceStartup;
         }
 
-        public override void Run()
+        public override void UpdateState()
         {
             float delta = Time.realtimeSinceStartup - _time;
 
@@ -49,11 +49,11 @@ namespace NPC.Functions
             //check hit
             if (Physics.Raycast(Targeter.Muzzle.position, Targeter.Muzzle.forward, out RaycastHit hitInfo))
             {
-                if (hitInfo.collider.TryGetComponent(out Target target) && target == ContainerFunction.Target)
+                if (hitInfo.collider.TryGetComponent(out Target target) && target == ContainerState.Target)
                 {
                     if (_damagable != null)
                     {
-                        float damageSent = _damage * ContainerFunction.Target.Priority;
+                        float damageSent = _damage * ContainerState.Target.Priority;
                     
                         DamageData hitData = new DamageData(new Dictionary<DamageType, float>
                             { { DamageType.Projectile, damageSent } }, _damagable.Damager, _damagable);
