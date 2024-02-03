@@ -7,7 +7,7 @@ using Sensors.Main;
 
 namespace NPC.States
 {
-    public class ShootState : SubState<TargetState>
+    public class ShootBlock : StateBlock<TargetState>
     {
         [Tooltip("How many shots per second")]
         [SerializeField] private float _fireRate;
@@ -20,16 +20,16 @@ namespace NPC.States
 
         private IDamagable _damagable;
         
-        protected override void EnableState()
+        protected override void EnableBlock()
         {
-            base.EnableState();
+            base.EnableBlock();
             
             _damagable = ContainerState.Target.Targetable as IDamagable;
             
             _time = Time.realtimeSinceStartup;
         }
 
-        public override void UpdateState()
+        public override void UpdateBlock()
         {
             float delta = Time.realtimeSinceStartup - _time;
 

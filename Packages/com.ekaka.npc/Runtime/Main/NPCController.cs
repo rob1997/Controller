@@ -9,17 +9,17 @@ namespace NPC.Main
 {
     public class NPCController : Controller
     {
-        private State[] _states = { };
+        private StateBase[] _states = { };
 
-        private State[] EnabledStates => _states.Where(f => f.Status == StateStatus.Enabled).ToArray();
+        private StateBase[] EnabledStates => _states.Where(f => f.Status == StateStatus.Enabled).ToArray();
         
         public override void Initialize(Actor actor)
         {
             base.Initialize(actor);
 
-            State[] states = GetComponentsInChildren<State>();
+            StateBase[] states = GetComponentsInChildren<StateBase>();
         
-            foreach (State state in states)
+            foreach (StateBase state in states)
             {
                 if (AddState(state))
                 {
@@ -28,14 +28,14 @@ namespace NPC.Main
             }
         }
 
-        protected bool AddState<T>(T state) where T : State
+        protected bool AddState<T>(T state) where T : StateBase
         {
             Type type = state.GetType();
         
             //state already exists
             if (_states.Any(f => f.GetType() == type && f.IsUnique))
             {
-                Debug.LogWarning($"can't add, {type.Name} is a unique {nameof(State)}");
+                Debug.LogWarning($"can't add, {type.Name} already exists.");
             
                 return false;
             }
@@ -64,7 +64,7 @@ namespace NPC.Main
 
         private void UpdateStates(StateUpdateType updateType)
         {
-            foreach (State state in EnabledStates.Where(f => f.StateUpdate.UpdateType == updateType))
+            foreach (StateBase state in EnabledStates.Where(f => f.StateUpdate.UpdateType == updateType))
             {
                 switch (updateType)
                 {
@@ -73,10 +73,13 @@ namespace NPC.Main
                         if (state.StateUpdate.UpdateTime())
                         {
                             state.UpdateState();
+                            
+                            state.TryExitState();
+                            
                             //check if state is completed/update frequency times
                             if (state.StateUpdate.Completed)
                             {
-                                state.CompleteFunction();
+                                state.DisableState();
                             }
                         }
                         
@@ -85,6 +88,8 @@ namespace NPC.Main
                     default:
                         
                         state.UpdateState();
+                        
+                        state.TryExitState();
                         
                         break;
                 }

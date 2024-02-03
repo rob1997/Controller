@@ -31,20 +31,47 @@ namespace NPC.Main
 
         #endregion
 
-        public StateStatus Status { get; private set; } = StateStatus.Initializing;
+        [field: Tooltip("If true there can only be one of this type per controller")]
+        [field: SerializeField] public bool IsUnique { get; private set; } = false;
 
-        protected virtual void EnableState()
+        //enables state on initialization
+        [field: SerializeField] public bool EnableOnInitialize { get; private set; } = false;
+        
+        [field: SerializeField] public StateUpdate StateUpdate { get; private set; }
+
+        public NPCController Controller { get; private set; }
+
+        public StateStatus Status { get; private set; } = StateStatus.Initializing;
+        
+        public virtual void Initialize(NPCController controller)
+        {
+            Controller = controller;
+
+            if (EnableOnInitialize)
+            {
+                EnableState();
+            }
+
+            else
+            {
+                DisableState();
+            }
+        }
+        
+        public virtual void EnableState()
         {
             ChangeStatus(StateStatus.Enabled);
         }
 
         public abstract void UpdateState();
 
-        protected virtual void DisableState()
+        public virtual void DisableState()
         {
             ChangeStatus(StateStatus.Disabled);
         }
 
+        public abstract void TryExitState();
+        
         private void ChangeStatus(StateStatus newStatus)
         {
             //same state

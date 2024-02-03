@@ -93,78 +93,37 @@ namespace NPC.Main
         }
     }
     
-    public abstract class State : StateBase
+    public abstract class State<T> : StateBase where T : State<T>
     {
-        [field: Tooltip("If true there can only be one of this type per controller")]
-        [field: SerializeField] public bool IsUnique { get; private set; } = false;
+        [field: SerializeField] public StateTransition<T>[] Transitions { get; private set; }
 
-        //enables state on initialization
-        [field: SerializeField] public bool EnableOnInitialize { get; private set; } = false;
-
-        //called/invoked/enabled on state exit before complete case
-        [field: SerializeField] public State[] BreakFunctions { get; private set; }
-
-        //called/invoked/enabled on completed
-        [field: SerializeField] public State[] NextFunctions { get; private set; }
-
-        [field: SerializeField] public StateUpdate StateUpdate { get; private set; }
-
-        public NPCController Controller { get; private set; }
-
-        public virtual void Initialize(NPCController controller)
+        public override void TryExitState()
         {
-            Controller = controller;
-
-            if (EnableOnInitialize)
-            {
-                EnableState();
-            }
-
-            else
-            {
-                DisableState();
-            }
-        }
-
-        public virtual void CompleteFunction()
-        {
-            //can't complete function from a different state
+            //can't exit function from a different state
             if (Status != StateStatus.Enabled)
             {
-                Debug.LogWarning($"can't complete {GetType().Name} {nameof(Main.State)} from {Status} {nameof(Status)}");
+                Debug.LogWarning($"can't exit {GetType().Name} from {Status} {nameof(Status)}");
                 
                 return;
             }
             
-            DisableState();
-
-            if (NextFunctions != null && NextFunctions.Length > 0)
+            foreach (var transition in Transitions)
             {
-                foreach (State nextFunction in NextFunctions)
+                if (transition.TryExitState())
                 {
-                    nextFunction.EnableState();
-                }
-            }
-        }
-
-        protected void BreakFunction()
-        {
-            //can't break function from a different state
-            if (Status != StateStatus.Enabled)
-            {
-                Debug.LogWarning($"can't break {GetType().Name} {nameof(Main.State)} from {Status} {nameof(Status)}");
-                
-                return;
-            }
+                    if (Status != StateStatus.Disabled)
+                    {
+                        DisableState();
+                    }
             
-            DisableState();
-            
-            //check and enable break functions
-            if (BreakFunctions != null && BreakFunctions.Length > 0)
-            {
-                foreach (State breakFunction in BreakFunctions)
-                {
-                    breakFunction.EnableState();
+                    //check and enable exit states
+                    if (transition.ExitStates != null)
+                    {
+                        foreach (var exitState in transition.ExitStates)
+                        {
+                            exitState.EnableState();
+                        }
+                    }
                 }
             }
         }

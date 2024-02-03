@@ -7,27 +7,27 @@ using UnityEngine.Serialization;
 
 namespace NPC.Main
 {
-    public abstract class ContainerState<T> : State where T : ContainerState<T>
+    public abstract class ContainerState<T> : State<T> where T : ContainerState<T>
     {
-        [field: SerializeField] protected SubState<T>[] SubStates { get; private set; }
+        [field: SerializeField] protected StateBlock<T>[] StateBlocks { get; private set; }
 
         public override void Initialize(NPCController controller)
         {
-            //initialize sub states first
-            foreach (var subState in SubStates)
+            //initialize state blocks first
+            foreach (var block in StateBlocks)
             {
-                subState.Initialize(this);
+                block.InitializeBlock(this);
             }
 
             base.Initialize(controller);
         }
 
-        protected override void EnableState()
+        public override void EnableState()
         {
-            //enable base before subStates
+            //enable base before stateBlocks
             EnableContainerState();
 
-            //this will trigger a callback for subStates to enable
+            //this will trigger a callback for stateBlocks to enable
             base.EnableState();
         }
 
@@ -35,15 +35,15 @@ namespace NPC.Main
         {
             UpdateContainerState();
 
-            UpdateSubStates();
+            UpdateStateBlocks();
         }
 
-        protected override void DisableState()
+        public override void DisableState()
         {
-            //disable base before subStates
+            //disable base before stateBlocks
             DisableContainerState();
 
-            //this will trigger a callback for subStates to disable
+            //this will trigger a callback for stateBlocks to disable
             base.DisableState();
         }
 
@@ -53,11 +53,11 @@ namespace NPC.Main
 
         protected abstract void DisableContainerState();
 
-        private void UpdateSubStates()
+        private void UpdateStateBlocks()
         {
-            foreach (var subState in SubStates)
+            foreach (var block in StateBlocks)
             {
-                subState.UpdateState();
+                block.UpdateBlock();
             }
         }
     }

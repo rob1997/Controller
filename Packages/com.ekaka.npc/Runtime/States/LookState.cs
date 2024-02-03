@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace NPC.States
 {
-    public class LookState : State
+    public class LookState : State<LookState>
     {
         [field: Tooltip("Vision viewCast per how many seconds? 0 means every frame")]
         [field: SerializeField]
@@ -81,7 +81,7 @@ namespace NPC.States
             Targeter = controller.Actor.Targeter;
         }
 
-        protected override void EnableState()
+        public override void EnableState()
         {
             base.EnableState();
 
