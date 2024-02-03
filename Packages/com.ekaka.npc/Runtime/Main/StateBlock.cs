@@ -20,17 +20,16 @@ namespace NPC.Main
         {
             ContainerState = (T) containerState;
 
-            containerState.OnStatusChanged += state =>
+            containerState.OnStatusChanged += isEnabled =>
             {
-                switch (state)
+                if (isEnabled)
                 {
-                    case StateStatus.Enabled:
-                        EnableBlock();
-                        break;
+                    EnableBlock();
+                }
                 
-                    case StateStatus.Disabled:
-                        DisableBlock();
-                        break;
+                else
+                {
+                    DisableBlock();
                 }
             };
         }

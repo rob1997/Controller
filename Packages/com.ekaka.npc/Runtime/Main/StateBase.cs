@@ -4,30 +4,13 @@ using UnityEngine;
 
 namespace NPC.Main
 {
-    public enum StateStatus
-    {
-        //initializing, once initialized it will enable/disable
-        Initializing,
-
-        //state is enabled, then it'll be running
-        Enabled,
-
-        //state isn't running
-        Disabled,
-    }
-
     public abstract class StateBase : MonoBehaviour
     {
         #region StatusChanged
 
-        public delegate void StatusChanged(StateStatus status);
+        public delegate void StatusChanged(bool isEnabled);
 
         public event StatusChanged OnStatusChanged;
-
-        private void InvokeStatusChanged(StateStatus status)
-        {
-            OnStatusChanged?.Invoke(status);
-        }
 
         #endregion
 
@@ -41,7 +24,7 @@ namespace NPC.Main
 
         public NPCController Controller { get; private set; }
 
-        public StateStatus Status { get; private set; } = StateStatus.Initializing;
+        public bool IsEnabled { get; private set; }
         
         public virtual void Initialize(NPCController controller)
         {
@@ -51,39 +34,34 @@ namespace NPC.Main
             {
                 EnableState();
             }
-
-            else
-            {
-                DisableState();
-            }
         }
         
         public virtual void EnableState()
         {
-            ChangeStatus(StateStatus.Enabled);
+            ChangeStatus(true);
         }
 
         public abstract void UpdateState();
 
         public virtual void DisableState()
         {
-            ChangeStatus(StateStatus.Disabled);
+            ChangeStatus(false);
         }
 
         public abstract void TryExitState();
         
-        private void ChangeStatus(StateStatus newStatus)
+        private void ChangeStatus(bool isEnabled)
         {
             //same state
-            if (Status == newStatus)
+            if (IsEnabled == isEnabled)
             {
                 return;
             }
 
-            Status = newStatus;
+            IsEnabled = isEnabled;
 
             //invoke event
-            InvokeStatusChanged(Status);
+            OnStatusChanged?.Invoke(IsEnabled);
         }
     }
 }

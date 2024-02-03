@@ -11,7 +11,7 @@ namespace NPC.Main
     {
         private StateBase[] _states = { };
 
-        private StateBase[] EnabledStates => _states.Where(f => f.Status == StateStatus.Enabled).ToArray();
+        private StateBase[] EnabledStates => _states.Where(f => f.IsEnabled).ToArray();
         
         public override void Initialize(Actor actor)
         {

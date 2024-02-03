@@ -100,9 +100,9 @@ namespace NPC.Main
         public override void TryExitState()
         {
             //can't exit function from a different state
-            if (Status != StateStatus.Enabled)
+            if (!IsEnabled)
             {
-                Debug.LogWarning($"can't exit {GetType().Name} from {Status} {nameof(Status)}");
+                Debug.LogWarning($"can't exit while {GetType().Name} is disabled");
                 
                 return;
             }
@@ -111,7 +111,7 @@ namespace NPC.Main
             {
                 if (transition.TryExitState())
                 {
-                    if (Status != StateStatus.Disabled)
+                    if (IsEnabled)
                     {
                         DisableState();
                     }
