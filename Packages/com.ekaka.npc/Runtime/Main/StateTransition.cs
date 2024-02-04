@@ -10,7 +10,7 @@ namespace NPC.Main
         
         public TFromState FromState { get; private set; }
         
-        public void InitializeTransition(TFromState fromState)
+        public virtual void InitializeTransition(TFromState fromState)
         {
             FromState = fromState;
         }

@@ -19,18 +19,26 @@ namespace NPC.States
         private Targeter Targeter => ContainerState.Targeter;
 
         private IDamagable _damagable;
-        
+
+        private IDamagable Damagable =>
+            _damagable ??= ContainerState.Target != null ? ContainerState.Target.Targetable as IDamagable : null;
+
         protected override void EnableBlock()
         {
             base.EnableBlock();
-            
-            _damagable = ContainerState.Target.Targetable as IDamagable;
-            
+
             _time = Time.realtimeSinceStartup;
         }
 
         public override void UpdateBlock()
         {
+            if (ContainerState.Target == null)
+            {
+                _time = Time.realtimeSinceStartup;
+                
+                return;
+            }
+            
             float delta = Time.realtimeSinceStartup - _time;
 
             if (delta > (1f / _fireRate))
@@ -51,17 +59,17 @@ namespace NPC.States
             {
                 if (hitInfo.collider.TryGetComponent(out Target target) && target == ContainerState.Target)
                 {
-                    if (_damagable != null)
+                    if (Damagable != null)
                     {
                         float damageSent = _damage * ContainerState.Target.Priority;
                     
                         DamageData hitData = new DamageData(new Dictionary<DamageType, float>
-                            { { DamageType.Projectile, damageSent } }, _damagable.Damager, _damagable);
+                            { { DamageType.Projectile, damageSent } }, Damagable.Damager, Damagable);
                     
                         if (Targeter.TryHit(target, hitData))
                         {
                             //hit
-                            Debug.Log($"Hit {_damagable.Obj.name} with {damageSent} {DamageType.Projectile} damage");
+                            Debug.Log($"Hit {Damagable.Obj.name} with {damageSent} {DamageType.Projectile} damage");
                         }
                     }
                 }

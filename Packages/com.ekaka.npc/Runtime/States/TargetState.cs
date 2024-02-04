@@ -38,7 +38,7 @@ public class TargetState : ContainerState<TargetState>
     
     public Targeter Targeter { get; private set; }
 
-    private float _timeSinceLastSeen = 0;
+    public float TimeSinceLastSeen { get; private set; } = 0;
 
     private Vector3 _lastKnownPosition;
 
@@ -51,27 +51,27 @@ public class TargetState : ContainerState<TargetState>
 
     protected override void EnableContainerState()
     {
-        ITargetable[] results = Targeter.FindTargets<ITargetable>();
-        
-        results = results.Where(t => !IgnoreMask.Contains(t.Obj.tag) && LookLayerMask.HasLayer(t.Obj.layer))
-            .ToArray();
-        
-        if (results.Length > 0)
-        {
-            Target = results[0].GetTarget(Targeter);
-            
-            _timeSinceLastSeen = 0;
+        TryFindTarget();
+    }
 
-            _lastKnownPosition = Target.Center;
+    protected override void UpdateContainerState()
+    {
+        if (Target != null)
+        {
+            LookAtTarget();
+            
+            CheckForTarget();
         }
 
         else
         {
-            BreakFunction();
+            TimeSinceLastSeen += Time.deltaTime;
+            
+            TryFindTarget();
         }
     }
 
-    protected override void UpdateContainerState()
+    private void LookAtTarget()
     {
         Vector3 origin = LookFrom.position;
 
@@ -92,15 +92,30 @@ public class TargetState : ContainerState<TargetState>
 
         LookFrom.rotation = Quaternion.Lerp(currentRotation, lookRotation,
             (Time.deltaTime / duration) * LookSpeedMultiplier);
-
-        CheckForTarget();
     }
-
+    
     protected override void DisableContainerState()
     {
         Debug.Log($"Disabling {nameof(TargetState)}...");
     }
 
+    private void TryFindTarget()
+    {
+        ITargetable[] results = Targeter.FindTargets<ITargetable>();
+        
+        results = results.Where(t => !IgnoreMask.Contains(t.Obj.tag) && LookLayerMask.HasLayer(t.Obj.layer))
+            .ToArray();
+        
+        if (results.Length > 0)
+        {
+            Target = results[0].GetTarget(Targeter);
+            
+            TimeSinceLastSeen = 0;
+
+            _lastKnownPosition = Target.Center;
+        }
+    }
+    
     private void CheckForTarget()
     {
         ITargetable[] results = Targeter.FindTargets<ITargetable>();
@@ -108,7 +123,7 @@ public class TargetState : ContainerState<TargetState>
         //break base if vision sees something
         if (results.Length > 0 && results.Contains(Target.Targetable))
         {
-            _timeSinceLastSeen = 0;
+            TimeSinceLastSeen = 0;
 
             //update last known position
             _lastKnownPosition = Target.Center;
@@ -116,15 +131,7 @@ public class TargetState : ContainerState<TargetState>
 
         else
         {
-            _timeSinceLastSeen += Time.deltaTime;
-        }
-
-        //if timeout is reached disable function
-        if (_timeSinceLastSeen > LastSeenTimeout)
-        {
-            BreakFunction();
-
-            return;
+            TimeSinceLastSeen += Time.deltaTime;
         }
     }
 
@@ -144,12 +151,12 @@ public class TargetState : ContainerState<TargetState>
 
         float worldToLocalY = Vector3.SignedAngle(up, Vector3.up, right);
 
-        eulers.x = Core.Utils.Utils.ClampAngle(eulers.x, MinLookLimit.x + worldToLocalY,
+        eulers.x = Utils.ClampAngle(eulers.x, MinLookLimit.x + worldToLocalY,
             MaxLookLimit.x + worldToLocalY);
 
         float worldToLocalZ = Vector3.SignedAngle(forward, Vector3.forward, -up);
 
-        eulers.y = Core.Utils.Utils.ClampAngle(eulers.y, MinLookLimit.y + worldToLocalZ,
+        eulers.y = Utils.ClampAngle(eulers.y, MinLookLimit.y + worldToLocalZ,
             MaxLookLimit.y + worldToLocalZ);
 
         return Quaternion.Euler(eulers);

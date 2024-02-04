@@ -64,34 +64,18 @@ namespace NPC.Main
 
         private void UpdateStates(StateUpdateType updateType)
         {
-            foreach (StateBase state in EnabledStates.Where(f => f.StateUpdate.UpdateType == updateType))
+            foreach (StateBase state in EnabledStates.Where(f => f.UpdateType == updateType))
             {
-                switch (updateType)
+                if (updateType != StateUpdateType.Custom || state.StateUpdate.UpdateTime())
                 {
-                    case StateUpdateType.Custom:
-                        
-                        if (state.StateUpdate.UpdateTime())
-                        {
-                            state.UpdateState();
-                            
-                            state.TryExitState();
-                            
-                            //check if state is completed/update frequency times
-                            if (state.StateUpdate.Completed)
-                            {
-                                state.DisableState();
-                            }
-                        }
-                        
-                        break;
-                
-                    default:
-                        
-                        state.UpdateState();
-                        
-                        state.TryExitState();
-                        
-                        break;
+                    state.UpdateState();
+                    
+                    state.TryExitState();
+                    
+                    if (state.IsCompleted && state.IsEnabled)
+                    {
+                        state.DisableState();
+                    }
                 }
             }
         }

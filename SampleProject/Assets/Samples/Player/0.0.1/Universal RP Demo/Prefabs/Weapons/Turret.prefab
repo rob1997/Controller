@@ -710,6 +710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6679653882964224338}
   - component: {fileID: 4323851292615867839}
+  - component: {fileID: 4891544468979343889}
   m_Layer: 0
   m_Name: TargetState
   m_TagString: Untagged
@@ -747,15 +748,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <IsUnique>k__BackingField: 1
   <EnableOnInitialize>k__BackingField: 0
-  <BreakFunctions>k__BackingField:
-  - {fileID: 7163921774270724331}
-  <NextFunctions>k__BackingField: []
   <StateUpdate>k__BackingField:
     <UpdateType>k__BackingField: 0
     <Interval>k__BackingField: 0
     <Delay>k__BackingField: 0
     <Frequency>k__BackingField: 0
-  <SubStates>k__BackingField:
+  <Transitions>k__BackingField:
+  - {fileID: 4891544468979343889}
+  <StateBlocks>k__BackingField:
   - {fileID: 5142137972580915441}
   <LookFrom>k__BackingField: {fileID: 4597034265451690}
   <LookSpeed>k__BackingField: 25
@@ -769,6 +769,20 @@ MonoBehaviour:
     m_Bits: 64
   <IgnoreMask>k__BackingField:
     <SelectedTags>k__BackingField: []
+--- !u!114 &4891544468979343889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4654671045843666335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8b6642664eeb74cabb82b81bf13a4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ExitStates>k__BackingField:
+  - {fileID: 7163921774270724331}
 --- !u!1 &6051623270660360232
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,6 +824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2576144122142555255}
   - component: {fileID: 7163921774270724331}
+  - component: {fileID: 4070183981402296577}
   m_Layer: 0
   m_Name: LookState
   m_TagString: Untagged
@@ -848,15 +863,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <IsUnique>k__BackingField: 1
   <EnableOnInitialize>k__BackingField: 1
-  <BreakFunctions>k__BackingField:
-  - {fileID: 4323851292615867839}
-  <NextFunctions>k__BackingField: []
   <StateUpdate>k__BackingField:
     <UpdateType>k__BackingField: 0
     <Interval>k__BackingField: 0
     <Delay>k__BackingField: 0
     <Frequency>k__BackingField: 0
-  <ViewInterval>k__BackingField: 0.0125
+  <Transitions>k__BackingField:
+  - {fileID: 4070183981402296577}
   <LookSpeed>k__BackingField: 25
   <WayPoints>k__BackingField:
   - <Target>k__BackingField: {fileID: 936907943670488171}
@@ -870,6 +883,20 @@ MonoBehaviour:
     m_Bits: 64
   <IgnoreTagMask>k__BackingField:
     <SelectedTags>k__BackingField: []
+--- !u!114 &4070183981402296577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7955772952073089544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f342ff6e2b74d4486a7516e2cd8632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ExitStates>k__BackingField:
+  - {fileID: 4323851292615867839}
 --- !u!1 &8272840132795850125
 GameObject:
   m_ObjectHideFlags: 0
