@@ -1,8 +1,11 @@
 ﻿using System;
 using Character.Main;
 using Core.Utils;
+using Data.Main;
 using Data.Persistence;
+using Inventory.Main;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Player.Character
 {
@@ -43,13 +46,29 @@ namespace Player.Character
             SerializedData.DataModel.Position = transform.position.ToSerializableVector3();
             
             SerializedData.DataModel.CurrentHealth = Vitality.CurrentHealth;
+
+            if (GetController(out InventoryController inventoryController))
+                SerializedData.DataModel.Bag = inventoryController.Bag;
+
+            else
+                Debug.LogWarning($"Can't save {nameof(Player)} Bag, {nameof(InventoryController)} not found");
         }
-        
+         
         #endregion
         
         public override float LoadCurrentHealth()
         {
             return SerializedData.DataModel.CurrentHealth;
+        }
+        
+        private void Update()
+        {
+#if UNITY_EDITOR
+            if (Keyboard.current.leftCtrlKey.isPressed && Keyboard.current.sKey.wasPressedThisFrame)
+            {
+                DataManager.Instance.Save();
+            }
+#endif
         }
     }
 }

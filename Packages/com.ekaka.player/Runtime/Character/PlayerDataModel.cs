@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Core.Utils;
 using Data.Main;
+using Inventory.Main;
 
 namespace Player.Character
 {
@@ -12,5 +13,7 @@ namespace Player.Character
         public SerializableVector3 Position;
     
         public float CurrentHealth;
+        
+        public Bag Bag;
     }
 }

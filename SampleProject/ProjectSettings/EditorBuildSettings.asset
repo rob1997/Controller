@@ -6,42 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Samples/Player/0.0.1/Universal RP Demo/Scenes/0_Loading.Unity
-    guid: b3f324cac70e362478f1e29a274df16a
-  - enabled: 1
-    path: Assets/Samples/Player/0.0.1/Universal RP Demo/Scenes/1_Landing.Unity
-    guid: b0b1cf589a12c664a877a468d9fdd00a
-  - enabled: 1
-    path: Assets/Samples/Player/0.0.1/Universal RP Demo/Scenes/2_Game.Unity
-    guid: 3f9f526c09d194d4a98b5f102cf46941
-  - enabled: 1
-    path: Assets/Samples/Player/0.0.1/Universal RP Demo/Scenes/0_Loading.unity
-    guid: b3f324cac70e362478f1e29a274df16a
-  - enabled: 1
-    path: Assets/Samples/Player/0.0.1/Universal RP Demo/Scenes/1_Landing.unity
-    guid: b0b1cf589a12c664a877a468d9fdd00a
-  - enabled: 1
-    path: Assets/Samples/Player/0.0.1/Universal RP Demo/Scenes/2_Game.unity
-    guid: 3f9f526c09d194d4a98b5f102cf46941
-  - enabled: 1
-    path: Assets/Samples/Player/0.0.1/Universal RP Demo/Scenes/0_Loading.unity
-    guid: b3f324cac70e362478f1e29a274df16a
-  - enabled: 1
-    path: Assets/Samples/Player/0.0.1/Universal RP Demo/Scenes/1_Landing.unity
-    guid: b0b1cf589a12c664a877a468d9fdd00a
-  - enabled: 1
-    path: Assets/Samples/Player/0.0.1/Universal RP Demo/Scenes/2_Game.unity
-    guid: 3f9f526c09d194d4a98b5f102cf46941
-  - enabled: 1
-    path: Assets/Samples/Player/0.0.1/Universal RP Demo/Scenes/0_Loading.unity
-    guid: b3f324cac70e362478f1e29a274df16a
-  - enabled: 1
-    path: Assets/Samples/Player/0.0.1/Universal RP Demo/Scenes/1_Landing.unity
-    guid: b0b1cf589a12c664a877a468d9fdd00a
-  - enabled: 1
-    path: Assets/Samples/Player/0.0.1/Universal RP Demo/Scenes/2_Game.unity
-    guid: 3f9f526c09d194d4a98b5f102cf46941
-  - enabled: 1
     path: Assets/Samples/Player/0.0.1/Universal RP Demo/Scenes/0_Loading.unity
     guid: b3f324cac70e362478f1e29a274df16a
   - enabled: 1

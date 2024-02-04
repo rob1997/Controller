@@ -8,15 +8,13 @@ using NPC.Main;
 using Sensors.Main;
 using UnityEngine;
 
-namespace NPC.Functions
+namespace NPC.States
 {
-    public class LookFunction : Function
+    public class LookState : State<LookState>
     {
-        [field: Tooltip("Vision viewCast per how many seconds? 0 means every frame")]
-        [field: SerializeField]
-        public float ViewInterval { get; private set; }
-
-        [field: Space] [field: SerializeField] public float LookSpeed { get; private set; } = 25f;
+        [field: Space]
+        
+        [field: SerializeField] public float LookSpeed { get; private set; } = 25f;
 
         [field: SerializeField] public WayPoint[] WayPoints { get; private set; }
 
@@ -45,9 +43,6 @@ namespace NPC.Functions
 
         //duration for rotation
         private float _duration;
-
-        //viewCast latency time
-        private float _viewTime;
 
         //cached start rotation
         //updated every index
@@ -81,19 +76,17 @@ namespace NPC.Functions
             Targeter = controller.Actor.Targeter;
         }
 
-        protected override void EnableFunction()
+        public override void EnableState()
         {
-            base.EnableFunction();
+            base.EnableState();
 
             //reset values
             _index = 0;
 
-            _viewTime = ViewInterval;
-
             WayPointIndexUpdated();
         }
 
-        public override void Run()
+        public override void UpdateState()
         {
             //finished rotating to wayPoint and is now waiting
             if (_isWaiting)
@@ -127,33 +120,6 @@ namespace NPC.Functions
                     }
                 }
             }
-
-            CheckVision();
-        }
-
-        //cast vision with view interval
-        private void CheckVision()
-        {
-            if (ViewInterval - _viewTime <= 0)
-            {
-                TargetHit[] results = Targeter.FindTargets();
-
-                //disable and run break function if vision sees something
-                if (results.Length > 0 && results.Any(c =>
-                        !IgnoreTagMask.Contains(c.Tag) && LookForLayerMask.HasLayer(c.Layer)))
-                {
-                    BreakFunction();
-
-                    return;
-                }
-
-                _viewTime = 0;
-            }
-
-            else
-            {
-                _viewTime += Time.deltaTime;
-            }
         }
 
         private void UpdateWayPointIndex()
@@ -169,7 +135,7 @@ namespace NPC.Functions
 
                 else
                 {
-                    CompleteFunction();
+                    IsCompleted = true;
 
                     return;
                 }

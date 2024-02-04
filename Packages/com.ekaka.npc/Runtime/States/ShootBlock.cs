@@ -5,9 +5,9 @@ using Damage.Main;
 using NPC.Main;
 using Sensors.Main;
 
-namespace NPC.Functions
+namespace NPC.States
 {
-    public class ShootFunction : SubFunction<TargetFunction>
+    public class ShootBlock : StateBlock<TargetState>
     {
         [Tooltip("How many shots per second")]
         [SerializeField] private float _fireRate;
@@ -16,21 +16,29 @@ namespace NPC.Functions
 
         private float _time;
 
-        private Targeter Targeter => ContainerFunction.Targeter;
+        private Targeter Targeter => ContainerState.Targeter;
 
         private IDamagable _damagable;
-        
-        protected override void EnableFunction()
+
+        private IDamagable Damagable =>
+            _damagable ??= ContainerState.Target != null ? ContainerState.Target.Targetable as IDamagable : null;
+
+        protected override void EnableBlock()
         {
-            base.EnableFunction();
-            
-            _damagable = ContainerFunction.Target.Targetable as IDamagable;
-            
+            base.EnableBlock();
+
             _time = Time.realtimeSinceStartup;
         }
 
-        public override void Run()
+        public override void UpdateBlock()
         {
+            if (ContainerState.Target == null)
+            {
+                _time = Time.realtimeSinceStartup;
+                
+                return;
+            }
+            
             float delta = Time.realtimeSinceStartup - _time;
 
             if (delta > (1f / _fireRate))
@@ -49,19 +57,19 @@ namespace NPC.Functions
             //check hit
             if (Physics.Raycast(Targeter.Muzzle.position, Targeter.Muzzle.forward, out RaycastHit hitInfo))
             {
-                if (hitInfo.collider.TryGetComponent(out Target target) && target == ContainerFunction.Target)
+                if (hitInfo.collider.TryGetComponent(out Target target) && target == ContainerState.Target)
                 {
-                    if (_damagable != null)
+                    if (Damagable != null)
                     {
-                        float damageSent = _damage * ContainerFunction.Target.Priority;
+                        float damageSent = _damage * ContainerState.Target.Priority;
                     
                         DamageData hitData = new DamageData(new Dictionary<DamageType, float>
-                            { { DamageType.Projectile, damageSent } }, _damagable.Damager, _damagable);
+                            { { DamageType.Projectile, damageSent } }, Damagable.Damager, Damagable);
                     
                         if (Targeter.TryHit(target, hitData))
                         {
                             //hit
-                            Debug.Log($"Hit {_damagable.Obj.name} with {damageSent} {DamageType.Projectile} damage");
+                            Debug.Log($"Hit {Damagable.Obj.name} with {damageSent} {DamageType.Projectile} damage");
                         }
                     }
                 }

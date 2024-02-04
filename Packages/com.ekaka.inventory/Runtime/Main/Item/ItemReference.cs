@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Data.Utils;
 using UnityEngine;
 
 namespace Inventory.Main.Item
 {
-    public abstract class ItemReference : ScriptableObject
+    public abstract class ItemReference : AddressableScriptableObject
     {
         [field: SerializeField] public string Title { get; private set; }
     

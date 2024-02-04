@@ -9,84 +9,73 @@ namespace NPC.Main
 {
     public class NPCController : Controller
     {
-        private Function[] _functions = { };
+        private StateBase[] _states = { };
 
-        private Function[] EnabledFunctions => _functions.Where(f => f.State == FunctionState.Enabled).ToArray();
+        private StateBase[] EnabledStates => _states.Where(f => f.IsEnabled).ToArray();
         
         public override void Initialize(Actor actor)
         {
             base.Initialize(actor);
 
-            Function[] functions = GetComponentsInChildren<Function>();
+            StateBase[] states = GetComponentsInChildren<StateBase>();
         
-            foreach (Function function in functions)
+            foreach (StateBase state in states)
             {
-                if (AddFunction(function))
+                if (AddState(state))
                 {
-                    function.Initialize(this);
+                    state.Initialize(this);
                 }
             }
         }
 
-        protected bool AddFunction<T>(T function) where T : Function
+        protected bool AddState<T>(T state) where T : StateBase
         {
-            Type type = function.GetType();
+            Type type = state.GetType();
         
-            //function already exists
-            if (_functions.Any(f => f.GetType() == type && f.IsUnique))
+            //state already exists
+            if (_states.Any(f => f.GetType() == type && f.IsUnique))
             {
-                Debug.LogWarning($"can't add, {type.Name} is a unique {nameof(Function)}");
+                Debug.LogWarning($"can't add, {type.Name} already exists.");
             
                 return false;
             }
         
-            _functions = _functions.Append(function).ToArray();
+            _states = _states.Append(state).ToArray();
 
             return true;
         }
 
         private void Update()
         {
-            RunFunctions(FunctionRunModeType.Update);
-            //update custom functions in update to make update time more accurate
-            RunFunctions(FunctionRunModeType.Custom);
+            UpdateStates(StateUpdateType.Update);
+            //update custom states in update to make update time more accurate
+            UpdateStates(StateUpdateType.Custom);
         }
         
         private void FixedUpdate()
         {
-            RunFunctions(FunctionRunModeType.FixedUpdate);
+            UpdateStates(StateUpdateType.FixedUpdate);
         }
 
         private void LateUpdate()
         {
-            RunFunctions(FunctionRunModeType.LateUpdate);
+            UpdateStates(StateUpdateType.LateUpdate);
         }
 
-        private void RunFunctions(FunctionRunModeType runModeType)
+        private void UpdateStates(StateUpdateType updateType)
         {
-            foreach (Function function in EnabledFunctions.Where(f => f.RunMode.RunModeType == runModeType))
+            foreach (StateBase state in EnabledStates.Where(f => f.UpdateType == updateType))
             {
-                switch (runModeType)
+                if (updateType != StateUpdateType.Custom || state.StateUpdate.UpdateTime())
                 {
-                    case FunctionRunModeType.Custom:
-                        
-                        if (function.RunMode.UpdateTime())
-                        {
-                            function.Run();
-                            //check if function is completed/run frequency times
-                            if (function.RunMode.Completed)
-                            {
-                                function.CompleteFunction();
-                            }
-                        }
-                        
-                        break;
-                
-                    default:
-                        
-                        function.Run();
-                        
-                        break;
+                    state.UpdateState();
+                    
+                    state.TryExitState();
+                    
+                    if (state.IsCompleted && state.IsEnabled)
+                    {
+                        state.DisableState();
+                    }
                 }
             }
         }
