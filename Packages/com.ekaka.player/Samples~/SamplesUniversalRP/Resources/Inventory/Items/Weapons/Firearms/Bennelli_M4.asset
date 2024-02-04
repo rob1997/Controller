@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35728d483d0246346b5f704a048bd0ea, type: 3}
   m_Name: Bennelli_M4
   m_EditorClassIdentifier: 
+  <AssetGuid>k__BackingField: Assets/Samples/Player/0.0.1/Universal RP Demo/Resources/Inventory/Items/Weapons/Firearms/Bennelli_M4.asset
   <Title>k__BackingField: Bennelli_M4
   <Description>k__BackingField: Rifle
   <Icon>k__BackingField: {fileID: 2800000, guid: bb5fa99d6e9434c9ebf101c956021ee1, type: 3}
