@@ -1,8 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Core.Utils;
 using Data.Main;
+using Data.Utils;
 using Inventory.Main;
 
 namespace Player.Character

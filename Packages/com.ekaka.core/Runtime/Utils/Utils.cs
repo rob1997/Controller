@@ -403,15 +403,6 @@ namespace Core.Utils
 
         #endregion
 
-        #region Serializables
-
-        public static SerializableVector3 ToSerializableVector3(this Vector3 value)
-        {
-            return new SerializableVector3(value.x, value.y, value.z);
-        }
-
-        #endregion
-        
         /// <summary>
         /// returns t
         /// </summary>
