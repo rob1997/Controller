@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using UnityEngine;
 
-namespace Core.Utils
+namespace Data.Utils
 {
     [Serializable]
     public struct SerializableVector3
@@ -22,6 +22,14 @@ namespace Core.Utils
             X = x;
             Y = y;
             Z = z;
+        }
+    }
+
+    public static class SerializableVector3Extensions
+    {
+        public static SerializableVector3 ToSerializableVector3(this Vector3 value)
+        {
+            return new SerializableVector3(value.x, value.y, value.z);
         }
     }
 }

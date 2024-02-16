@@ -67,11 +67,9 @@ namespace Weapon.Main
             
             foreach (TargetHit hit in hits)
             {
-                GameObject hitObj = Instantiate(_group.HitObjPrefab, hit.Point, Quaternion.LookRotation(hit.Normal));
-
-                hitObj.transform.parent = hit.Transform;
-
-                Destroy(hitObj, _group.HitObjDestroyTimeout);
+                HitEffect hitEffect = _group.HitEffectSpawner.Spawn(hit.Point, Quaternion.LookRotation(hit.Normal), hit.Transform);
+                
+                _group.HitEffectSpawner.DeSpawn(hitEffect, _group.HitObjDestroyTimeout);
                 
                 Vector3 hitDirection = (hit.Point - transform.position).normalized;
 
