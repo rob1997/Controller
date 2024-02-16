@@ -19,7 +19,7 @@ namespace Weapon.Main
 
         [field: SerializeField] public float Timeout { get; private set; } = .5f;
 
-        [field: SerializeField] public GameObject HitObjPrefab { get; private set; }
+        [field: SerializeField] public HitEffectSpawner HitEffectSpawner { get; private set; }
         
         [field: SerializeField] public float HitObjDestroyTimeout { get; private set; }
         

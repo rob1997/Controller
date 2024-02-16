@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6900057298978984291}
+  - component: {fileID: 7586663156541422713}
   m_Layer: 0
   m_Name: BulletHole
   m_TagString: Untagged
@@ -33,6 +34,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7586663156541422713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6900057298978984290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67fce522cba9f824e983e3646c57b9c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _effect: {fileID: 2748554696830409055}
 --- !u!1 &6900057299573598470
 GameObject:
   m_ObjectHideFlags: 0
@@ -84,6 +98,7 @@ MonoBehaviour:
   m_EndAngleFade: 180
   m_UVScale: {x: 1, y: 1}
   m_UVBias: {x: 0, y: 0}
+  m_DecalLayerMask: 1
   m_ScaleMode: 0
   m_Offset: {x: 0, y: 0, z: 0}
   m_Size: {x: 0.085, y: 0.085, z: 0.125}
@@ -93,6 +108,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 6900057298978984291}
     m_Modifications:
     - target: {fileID: 7854768636673346890, guid: dc5a0016b1aeb974eadf815cfd8b85f0, type: 3}
@@ -144,7 +160,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc5a0016b1aeb974eadf815cfd8b85f0, type: 3}
+--- !u!198 &2748554696830409055 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7854768636658418338, guid: dc5a0016b1aeb974eadf815cfd8b85f0, type: 3}
+  m_PrefabInstance: {fileID: 5414854636293676029}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2748554696848740623 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7854768636673641202, guid: dc5a0016b1aeb974eadf815cfd8b85f0, type: 3}
