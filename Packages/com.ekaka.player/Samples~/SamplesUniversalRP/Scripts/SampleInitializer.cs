@@ -38,7 +38,7 @@ public static class SampleInitializer
         AddScenesToBuildSettings();
         
         // Mark all UI prefabs into Addressable
-        MarkUiPrefabsAddressable();
+        MarkAssetsAddressable();
         
         // Assign urp render pipeline asset Graphics Settings
         AssignUrpGraphicsAsset();
@@ -89,7 +89,7 @@ public static class SampleInitializer
             .ToArray();
     }
 
-    private static void MarkUiPrefabsAddressable()
+    private static void MarkAssetsAddressable()
     {
         var settings = AddressableAssetSettingsDefaultObject.Settings;
         var group = settings.DefaultGroup;
@@ -98,7 +98,12 @@ public static class SampleInitializer
         {
             Path.Combine(_importPath, "Prefabs", "Ui")
         });
- 
+        
+        guids = guids.Concat(AssetDatabase.FindAssets("t:ScriptableObject", new[]
+        {
+            Path.Combine(_importPath, "Resources", "Inventory")
+        })).ToArray();
+        
         var addedEntries = new List<AddressableAssetEntry>();
         
         for (int i = 0; i < guids.Length; i++)

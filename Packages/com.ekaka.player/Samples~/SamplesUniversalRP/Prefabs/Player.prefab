@@ -918,9 +918,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619665973841224261}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 0.25, y: 0.25, z: 0.25}
   m_Center: {x: 0, y: 1.65, z: 0}
 --- !u!1 &1850220619815689644
@@ -1549,8 +1557,16 @@ MonoBehaviour:
         <EquipBone>k__BackingField: {fileID: 0}
         <State>k__BackingField: 0
         controller: {fileID: 3451814885883608338}
-  <Bag>k__BackingField: {fileID: 11400000, guid: 40ccfdf950d35c743adb98b8ecffaa8e, type: 2}
+  <Bag>k__BackingField:
+    <SupplementSlotCount>k__BackingField: 15
+    <GearSlotCount>k__BackingField: 25
+    <Limit>k__BackingField: 50
+    <Gears>k__BackingField: []
+    <Supplements>k__BackingField: []
   <Beamer>k__BackingField: {fileID: 7782784014583421561}
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &2585941375098689211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1737,7 +1753,7 @@ GameObject:
   - component: {fileID: 2597089403928404546}
   - component: {fileID: 2597089403928404544}
   - component: {fileID: 5590362405879292995}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1772,7 +1788,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &8457798189864837083
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1789,7 +1805,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!143 &2597089403928404545
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1798,9 +1815,17 @@ CharacterController:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2939688220127420187}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Height: 1.8
   m_Radius: 0.35
   m_SlopeLimit: 45
@@ -1854,6 +1879,15 @@ MonoBehaviour:
         Y: 0
         Z: 0
       CurrentHealth: 0
+      Bag:
+        <SupplementSlotCount>k__BackingField: 15
+        <GearSlotCount>k__BackingField: 25
+        <Limit>k__BackingField: 50
+        <Gears>k__BackingField: []
+        <Supplements>k__BackingField: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &2597089403928404546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2333,9 +2367,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4245484927854601778}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 0.5, y: 1, z: 0.5}
   m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &4352468548394874530
@@ -3433,9 +3475,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7281753197766027019}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 1.25, z: 0}
 --- !u!1 &7285169124976504095
