@@ -24,6 +24,8 @@ namespace Core.Game
         Play,
         //when game is paused - still in game scene
         Pause,
+        //when game is over (Player is dead) - still in game scene
+        GameOver,
         //onApplicationQuit (maybe use for dispose/garbage collection)
         Quitting
     }
@@ -80,6 +82,8 @@ namespace Core.Game
 
         public GameState State { get; private set; } = GameState.Initializing;
 
+        public bool InGame => State == GameState.Play || State == GameState.Pause || State == GameState.GameOver;
+        
         private void Start()
         {
             Initialize();
@@ -163,23 +167,20 @@ namespace Core.Game
         //leave/unload game scene and load to Landing scene
         public void ExitToMainMenu()
         {
-            switch (State)
+            if (InGame)
             {
-                case GameState.Play: case GameState.Pause:
-                    
-                    //change to loading until scene loads async
-                    ChangeGameState(GameState.Loading);
+                //change to loading until scene loads async
+                ChangeGameState(GameState.Loading);
             
-                    Debug.Log($"exiting {nameof(GameScene)}...");
+                Debug.Log($"exiting {nameof(GameScene)}...");
                     
-                    //load landing scene and call onSceneLoaded
-                    Utils.Utils.LoadScene(LandingScene, GameExited);
-                    
-                    break;
-                
-                default:
-                    Debug.LogError($"can't exit {nameof(GameScene)} when {nameof(GameState)} is {State}");
-                    return;
+                //load landing scene and call onSceneLoaded
+                Utils.Utils.LoadScene(LandingScene, GameExited);
+            }
+
+            else
+            {
+                Debug.LogError($"can't exit {nameof(GameScene)} when {nameof(GameState)} is not an {nameof(InGame)} {State}");
             }
         }
         
@@ -207,6 +208,20 @@ namespace Core.Game
             Time.timeScale = 0f;
 
             ChangeGameState(GameState.Pause);
+        }
+        
+        public void GameOver()
+        {
+            if (!InGame)
+            {
+                Debug.LogWarning($"can't {nameof(GameOver)} when {nameof(GameState)} is {State}");
+                
+                return;
+            }
+            
+            Time.timeScale = 0f;
+
+            ChangeGameState(GameState.GameOver);
         }
 
         public void ResumeGame()

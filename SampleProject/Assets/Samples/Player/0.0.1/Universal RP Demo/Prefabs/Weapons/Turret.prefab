@@ -416,6 +416,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6556b6020d591fc4f9ba7c2bdc3febd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Death>k__BackingField: {fileID: 8769084457819201804}
+  <DeathOverrides>k__BackingField:
+    serializedList: []
   Resistance:
     serializedList:
     - Key: 0
@@ -632,6 +635,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8264200836467056228}
   - component: {fileID: 3737922768043553856}
+  - component: {fileID: 8769084457819201804}
   m_Layer: 0
   m_Name: DamageController
   m_TagString: Untagged
@@ -668,6 +672,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fallDamageVelocityThreshold: 10
   _fallDamagePerUnit: 2
+--- !u!114 &8769084457819201804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3937386317489973162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7912232ba8506594e9dad5566bf5de33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4138378296317627112
 GameObject:
   m_ObjectHideFlags: 0

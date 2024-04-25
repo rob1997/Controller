@@ -51,7 +51,7 @@ namespace Ui.Main
                     Cursor.lockState = CursorLockMode.Locked;
                     break;
                     
-                case GameState.Pause:
+                case GameState.Pause: case GameState.GameOver:
                     //unlock cursor on resume/in Game
                     Cursor.lockState = CursorLockMode.None;
                     break;

@@ -39,6 +39,15 @@ namespace Player.Ui
                         break;
                 }
             };
+            
+            GameManager.Instance.OnGameStateChanged += state =>
+            {
+                if (state == GameState.GameOver)
+                {
+                    //queue/load uiModal
+                    UiRoot.QueueUiModal(_gameOverUiModal);
+                }
+            };
         }
 
         public void PauseGame()
@@ -54,9 +63,8 @@ namespace Player.Ui
         //override cancel action with an exit uiModal
         public override void CancelAction()
         {
-            bool isPlayerDead = Character.Player.Instance.Vitality.IsDead;
             //queue/load uiModal
-            UiRoot.QueueUiModal(isPlayerDead ? _gameOverUiModal : _pauseUiModal);
+            UiRoot.QueueUiModal(_pauseUiModal);
         }
     }
 }

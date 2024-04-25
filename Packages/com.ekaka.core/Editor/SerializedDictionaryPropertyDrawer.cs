@@ -20,8 +20,6 @@ namespace Editor.Core
             
             _position.height = EditorGUIUtility.singleLineHeight;
 
-            property.serializedObject.Update();
-            
             _foldout = EditorGUI.Foldout(_position, _foldout, new GUIContent(property.displayName, property.tooltip));
             
             if (_foldout)
