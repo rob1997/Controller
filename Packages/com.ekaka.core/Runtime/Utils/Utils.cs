@@ -308,8 +308,9 @@ namespace Core.Utils
         /// </summary>
         /// <param name="sceneBuildIndex">build index of scene in build settings</param>
         /// <param name="onSceneLoaded">called once scene has finished loading</param>
+        /// <param name="reload">reload an already loaded scene</param>
         /// <returns></returns>
-        public static bool LoadScene(int sceneBuildIndex, Action onSceneLoaded = null)
+        public static bool LoadScene(int sceneBuildIndex, Action onSceneLoaded = null, bool reload = false)
         {
             //check if scene is at build index
             if (sceneBuildIndex < 0 || sceneBuildIndex >= SceneManager.sceneCountInBuildSettings)
@@ -321,7 +322,7 @@ namespace Core.Utils
             
             Scene scene = SceneManager.GetSceneByBuildIndex(sceneBuildIndex);
             
-            if (scene.isLoaded)
+            if (!reload && scene.isLoaded)
             {
                 Debug.LogError($"[{sceneBuildIndex}] {scene.name} {nameof(Scene)} already loaded");
                 

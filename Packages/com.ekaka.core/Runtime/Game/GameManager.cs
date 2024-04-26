@@ -131,9 +131,15 @@ namespace Core.Game
         }
 
         //load persistent data first
-        private void ContinueGame()
+        private void ContinueGame(bool reload = false)
         {
-            //implement
+            //change to loading until scene loads async
+            ChangeGameState(GameState.Loading);
+            
+            Debug.Log("Loading Game...");
+            
+            //load game scene and call onSceneLoaded
+            Utils.Utils.LoadScene(GameScene, NewGameStarted, reload);
         }
 
         private void StartNewGame()
@@ -182,6 +188,20 @@ namespace Core.Game
             {
                 Debug.LogError($"can't exit {nameof(GameScene)} when {nameof(GameState)} is not an {nameof(InGame)} {State}");
             }
+        }
+
+        public void TryAgain()
+        {
+            if (!InGame)
+            {
+                Debug.LogError("Can't Not in Game.");
+                
+                return;
+            }
+            
+            GameExited();
+            
+            ContinueGame(true);
         }
         
         //called once landing scene is loaded

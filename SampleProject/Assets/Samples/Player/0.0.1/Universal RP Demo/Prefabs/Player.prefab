@@ -1352,7 +1352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3acd97e1cbd395b44acdc09c536583a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   ikRig: {fileID: 8971974542734733054}
   ikConstraintL: {fileID: 8971974544154322279}
   ikConstraintR: {fileID: 8971974544114699037}

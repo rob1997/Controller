@@ -94,7 +94,7 @@ namespace Locomotion.Utils.Grounder
             _footPlacementR.rotation = ikConstraintR.data.tip.rotation;
         }
 
-        private void Update()
+        private void LateUpdate()
         {
             //Get all original Bone Positions
             Vector3 pelvisPosition = extractConstraintPelvis.data.position;
