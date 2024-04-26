@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Sensors.Main;
 using UnityEngine;
 
@@ -39,6 +40,8 @@ namespace Damage.Main
     
         public float DamageDealt { get; private set; }
 
+        public DamageType MaxDamageType { get; private set; }
+        
         public DamageData(Dictionary<DamageType, float> hits, Damager damager, IDamagable damagable)
         {
             Hits = hits;
@@ -56,6 +59,8 @@ namespace Damage.Main
 
                 if (!resistance.Invulnerable) DamageDealt += hitPair.Value - (resistance.Value * hitPair.Value);
             }
+            
+            MaxDamageType = Hits.Aggregate((h, l) => h.Value > l.Value ? h : l).Key;
         }
     }
 }

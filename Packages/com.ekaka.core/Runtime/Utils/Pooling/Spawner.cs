@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using Core.Game;
 using UnityEngine;
 using UnityEngine.Pool;
 
@@ -41,37 +39,63 @@ namespace Core.Utils
             
             return instance;
         }
+        
+        public T Spawn(Vector3 position, Quaternion rotation, Transform parent, float timeout)
+        {
+            T instance = Spawn(position, rotation, parent);
+            
+            DeSpawn(instance, timeout);
+
+            return instance;
+        }
 
         public void DeSpawn(T instance)
         {
-            Pool.Release(instance);
+            // Check if already DeSpawned.
+            if (instance != null)
+            {
+                Pool.Release(instance);
+            }
         }
         
-        public void DeSpawn(T instance, float t)
+        public void DeSpawn(T instance, float timeout)
         {
-            GameManager.Instance.StartCoroutine(WaitAndDeSpawn(instance, t));
+            StartCoroutine(WaitAndDeSpawn(instance, timeout));
         }
 
-        private IEnumerator WaitAndDeSpawn(T instance, float t)
+        private IEnumerator WaitAndDeSpawn(T instance, float timeout)
         {
-            yield return new WaitForSeconds(t);
+            yield return new WaitForSeconds(timeout);
 
-            _pool?.Release(instance);
+            DeSpawn(instance);
         }
-        
-        protected void Renew(T instance)
+
+        private void Renew(T instance)
         {
             instance.Renew();
         }
 
-        protected void Release(T instance)
+        private void Release(T instance)
         {
             instance.Release();
         }
 
-        protected void Retire(T instance)
+        private void Retire(T instance)
         {
             instance.Retire();
+        }
+        
+        public void Clear()
+        {
+            Pool.Clear();
+        }
+        
+        private void OnApplicationQuit()
+        {
+            if (_pool != null && _pool.CountActive > 0)
+            {
+                Pool.Dispose();
+            }
         }
     }
 }

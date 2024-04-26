@@ -44,15 +44,29 @@ namespace Damage.Main
         #endregion
 
         #region Death
+        
+        public delegate void DeathDelegate(DamageData damage);
 
-        public delegate void Death(DamageData damage);
-
-        public event Death OnDeath;
+        public event DeathDelegate OnDeath;
 
         private void InvokeDeath(DamageData damage)
         {
             OnDeath?.Invoke(damage);
+
+            if (!DeathOverrides.TryGetValue(damage.MaxDamageType, out Death death))
+            {
+                death = Death;
+            }
+            
+            death.Apply(damage);
         }
+        
+        [field: SerializeField] public Death Death { get; private set; }
+
+        [field: SerializeField, SerializedDictionary,
+                Tooltip(
+                    "If the highest killing blow hit damage type is not found in this dictionary, default death will be applied instead.")]
+        public GenericDictionary<DamageType, Death> DeathOverrides { get; private set; }
 
         #endregion
 

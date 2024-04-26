@@ -1227,6 +1227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2597089404195881515}
   - component: {fileID: 2597089404195881514}
+  - component: {fileID: 4702685486435802194}
   m_Layer: 0
   m_Name: DamageController
   m_TagString: Untagged
@@ -1263,6 +1264,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fallDamageVelocityThreshold: 10
   _fallDamagePerUnit: 2
+--- !u!114 &4702685486435802194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2597089404195881516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7912232ba8506594e9dad5566bf5de33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2597089404562965708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,7 +1352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3acd97e1cbd395b44acdc09c536583a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   ikRig: {fileID: 8971974542734733054}
   ikConstraintL: {fileID: 8971974544154322279}
   ikConstraintR: {fileID: 8971974544114699037}
@@ -1472,7 +1485,7 @@ MonoBehaviour:
   <Muzzle>k__BackingField: {fileID: 6565140590972753508}
   <TargetLayerMask>k__BackingField:
     serializedVersion: 2
-    m_Bits: 465
+    m_Bits: 81
   <IgnoreTagMask>k__BackingField:
     <SelectedTags>k__BackingField:
     - Player
@@ -1918,6 +1931,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6556b6020d591fc4f9ba7c2bdc3febd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Death>k__BackingField: {fileID: 4702685486435802194}
+  <DeathOverrides>k__BackingField:
+    serializedList: []
   Resistance:
     serializedList:
     - Key: 0

@@ -51,14 +51,26 @@ namespace Core.Utils
         }
         
         public bool IsReadOnly { get; set; }
-        
-        public void OnBeforeSerialize() { }
+
+        public void OnBeforeSerialize()
+        {
+            if (serializedList.GroupBy(p => p.Key).Any(g => g.Count() > 1))
+            {
+                Debug.LogError("Can't serialize duplicate keys into dictionary");
+            }
+        }
 
         public void OnAfterDeserialize()
         {
             _dictionary.Clear();
 
-            serializedList.ForEach(pair => _dictionary.Add(pair.Key, pair.Value));
+            serializedList.ForEach(pair =>
+            {
+                if (_dictionary.ContainsKey(pair.Key))
+                    Debug.LogError($"Can't serialize duplicate key {pair.Key}");
+                else
+                    _dictionary.Add(pair.Key, pair.Value);
+            });
         }
         
         public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator() => _dictionary.GetEnumerator();
