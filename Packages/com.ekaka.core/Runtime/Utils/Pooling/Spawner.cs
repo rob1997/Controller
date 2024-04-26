@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using Core.Game;
 using UnityEngine;
 using UnityEngine.Pool;
 
@@ -53,7 +51,11 @@ namespace Core.Utils
 
         public void DeSpawn(T instance)
         {
-            Pool.Release(instance);
+            // Check if already DeSpawned.
+            if (instance != null)
+            {
+                Pool.Release(instance);
+            }
         }
         
         public void DeSpawn(T instance, float timeout)
@@ -67,18 +69,18 @@ namespace Core.Utils
 
             DeSpawn(instance);
         }
-        
-        protected void Renew(T instance)
+
+        private void Renew(T instance)
         {
             instance.Renew();
         }
 
-        protected void Release(T instance)
+        private void Release(T instance)
         {
             instance.Release();
         }
 
-        protected void Retire(T instance)
+        private void Retire(T instance)
         {
             instance.Retire();
         }

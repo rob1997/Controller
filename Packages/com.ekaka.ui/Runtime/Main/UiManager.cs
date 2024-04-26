@@ -64,9 +64,9 @@ namespace Ui.Main
         /// <param name="sceneBuildIndex">build index for a loaded scene</param>
         private void TryLoadLandingUiMenus(int sceneBuildIndex)
         {
-            if (UiReferences.LandingUiMenus.ContainsKey(sceneBuildIndex))
+            if (UiReferences.LandingUiMenus.TryGetValue(sceneBuildIndex, out var uiMenuTypes))
             {
-                foreach (string uiMenuType in UiReferences.LandingUiMenus[sceneBuildIndex])
+                foreach (string uiMenuType in uiMenuTypes)
                 {
                     UiRoot.LoadUiMenu(uiMenuType);
                 }
