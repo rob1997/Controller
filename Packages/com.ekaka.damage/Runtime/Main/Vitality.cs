@@ -42,6 +42,19 @@ namespace Damage.Main
         }
 
         #endregion
+        
+        #region HeathReceived
+
+        public delegate void HeathReceived(float receivedValue);
+
+        public event HeathReceived OnHeathReceived;
+
+        private void InvokeHeathReceived(float receivedValue)
+        {
+            OnHeathReceived?.Invoke(receivedValue);
+        }
+
+        #endregion
 
         #region Death
         
@@ -53,7 +66,7 @@ namespace Damage.Main
         {
             OnDeath?.Invoke(damage);
 
-            if (!DeathOverrides.TryGetValue(damage.MaxDamageType, out Death death))
+            if (!DeathOverrides.TryGetValue(damage.MaxDamageType, out DeathHandler death))
             {
                 death = Death;
             }
@@ -61,12 +74,12 @@ namespace Damage.Main
             death.Apply(damage);
         }
         
-        [field: SerializeField] public Death Death { get; private set; }
+        [field: SerializeField] public DeathHandler Death { get; private set; }
 
         [field: SerializeField, SerializedDictionary,
                 Tooltip(
                     "If the highest killing blow hit damage type is not found in this dictionary, default death will be applied instead.")]
-        public GenericDictionary<DamageType, Death> DeathOverrides { get; private set; }
+        public GenericDictionary<DamageType, DeathHandler> DeathOverrides { get; private set; }
 
         #endregion
 
@@ -129,13 +142,15 @@ namespace Damage.Main
         {
             Debug.Log($"{healthReceived} health received to {Damagable.Obj.name}");
             
+            InvokeHeathReceived(healthReceived);
+            
             float healthGained = Mathf.Clamp(healthReceived,0, FullHealth - CurrentHealth);
         
             CurrentHealth += healthGained;
         
             Debug.Log($"{healthGained} health gained by {Damagable.Obj.name}");
             
-            InvokeHeathGained(healthReceived);
+            InvokeHeathGained(healthGained);
         }
     }
 }

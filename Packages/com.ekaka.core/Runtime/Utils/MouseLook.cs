@@ -71,7 +71,7 @@ namespace Core.Utils
 
             else
             {
-                GameManager.Instance.OnReady += Initialize;
+                EventBus<GameManagerReady>.Subscribe(Initialize);
             }
         }
 	

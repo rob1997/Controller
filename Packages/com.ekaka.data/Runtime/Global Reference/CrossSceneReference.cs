@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Core.Game;
+using Core.Utils;
 using Data.Main;
 using UnityEngine;
 
@@ -27,20 +28,20 @@ namespace Data.GlobalReference
                     Initialize();
                 }
             
-                return _referenceService.GetComponentReference(Id);
+                return _referenceService?.GetComponentReference(Id);
             }
         }
     
         private void Initialize()
         {
-            if (GameManager.Instance.IsReady)
+            if (DataManager.Instance.IsReady)
             {
                 SetReferenceService();
             }
 
             else
             {
-                GameManager.Instance.OnReady += SetReferenceService;
+                EventBus<ManagerReady<DataManager>>.Subscribe(SetReferenceService);
             }
         }
     

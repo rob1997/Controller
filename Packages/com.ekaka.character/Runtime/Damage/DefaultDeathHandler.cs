@@ -2,7 +2,7 @@ using Damage.Main;
 
 namespace Character.Damage
 {
-    public class DefaultDeath : Death
+    public class DefaultDeathHandler : DeathHandler
     {
         public override void Apply(DamageData damage)
         {

@@ -110,7 +110,7 @@ namespace Character.Main
 
             else
             {
-                GameManager.Instance.OnReady += Initialize;
+                EventBus<GameManagerReady>.Subscribe(Initialize);
             }
         }
 

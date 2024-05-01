@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 namespace Core.Utils
 {
@@ -81,6 +82,23 @@ namespace Core.Utils
         public static void Unsubscribe(TDelegate handler)
         {
             Instance.RemoveListener(handler);
+        }
+        
+        /// <summary>
+        /// Try to Unsubscribe from event.
+        /// This won't throw an exception if the listener is not subscribed.
+        /// </summary>
+        /// <param name="handler">Listener method subscribed to event.</param>
+        public static void TryUnsubscribe(TDelegate handler)
+        {
+            try
+            {
+                Instance.RemoveListener(handler);
+            }
+            catch (InvalidOperationException)
+            {
+                Debug.LogWarning("Attempting to unsubscribe a method that is not subscribed.");
+            }
         }
     }
 
@@ -169,10 +187,27 @@ namespace Core.Utils
         /// <summary>
         /// Unsubscribe from event.
         /// </summary>
-        /// <param name="handler">Listener method subscribing to event.</param>
+        /// <param name="handler">Listener method subscribed to event.</param>
         public static void Unsubscribe(Action handler)
         {
             Instance.RemoveListener(handler);
+        }
+        
+        /// <summary>
+        /// Try to Unsubscribe from event.
+        /// This won't throw an exception if the listener is not subscribed.
+        /// </summary>
+        /// <param name="handler">Listener method subscribed to event.</param>
+        public static void TryUnsubscribe(Action handler)
+        {
+            try
+            {
+                Instance.RemoveListener(handler);
+            }
+            catch (InvalidOperationException)
+            {
+                Debug.LogWarning("Attempting to unsubscribe a method that is not subscribed.");
+            }
         }
 
         private void Publish(T arg)

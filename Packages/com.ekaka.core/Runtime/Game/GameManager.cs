@@ -38,13 +38,6 @@ namespace Core.Game
 
         public static bool Initialized => Instance != null && Instance.IsReady;
         
-        #region Ready
-
-        public delegate void Ready();
-
-        //all Managers have been initialized
-        public event Ready OnReady;
-
         public bool IsReady { get; private set; }
 
         private void InvokeReady()
@@ -56,25 +49,10 @@ namespace Core.Game
                 return;
             }
 
-            OnReady?.Invoke();
+            EventBus<GameManagerReady>.Invoke();
 
             IsReady = true;
         }
-
-        #endregion
-
-        #region GameStateChanged
-
-        public delegate void GameStateChanged(GameState state);
-
-        public event GameStateChanged OnGameStateChanged;
-
-        private void InvokeGameStateChanged(GameState state)
-        {
-            OnGameStateChanged?.Invoke(state);
-        }
-
-        #endregion
 
         [field: SceneList] [field: SerializeField] public int LandingScene { get; private set; }
         
@@ -114,7 +92,7 @@ namespace Core.Game
             
             State = newState;
             
-            InvokeGameStateChanged(State);
+            EventBus<GameStateChanged>.Invoke(new GameStateChanged(State));
         }
         
         public void StartGame(bool continued)

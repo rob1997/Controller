@@ -277,32 +277,6 @@ namespace Core.Utils
         
         #region Scene Load/Unload
 
-        #region LoadingScene
-
-        public delegate void LoadingScene(int sceneBuildIndex);
-
-        public static event LoadingScene OnLoadingScene;
-
-        private static void InvokeLoadingScene(int sceneBuildIndex)
-        {
-            OnLoadingScene?.Invoke(sceneBuildIndex);
-        }
-
-        #endregion
-        
-        #region SceneLoaded
-
-        public delegate void SceneLoaded(int loadedSceneBuildIndex);
-
-        public static event SceneLoaded OnSceneLoaded;
-
-        private static void InvokeSceneLoaded(int loadedSceneBuildIndex)
-        {
-            OnSceneLoaded?.Invoke(loadedSceneBuildIndex);
-        }
-
-        #endregion
-
         /// <summary>
         /// load scene with utilities
         /// </summary>
@@ -329,8 +303,8 @@ namespace Core.Utils
                 return false;
             }
             
-            InvokeLoadingScene(sceneBuildIndex);
-            
+            EventBus<LoadingScene>.Invoke(new LoadingScene(sceneBuildIndex));
+
             SceneManager.LoadSceneAsync(sceneBuildIndex).completed += handle =>
             {
                 if (!handle.isDone)
@@ -343,7 +317,7 @@ namespace Core.Utils
                 //invoke scene loaded
                 onSceneLoaded?.Invoke();
                 
-                InvokeSceneLoaded(sceneBuildIndex);
+                EventBus<SceneLoaded>.Invoke(new SceneLoaded(sceneBuildIndex));
             };
 
             return true;

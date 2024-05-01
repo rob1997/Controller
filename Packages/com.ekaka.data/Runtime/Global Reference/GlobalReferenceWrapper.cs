@@ -59,7 +59,7 @@ namespace Data.GlobalReference
         {
             if (DataManager.Instance.IsReady) Initialize();
 
-            else DataManager.Instance.OnReady += Initialize;
+            else EventBus<ManagerReady<DataManager>>.Subscribe(Initialize);
         }
 
         private void Initialize()
