@@ -2,10 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Core.Utils;
+using Core.Common;
 using Damage.Main;
 using Sensors.Main;
-using Sensors.Utils;
+using Sensors.Common;
 using UnityEngine;
 
 namespace Weapon.Main
@@ -81,7 +81,7 @@ namespace Weapon.Main
                 
                 if (hit.Collider.TryGetComponent(out Target target))
                 {
-                    if (target.Targetable is IDamagable damagable)
+                    if (target.Targetable is IDamageable damagable)
                     {
                         Dictionary<DamageType, float> damageSent =
                             damageGroup.ToDictionary(g => g.Key, g => normalizedPower * g.Sum(d => d.Value));

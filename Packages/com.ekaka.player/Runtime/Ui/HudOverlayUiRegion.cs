@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Core.Game;
+using Core.Common;
 using Ui.Main;
 using UnityEngine;
 
@@ -40,14 +41,14 @@ namespace Player.Ui
                 }
             };
             
-            GameManager.Instance.OnGameStateChanged += state =>
+            EventBus<GameStateChanged>.Subscribe(args =>
             {
-                if (state == GameState.GameOver)
+                if (args.State == GameState.GameOver)
                 {
                     //queue/load uiModal
                     UiRoot.QueueUiModal(_gameOverUiModal);
                 }
-            };
+            });
         }
 
         public void PauseGame()

@@ -1,18 +1,12 @@
 ﻿using System;
-using Core.Utils;
+using Core.Common;
 using UnityEngine;
 
 namespace Core.Game
 {
     public abstract class Manager<T> : Singleton<T>, IManager where T : Manager<T>
     {
-        #region Ready
-
-        public delegate void Ready();
-
-        public event Ready OnReady;
-
-        public void InvokeReady()
+        protected void InvokeReady()
         {
             if (IsReady)
             {
@@ -21,13 +15,11 @@ namespace Core.Game
                 return;
             }
             
-            OnReady?.Invoke();
+            EventBus<ManagerReady<T>>.Invoke();
             
             IsReady = true;
         }
 
-        #endregion
-        
         public bool IsReady { get; private set; }
 
         private void OnEnable()

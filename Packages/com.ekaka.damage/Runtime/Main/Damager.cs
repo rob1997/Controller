@@ -30,7 +30,7 @@
     
         public void DealDamage(DamageData damage)
         {
-            damage.Damagable.TakeDamage(damage);
+            damage.Damageable.TakeDamage(damage);
         }
     }
 }

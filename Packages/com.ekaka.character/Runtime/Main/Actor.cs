@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using Core.Game;
-using Core.Utils;
+using Core.Common;
 using Damage.Main;
 using Sensors.Main;
 using UnityEngine;
 
 namespace Character.Main
 {
-    public abstract class Actor : MonoBehaviour, IDamagable
+    public abstract class Actor : MonoBehaviour, IDamageable
     {
         #region Ready
 
@@ -110,7 +110,7 @@ namespace Character.Main
 
             else
             {
-                GameManager.Instance.OnReady += Initialize;
+                EventBus<GameManagerReady>.Subscribe(Initialize);
             }
         }
 
@@ -135,9 +135,9 @@ namespace Character.Main
             
             #region Damagable
 
-            IDamagable damagable = this;
+            IDamageable damageable = this;
 
-            damagable.InitializeDamagable();
+            damageable.InitializeDamagable();
 
             #endregion
             

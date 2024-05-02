@@ -1,8 +1,8 @@
 using Damage.Main;
-using Editor.Core;
+using Core.Editor;
 using UnityEditor;
 
-namespace Editor.Damage
+namespace Damage.Editor
 {
     [CustomEditor(typeof(Vitality))]
     public class VitalityEditor : UnityEditor.Editor

@@ -1,7 +1,7 @@
 ﻿using Character.Main;
 using Data.Main;
 using Data.Persistence;
-using Data.Utils;
+using Data.Common;
 using Inventory.Main;
 using UnityEngine;
 using UnityEngine.InputSystem;

@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Core.Utils;
+using Core.Common;
 using UnityEditor;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Editor.Core
+namespace Core.Editor
 {
     [CustomPropertyDrawer(typeof(ObjectTypeAttribute))]
     public class ObjectTypePropertyDrawer : PropertyDrawer

@@ -1,9 +1,9 @@
 using System.Dynamic;
-using Core.Utils;
+using Core.Common;
 using UnityEditor;
 using UnityEngine;
 
-namespace Editor.Core
+namespace Core.Editor
 {
     [CustomPropertyDrawer(typeof(SerializedDictionaryAttribute), true)]
     public class SerializedDictionaryPropertyDrawer : PropertyDrawer

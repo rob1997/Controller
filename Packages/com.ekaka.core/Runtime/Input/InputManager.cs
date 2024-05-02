@@ -1,38 +1,24 @@
-﻿using System;
-using Core.Game;
-using Core.Input;
-using UnityEngine;
+﻿using Core.Game;
+using Core.Common;
 using UnityEngine.InputSystem;
 
 namespace Core.Input
 {
     public class InputManager : Manager<InputManager>
     {
-        //invoked when input actions in initialized or re-initialized
-        #region InputActionsInitialized
-
-        public delegate void InputActionsInitialized(BaseInputActions inputActions);
-
-        public event InputActionsInitialized OnInputActionsInitialized;
-
-        private void InvokeInputActionsInitialized()
-        {
-            OnInputActionsInitialized?.Invoke(InputActions);
-        }
-
-        #endregion
-        
         public BaseInputActions InputActions { get; private set; }
 
         public override void Initialize()
         {
             //on pause/resume disable/enable input actions
-            GameManager.Instance.OnGameStateChanged += GameStateChanged;
+            EventBus<GameStateChanged>.Subscribe(GameStateChanged);
         }
 
         //enables/disables input based on game state
-        private void GameStateChanged(GameState state)
+        private void GameStateChanged(GameStateChanged gameStateChanged)
         {
+            GameState state = gameStateChanged.State;
+            
             switch (state)
             {
                 //loading - when exiting game or before game loads/initializes
@@ -45,7 +31,8 @@ namespace Core.Input
                     //enable after re-initializing
                     InputActions.Enable();
                     
-                    InvokeInputActionsInitialized();
+                    //invoked when input actions in initialized or re-initialized
+                    EventBus<InputActionsInitialized>.Invoke(new InputActionsInitialized(InputActions));
                     break;
                 
                 //Play when resuming game

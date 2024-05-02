@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
-using Core.Utils;
+using Core.Common;
 using UnityEditor;
 using UnityEngine;
 
-namespace Editor.Core
+namespace Core.Editor
 {
     public static class BaseEditor
     {

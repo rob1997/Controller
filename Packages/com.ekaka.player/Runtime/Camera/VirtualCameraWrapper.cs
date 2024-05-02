@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
-using Core.Utils;
+using Core.Common;
 using UnityEngine;
 using Random = UnityEngine.Random;
 

@@ -1,8 +1,9 @@
 ﻿using System;
 using Character.Main;
 using Character.Damage;
-using Locomotion.Utils;
-using Locomotion.Utils.Grounder;
+using Core.Common;
+using Locomotion.Common;
+using Locomotion.Common.Grounder;
 using Sensors.Main;
 using UnityEngine;
 
@@ -161,7 +162,7 @@ namespace Locomotion.Controllers
                 OnGroundStateChange += grounded => { Grounder.active = grounded; };
             }
 
-            else Debug.LogWarning($"{nameof(Utils.Grounder.Grounder)} component not found");
+            else Debug.LogWarning($"{nameof(Common.Grounder.Grounder)} component not found");
 
             #endregion
 
@@ -612,7 +613,7 @@ namespace Locomotion.Controllers
             
             GetLimit(ref forward, out float initialBlendValueZ, out float lowerLimitZ, out float upperLimitZ);
             
-            forward = initialBlendValueZ + Core.Utils.Utils.NormalizeValue(forward, lowerLimitZ, upperLimitZ);
+            forward = initialBlendValueZ + Utils.NormalizeValue(forward, lowerLimitZ, upperLimitZ);
 
             forward *= signZ;
             
@@ -621,7 +622,7 @@ namespace Locomotion.Controllers
             
             GetLimit(ref right, out float initialBlendValueX, out float lowerLimitX, out float upperLimitX);
             
-            right = initialBlendValueX + Core.Utils.Utils.NormalizeValue(right, lowerLimitX, upperLimitX);
+            right = initialBlendValueX + Utils.NormalizeValue(right, lowerLimitX, upperLimitX);
 
             right *= signX;
         }

@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Core.Utils;
-using Editor.Core;
+using Core.Common;
+using Core.Editor;
 using Ui.Main;
 using UnityEditor;
 using UnityEngine;

@@ -2,8 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Core.Utils;
-using Editor.Core;
+using Core.Common;
+using Core.Editor;
 using Ui.Main;
 using UnityEditor;
 using UnityEngine;
@@ -98,7 +98,7 @@ namespace Ui.Editor
         private void DrawLandingUiMenuList()
         {
             //get all scene Names in build settings
-            string[] sceneNames = Core.Utils.Utils.GetAllSceneNamesInBuildSettings();
+            string[] sceneNames = Utils.GetAllSceneNamesInBuildSettings();
 
             string[] uiMenuTypes = _uiReferences.UiMenuReferences.Keys.ToArray();
             

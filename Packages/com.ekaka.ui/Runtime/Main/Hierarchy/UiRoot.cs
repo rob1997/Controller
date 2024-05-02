@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Core.Game;
 using Core.Input;
+using Core.Common;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -80,7 +81,7 @@ namespace Ui.Main
 
             else
             {
-                GameManager.Instance.OnReady += RegisterUiInputActions;
+                EventBus<GameManagerReady>.Subscribe(RegisterUiInputActions);
             }
             
             void RegisterUiInputActions()
@@ -94,7 +95,7 @@ namespace Ui.Main
 
                 else
                 {
-                    _inputManager.OnReady += AddUiInputActions;
+                    EventBus<ManagerReady<InputManager>>.Subscribe(AddUiInputActions);
                 }
             }
             
@@ -102,12 +103,14 @@ namespace Ui.Main
             {
                 //subscribe to input actions changed
                 //because inputActions is disposed, initialized and re-initialized base on GameManager.GameState changes we can't just call this once
-                _inputManager.OnInputActionsInitialized += actions =>
+                EventBus<InputActionsInitialized>.Subscribe(args =>
                 {
+                    var actions = args.InputActions;
+                    
                     actions.UI.Cancel.performed += delegate { Cancel(); };
                 
                     Debug.Log($"{nameof(actions.UI.Cancel)} Ui action added");
-                };
+                });
             }
         }
 
@@ -128,7 +131,7 @@ namespace Ui.Main
         {
             if (_uiManager.GetMenuReference(uiMenuType, out AssetReference menuRef))
             {
-                Core.Utils.Utils.LoadObjComponent<T>(menuRef.AssetGUID, uiMenu =>
+                Utils.LoadObjComponent<T>(menuRef.AssetGUID, uiMenu =>
                 {
                     //if parameter type is null assign to prefab layer type
                     uiLayerType = string.IsNullOrEmpty(uiLayerType) ? uiMenu.UiLayerType : uiLayerType;

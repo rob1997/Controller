@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using Character.Main;
-using Core.Utils;
+using Core.Common;
 using UnityEngine;
 using Inventory.Main.Item;
 using Inventory.Main.Slot;

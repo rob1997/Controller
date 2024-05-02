@@ -18,10 +18,10 @@ namespace NPC.States
 
         private Targeter Targeter => ContainerState.Targeter;
 
-        private IDamagable _damagable;
+        private IDamageable _damageable;
 
-        private IDamagable Damagable =>
-            _damagable ??= ContainerState.Target != null ? ContainerState.Target.Targetable as IDamagable : null;
+        private IDamageable Damageable =>
+            _damageable ??= ContainerState.Target != null ? ContainerState.Target.Targetable as IDamageable : null;
 
         protected override void EnableBlock()
         {
@@ -59,17 +59,17 @@ namespace NPC.States
             {
                 if (hitInfo.collider.TryGetComponent(out Target target) && target == ContainerState.Target)
                 {
-                    if (Damagable != null)
+                    if (Damageable != null)
                     {
                         float damageSent = _damage * ContainerState.Target.Priority;
                     
                         DamageData hitData = new DamageData(new Dictionary<DamageType, float>
-                            { { DamageType.Projectile, damageSent } }, Damagable.Damager, Damagable);
+                            { { DamageType.Projectile, damageSent } }, Damageable.Damager, Damageable);
                     
                         if (Targeter.TryHit(target, hitData))
                         {
                             //hit
-                            Debug.Log($"Hit {Damagable.Obj.name} with {damageSent} {DamageType.Projectile} damage");
+                            Debug.Log($"Hit {Damageable.Obj.name} with {damageSent} {DamageType.Projectile} damage");
                         }
                     }
                 }

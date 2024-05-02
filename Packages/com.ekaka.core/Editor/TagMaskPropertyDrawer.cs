@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Core.Utils;
-using Editor.Core;
+using Core.Common;
 using UnityEditor;
 using UnityEngine;
 
-namespace Editor.Core
+namespace Core.Editor
 {
     [CustomPropertyDrawer(typeof(TagMask))]
     public class TagMaskPropertyDrawer : PropertyDrawer

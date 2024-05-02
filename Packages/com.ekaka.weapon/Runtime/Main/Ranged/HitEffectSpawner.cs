@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Core.Utils;
+using Core.Common;
 using UnityEngine;
 
 public class HitEffectSpawner : Spawner<HitEffect>

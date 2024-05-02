@@ -1,4 +1,5 @@
 using Core.Game;
+using Core.Common;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.EventSystems;
@@ -26,19 +27,21 @@ namespace Ui.Main
             DontDestroyOnLoad(EventSystem.current.gameObject);
             
             //register GameStateChanged events
-            GameManager.Instance.OnGameStateChanged += GameStateChanged;
+            EventBus<GameStateChanged>.Subscribe(GameStateChanged);
             
             //register OnSceneLoaded events (loading landing uiMenus)
-            Core.Utils.Utils.OnSceneLoaded += TryLoadLandingUiMenus;
+            EventBus<SceneLoaded>.Subscribe(TryLoadLandingUiMenus);
             
             //load landing uiMenus for first scene
-            TryLoadLandingUiMenus(0);
+            TryLoadLandingUiMenus(new SceneLoaded(0));
             
             Debug.Log($"{nameof(UiManager)} Initialized");
         }
 
-        private void GameStateChanged(GameState state)
+        private void GameStateChanged(GameStateChanged gameStateChanged)
         {
+            GameState state = gameStateChanged.State;
+            
             switch (state)
             {
                 case GameState.Loading:
@@ -57,13 +60,15 @@ namespace Ui.Main
                     break;
             }
         }
-        
+
         /// <summary>
         /// try and load landing UiMenus for a specific scene
         /// </summary>
-        /// <param name="sceneBuildIndex">build index for a loaded scene</param>
-        private void TryLoadLandingUiMenus(int sceneBuildIndex)
+        /// <param name="sceneLoaded">Loaded scene event params.</param>
+        private void TryLoadLandingUiMenus(SceneLoaded sceneLoaded)
         {
+            int sceneBuildIndex = sceneLoaded.SceneBuildIndex;
+            
             if (UiReferences.LandingUiMenus.TryGetValue(sceneBuildIndex, out var uiMenuTypes))
             {
                 foreach (string uiMenuType in uiMenuTypes)

@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
 using Core.Game;
-using Core.Utils;
+using Core.Common;
 using Inventory.Main;
 using Inventory.Main.Item;
 using Locomotion.Controllers;
 using UnityEngine;
-using Weapon.Utils;
+using Weapon.Common;
 
 namespace Weapon.Main
 {

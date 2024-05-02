@@ -1,6 +1,6 @@
 using System;
-using Data.GlobalReference;
-using Editor.Core;
+using Data.SceneLink;
+using Core.Editor;
 using UnityEditor;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -21,18 +21,18 @@ namespace Data.Editor
                 return;
             }
 
-            GlobalReference.GlobalReference[] references = wrapper.References;
+            GlobalReference[] references = wrapper.References;
 
             for (int i = 0; i < references.Length; i++)
             {
-                GlobalReference.GlobalReference reference = references[i];
+                GlobalReference reference = references[i];
 
                 EditorGUILayout.LabelField(new GUIContent($"Id - {reference.Id}", "unique GUiD reference Id"));
 
                 EditorGUILayout.BeginHorizontal();
 
                 Object obj = EditorGUILayout.ObjectField(
-                    new GUIContent(nameof(GlobalReference.GlobalReference.Reference), "Referenced Unity Object"), reference.Reference,
+                    new GUIContent(nameof(GlobalReference.Reference), "Referenced Unity Object"), reference.Reference,
                     reference.Type, true);
 
                 if (GUILayout.Button(new GUIContent("-", "Remove Reference"),
@@ -49,7 +49,7 @@ namespace Data.Editor
 
                 if (obj == null)
                 {
-                    Debug.LogWarning($"{nameof(GlobalReference.GlobalReference.Reference)} can't be null or empty!");
+                    Debug.LogWarning($"{nameof(GlobalReference.Reference)} can't be null or empty!");
                 }
 
                 else if (obj != reference.Reference)
@@ -75,7 +75,7 @@ namespace Data.Editor
                 if (GUILayout.Button(new GUIContent("+", "Add new Reference"),
                     GUILayout.MaxWidth(BaseEditor.SmallButtonWidth)))
                 {
-                    if (wrapper.AddReference(new GlobalReference.GlobalReference(Guid.NewGuid().ToString(), _newComponent)))
+                    if (wrapper.AddReference(new GlobalReference(Guid.NewGuid().ToString(), _newComponent)))
                     {
                         //so changes can be saved
                         EditorUtility.SetDirty(target);

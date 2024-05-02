@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Core.Utils;
+using Core.Common;
 using NPC.Main;
-using NPC.Utils;
+using NPC.Common;
 using Sensors.Main;
-using Sensors.Utils;
+using Sensors.Common;
 using UnityEngine;
 
 public class TargetState : ContainerState<TargetState>

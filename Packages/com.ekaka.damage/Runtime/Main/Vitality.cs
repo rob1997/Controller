@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using Core.Utils;
+using Core.Common;
 using UnityEngine;
 
 namespace Damage.Main
@@ -42,6 +42,19 @@ namespace Damage.Main
         }
 
         #endregion
+        
+        #region HeathReceived
+
+        public delegate void HeathReceived(float receivedValue);
+
+        public event HeathReceived OnHeathReceived;
+
+        private void InvokeHeathReceived(float receivedValue)
+        {
+            OnHeathReceived?.Invoke(receivedValue);
+        }
+
+        #endregion
 
         #region Death
         
@@ -53,7 +66,7 @@ namespace Damage.Main
         {
             OnDeath?.Invoke(damage);
 
-            if (!DeathOverrides.TryGetValue(damage.MaxDamageType, out Death death))
+            if (!DeathOverrides.TryGetValue(damage.MaxDamageType, out DeathHandler death))
             {
                 death = Death;
             }
@@ -61,12 +74,12 @@ namespace Damage.Main
             death.Apply(damage);
         }
         
-        [field: SerializeField] public Death Death { get; private set; }
+        [field: SerializeField] public DeathHandler Death { get; private set; }
 
         [field: SerializeField, SerializedDictionary,
                 Tooltip(
                     "If the highest killing blow hit damage type is not found in this dictionary, default death will be applied instead.")]
-        public GenericDictionary<DamageType, Death> DeathOverrides { get; private set; }
+        public GenericDictionary<DamageType, DeathHandler> DeathOverrides { get; private set; }
 
         #endregion
 
@@ -83,14 +96,14 @@ namespace Damage.Main
         
         public bool IsDead => CurrentHealth <= 0;
 
-        public IDamagable Damagable { get; private set; }
+        public IDamageable Damageable { get; private set; }
 
-        public void Initialize(IDamagable damagable)
+        public void Initialize(IDamageable damageable)
         {
-            Damagable = damagable;
+            Damageable = damageable;
             
             //load health from damagable
-            CurrentHealth = Damagable.LoadCurrentHealth();
+            CurrentHealth = Damageable.LoadCurrentHealth();
             
             //if current health is 0, it means it's a new Game or Damagable wasn't initialized before
             if (CurrentHealth <= 0)
@@ -98,18 +111,18 @@ namespace Damage.Main
                 CurrentHealth = FullHealth;
             }
             
-            Debug.Log($"{Damagable.Obj.name} {nameof(Vitality)} initialized");
+            Debug.Log($"{Damageable.Obj.name} {nameof(Vitality)} initialized");
         }
         
         public void TakeDamage(DamageData damageReceived)
         {
-            Debug.Log($"{damageReceived.DamageDealt} damage dealt to {Damagable.Obj.name}");
+            Debug.Log($"{damageReceived.DamageDealt} damage dealt to {Damageable.Obj.name}");
             
             float damageTaken = Mathf.Clamp(damageReceived.DamageDealt, 0, CurrentHealth);
 
             CurrentHealth -= damageTaken;
 
-            Debug.Log($"{damageTaken} damage taken by {Damagable.Obj.name}");
+            Debug.Log($"{damageTaken} damage taken by {Damageable.Obj.name}");
             
             InvokeDamageTaken(damageReceived);
         
@@ -117,7 +130,7 @@ namespace Damage.Main
         
             if (CurrentHealth <= 0)
             {
-                Debug.Log($"{Damagable.Obj.name} Dead...");
+                Debug.Log($"{Damageable.Obj.name} Dead...");
                 
                 InvokeDeath(damageReceived);
             
@@ -127,15 +140,17 @@ namespace Damage.Main
 
         public void GainHealth(float healthReceived)
         {
-            Debug.Log($"{healthReceived} health received to {Damagable.Obj.name}");
+            Debug.Log($"{healthReceived} health received to {Damageable.Obj.name}");
+            
+            InvokeHeathReceived(healthReceived);
             
             float healthGained = Mathf.Clamp(healthReceived,0, FullHealth - CurrentHealth);
         
             CurrentHealth += healthGained;
         
-            Debug.Log($"{healthGained} health gained by {Damagable.Obj.name}");
+            Debug.Log($"{healthGained} health gained by {Damageable.Obj.name}");
             
-            InvokeHeathGained(healthReceived);
+            InvokeHeathGained(healthGained);
         }
     }
 }

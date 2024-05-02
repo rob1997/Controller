@@ -1,8 +1,8 @@
 using System;
 using System.IO;
 using System.Linq;
-using Data.GlobalReference;
-using Editor.Core;
+using Data.SceneLink;
+using Core.Editor;
 using Newtonsoft.Json;
 using UnityEditor;
 using UnityEngine;
@@ -57,14 +57,14 @@ namespace Data.Editor
 
             string rawJson = File.ReadAllText(path);
 
-            GlobalReference.GlobalReference[] references = JsonConvert.DeserializeObject<GlobalReference.GlobalReference[]>(rawJson);
+            GlobalReference[] references = JsonConvert.DeserializeObject<GlobalReference[]>(rawJson);
 
             //make sure types match
             references = references.Where(r => typeof(T).IsAssignableFrom(r.Type)).ToArray();
 
             if (references.Length <= 0)
             {
-                EditorGUI.HelpBox(_position, $"No {nameof(GlobalReference)} with {typeof(T).Name} {nameof(Type)} found",
+                EditorGUI.HelpBox(_position, $"No {nameof(SceneLink)} with {typeof(T).Name} {nameof(Type)} found",
                     MessageType.Warning);
                 //move down position rect
                 MovePositionDown();
@@ -117,7 +117,7 @@ namespace Data.Editor
 
                 else
                 {
-                    EditorGUI.LabelField(_position, new GUIContent($"{nameof(GlobalReference)} not loaded"));
+                    EditorGUI.LabelField(_position, new GUIContent($"{nameof(SceneLink)} not loaded"));
                 }
 
                 MovePositionDown();
@@ -131,7 +131,7 @@ namespace Data.Editor
 
             if (wrapper != null)
             {
-                GlobalReference.GlobalReference reference = wrapper.References.First(r => r.Id == id);
+                GlobalReference reference = wrapper.References.First(r => r.Id == id);
 
                 _component = reference.Reference;
             }
