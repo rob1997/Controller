@@ -1,10 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Core.Utils;
+using Core.Common;
 using TMPro;
 using Ui.Main;
-using Ui.Utils;
+using Ui.Common;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Events;
@@ -334,7 +334,7 @@ namespace Ui.Main
                         else
                         {
                             //load button asset and instantiate for each unattached action
-                            Core.Utils.Utils.LoadObjComponent<Button>(_uiModalButtonReference.AssetGUID, ButtonAssetLoaded);
+                            Utils.LoadObjComponent<Button>(_uiModalButtonReference.AssetGUID, ButtonAssetLoaded);
                             //break out because the above method is async
                             break;
                         }

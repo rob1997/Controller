@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Core.Utils;
+using Core.Common;
 using UnityEngine;
 using Weapon.Main;
 
@@ -71,13 +71,13 @@ namespace Weapon.Main
             //draw squares/boxes
 
             //top left
-            Core.Utils.Utils.DrawRectangle(position + up - right, right.normalized, up.normalized, quadrant, Color.red);
+            Utils.DrawRectangle(position + up - right, right.normalized, up.normalized, quadrant, Color.red);
             //top right
-            Core.Utils.Utils.DrawRectangle(position + up + right, right.normalized, up.normalized, quadrant, Color.red);
+            Utils.DrawRectangle(position + up + right, right.normalized, up.normalized, quadrant, Color.red);
             //bottom right
-            Core.Utils.Utils.DrawRectangle(position - up + right, right.normalized, up.normalized, quadrant, Color.red);
+            Utils.DrawRectangle(position - up + right, right.normalized, up.normalized, quadrant, Color.red);
             //bottom left
-            Core.Utils.Utils.DrawRectangle(position - up - right, right.normalized, up.normalized, quadrant, Color.red);
+            Utils.DrawRectangle(position - up - right, right.normalized, up.normalized, quadrant, Color.red);
 
             Gizmos.color = Color.green;
 

@@ -1,6 +1,6 @@
 using Data.Main;
 using Data.Persistence;
-using Editor.Core;
+using Core.Editor;
 using UnityEditor;
 using UnityEngine;
 

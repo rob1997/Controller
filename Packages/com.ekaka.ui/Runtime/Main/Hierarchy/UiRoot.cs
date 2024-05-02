@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Core.Game;
 using Core.Input;
-using Core.Utils;
+using Core.Common;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -131,7 +131,7 @@ namespace Ui.Main
         {
             if (_uiManager.GetMenuReference(uiMenuType, out AssetReference menuRef))
             {
-                Core.Utils.Utils.LoadObjComponent<T>(menuRef.AssetGUID, uiMenu =>
+                Utils.LoadObjComponent<T>(menuRef.AssetGUID, uiMenu =>
                 {
                     //if parameter type is null assign to prefab layer type
                     uiLayerType = string.IsNullOrEmpty(uiLayerType) ? uiMenu.UiLayerType : uiLayerType;

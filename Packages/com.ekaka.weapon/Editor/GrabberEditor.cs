@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Core.Utils;
-using Editor.Core;
+using Core.Common;
+using Core.Editor;
 using Inventory.Main.Slot;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
-using Weapon.Utils;
+using Weapon.Common;
 
-namespace Editor.Weapon
+namespace Weapon.Editor
 {
     [CustomEditor(typeof(Grabber))]
     public class GrabberEditor : UnityEditor.Editor

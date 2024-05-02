@@ -1,5 +1,5 @@
 ﻿using Core.Game;
-using Core.Utils;
+using Core.Common;
 using UnityEngine.InputSystem;
 
 namespace Core.Input

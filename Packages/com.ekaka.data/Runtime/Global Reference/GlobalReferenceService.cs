@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace Data.GlobalReference
+namespace Data.SceneLink
 {
     public class GlobalReferenceService
     {

@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Data.Utils;
+using Data.Common;
 using UnityEngine;
 
 namespace Inventory.Main.Item

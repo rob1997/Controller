@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using Character.Main;
 using Core.Input;
-using Core.Utils;
+using Core.Common;
 using Inventory.Main;
 using Inventory.Main.Item;
 using Inventory.Main.Slot;
 using Locomotion.Controllers;
 using Sensors.Main;
-using Sensors.Utils;
+using Sensors.Common;
 using UnityEngine;
 
 namespace Player.Controllers

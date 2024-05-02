@@ -36,17 +36,17 @@ namespace Damage.Main
     
         public Damager Damager { get; private set; }
 
-        public IDamagable Damagable { get; private set; }
+        public IDamageable Damageable { get; private set; }
     
         public float DamageDealt { get; private set; }
 
         public DamageType MaxDamageType { get; private set; }
         
-        public DamageData(Dictionary<DamageType, float> hits, Damager damager, IDamagable damagable)
+        public DamageData(Dictionary<DamageType, float> hits, Damager damager, IDamageable damageable)
         {
             Hits = hits;
             
-            Damagable = damagable;
+            Damageable = damageable;
 
             Damager = damager;
 
@@ -55,7 +55,7 @@ namespace Damage.Main
             
             foreach (var hitPair in Hits)
             {
-                Resistance resistance = Damagable.Resistance[hitPair.Key];
+                Resistance resistance = Damageable.Resistance[hitPair.Key];
 
                 if (!resistance.Invulnerable) DamageDealt += hitPair.Value - (resistance.Value * hitPair.Value);
             }

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using Core.Utils;
-using Editor.Core;
+using Core.Common;
+using Core.Editor;
 using Inventory.Main.Item;
 using UnityEditor;
 using UnityEngine;

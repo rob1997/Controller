@@ -1,7 +1,7 @@
 ﻿using Character.Main;
 using Core.Game;
 using Core.Input;
-using Core.Utils;
+using Core.Common;
 using Locomotion.Controllers;
 using UnityEngine;
 using UnityEngine.InputSystem;

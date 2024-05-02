@@ -1,12 +1,12 @@
 using System;
 using System.IO;
 using System.Linq;
-using Core.Utils;
+using Core.Common;
 using Data.Main;
 using Newtonsoft.Json;
 using UnityEngine;
 
-namespace Data.GlobalReference
+namespace Data.SceneLink
 {
     [Serializable]
     public struct GlobalReference : IDataModel

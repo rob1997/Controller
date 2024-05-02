@@ -2,11 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Core.Game;
-using Core.Utils;
+using Core.Common;
 using Data.Main;
 using UnityEngine;
 
-namespace Data.GlobalReference
+namespace Data.SceneLink
 {
     [Serializable]
     public struct CrossSceneReference<T> where T : class

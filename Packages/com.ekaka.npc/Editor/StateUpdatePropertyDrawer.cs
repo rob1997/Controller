@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Editor.Core;
+using Core.Editor;
 using NPC.Main;
 using UnityEditor;
 using UnityEngine;

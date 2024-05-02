@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Core.Utils;
+using Core.Common;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -76,7 +76,7 @@ namespace Core.Game
             ChangeGameState(GameState.Loading);
             
             //load first/landing scene
-            Utils.Utils.LoadScene(LandingScene, delegate { ChangeGameState(GameState.Landing); });
+            Common.Utils.LoadScene(LandingScene, delegate { ChangeGameState(GameState.Landing); });
         }
 
         private void ChangeGameState(GameState newState)
@@ -117,7 +117,7 @@ namespace Core.Game
             Debug.Log("Loading Game...");
             
             //load game scene and call onSceneLoaded
-            Utils.Utils.LoadScene(GameScene, NewGameStarted, reload);
+            Common.Utils.LoadScene(GameScene, NewGameStarted, reload);
         }
 
         private void StartNewGame()
@@ -128,7 +128,7 @@ namespace Core.Game
             Debug.Log("Loading New Game...");
             
             //load game scene and call onSceneLoaded
-            Utils.Utils.LoadScene(GameScene, NewGameStarted);
+            Common.Utils.LoadScene(GameScene, NewGameStarted);
         }
 
         //when game scene finished loading
@@ -159,7 +159,7 @@ namespace Core.Game
                 Debug.Log($"exiting {nameof(GameScene)}...");
                     
                 //load landing scene and call onSceneLoaded
-                Utils.Utils.LoadScene(LandingScene, GameExited);
+                Common.Utils.LoadScene(LandingScene, GameExited);
             }
 
             else

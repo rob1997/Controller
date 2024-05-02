@@ -2,8 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using Core.Utils;
-using Data.Utils;
+using Core.Common;
+using Data.Common;
 using Newtonsoft.Json;
 using UnityEngine;
 

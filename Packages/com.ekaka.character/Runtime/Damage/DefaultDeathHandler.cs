@@ -6,7 +6,7 @@ namespace Character.Damage
     {
         public override void Apply(DamageData damage)
         {
-            Destroy(damage.Damagable.Obj);
+            Destroy(damage.Damageable.Obj);
         }
     }
 }

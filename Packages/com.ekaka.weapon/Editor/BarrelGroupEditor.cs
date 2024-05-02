@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using Weapon.Main;
 
-namespace Editor.Weapon
+namespace Weapon.Editor
 {
     [CustomEditor(typeof(BarrelGroup))]
     public class BarrelGroupEditor : UnityEditor.Editor

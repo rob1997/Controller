@@ -1,6 +1,6 @@
 using System;
 using Core.Game;
-using Data.GlobalReference;
+using Data.SceneLink;
 using Data.Persistence;
 using UnityEngine;
 

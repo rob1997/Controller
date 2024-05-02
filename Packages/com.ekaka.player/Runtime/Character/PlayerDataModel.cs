@@ -1,6 +1,6 @@
 using System;
 using Data.Main;
-using Data.Utils;
+using Data.Common;
 using Inventory.Main;
 
 namespace Player.Character
