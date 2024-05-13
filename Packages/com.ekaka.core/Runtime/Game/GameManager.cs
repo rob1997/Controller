@@ -1,35 +1,9 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using Core.Common;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 using UnityEngine;
 
 namespace Core.Game
 {
-    public enum GameState
-    {
-        //happens only once when game is first loaded on start
-        //used to load assets and initialize GameManager
-        Initializing,
-        //when loading between scenes or game states
-        //from landing to play from game scene to menu...
-        Loading,
-        //first landing scene (main menu)
-        Landing,
-        //in game scene/playing game
-        Play,
-        //when game is paused - still in game scene
-        Pause,
-        //when game is over (Player is dead) - still in game scene
-        GameOver,
-        //onApplicationQuit (maybe use for dispose/garbage collection)
-        Quitting
-    }
-    
     //run before everything else
     [DefaultExecutionOrder(- 1)]
     public class GameManager : Singleton<GameManager>
@@ -54,13 +28,25 @@ namespace Core.Game
             IsReady = true;
         }
 
+        // Add new GameStates here.
+        private IGameState[] AllStates => new IGameState[]{
+            new Loading(),
+            new Landing(),
+            new Play(),
+            new Pause(),
+            new GameOver(),
+            new Quitting()
+        };
+
+        private int _currentStateIndex = - 1;
+        
         [field: SceneList] [field: SerializeField] public int LandingScene { get; private set; }
         
         [field: SceneList] [field: SerializeField] public int GameScene { get; private set; }
 
-        public GameState State { get; private set; } = GameState.Initializing;
+        public IGameState CurrentState => _currentStateIndex < 0 ? null : AllStates[_currentStateIndex];
 
-        public bool InGame => State == GameState.Play || State == GameState.Pause || State == GameState.GameOver;
+        public bool InGame => CurrentState is IInGameState;
         
         private void Start()
         {
@@ -71,175 +57,167 @@ namespace Core.Game
         {
             //all other managers are already initialized OnEnable
             InvokeReady();
+
+            // use for loop since states are mostly structs.
+            for (int i = 0; i < AllStates.Length; i++)
+            {
+                AllStates[i].Initialize();
+            }
             
             //now it has finished initializing change state to loading - loading landing scene
-            ChangeGameState(GameState.Loading);
+            ChangeGameState<Loading>();
             
             //load first/landing scene
-            Common.Utils.LoadScene(LandingScene, delegate { ChangeGameState(GameState.Landing); });
+            Utils.LoadScene(LandingScene, ChangeGameState<Landing>);
         }
 
-        private void ChangeGameState(GameState newState)
+        private void ChangeGameState<T>() where T : IGameState
         {
-            if (newState == State)
+            if (!AllStates.FindIndex( s => s is T, out int index))
             {
-                Debug.LogWarning($"{nameof(GameState)} already {State}");
+                Debug.LogError($"{nameof(IGameState)} of type {typeof(T).Name} not found.");
+                
+                return;
+            }
+            
+            if (_currentStateIndex == index)
+            {
+                Debug.LogWarning($"{nameof(IGameState)} already {CurrentState}.");
                 
                 return;
             }
 
-            Debug.Log($"{nameof(GameState)} changed from {State} to {newState}");
+            IGameState newState = AllStates[index];
             
-            State = newState;
+            if (!newState.IsReady)
+            {
+                Debug.LogWarning($"{typeof(T).Name} {nameof(IGameState)} is not ready.");
+                
+                return;
+            }
+
+            // Disable previous state.
+            if (_currentStateIndex != - 1)
+            {
+                AllStates[_currentStateIndex].Disable();
+            }
             
-            EventBus<GameStateChanged>.Invoke(new GameStateChanged(State));
+            Debug.Log($"{nameof(IGameState)} changed from {CurrentState.TypeName()} to {newState.TypeName()}.");
+            
+            _currentStateIndex = index;
+            
+            newState.Enable();
+            
+            // Update current state reference since states can be structs.
+            AllStates[_currentStateIndex] = newState;
+            
+            EventBus<GameStateEnabled<T>>.Invoke();
+            
+            EventBus<GameStateChanged>.Invoke(new GameStateChanged(CurrentState));
         }
         
         public void StartGame(bool continued)
         {
             if (continued)
             {
-                ContinueGame();
+                LoadSavedGame();
             }
 
             else
             {
-                StartNewGame();
+                LoadNewGame();
             }
         }
 
         //load persistent data first
-        private void ContinueGame(bool reload = false)
+        private void LoadSavedGame(bool tryAgain = false)
         {
             //change to loading until scene loads async
-            ChangeGameState(GameState.Loading);
+            ChangeGameState<Loading>();
             
-            Debug.Log("Loading Game...");
+            Debug.Log("Loading Saved Game...");
             
             //load game scene and call onSceneLoaded
-            Common.Utils.LoadScene(GameScene, NewGameStarted, reload);
+            Utils.LoadScene(GameScene, GameStarted, tryAgain);
         }
 
-        private void StartNewGame()
+        private void LoadNewGame()
         {
             //change to loading until scene loads async
-            ChangeGameState(GameState.Loading);
+            ChangeGameState<Loading>();
             
             Debug.Log("Loading New Game...");
             
             //load game scene and call onSceneLoaded
-            Common.Utils.LoadScene(GameScene, NewGameStarted);
+            Utils.LoadScene(GameScene, GameStarted);
         }
 
         //when game scene finished loading
-        void NewGameStarted()
+        void GameStarted()
         {
-            ChangeGameState(GameState.Play);
+            ChangeGameState<Play>();
                 
             Debug.Log("Loaded New Game");
         }
         
         public void ExitGame()
         {
-#if UNITY_EDITOR
-            EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+            ChangeGameState<Quitting>();
         }
 
         //leave/unload game scene and load to Landing scene
         public void ExitToMainMenu()
         {
-            if (InGame)
-            {
-                //change to loading until scene loads async
-                ChangeGameState(GameState.Loading);
-            
-                Debug.Log($"exiting {nameof(GameScene)}...");
-                    
-                //load landing scene and call onSceneLoaded
-                Common.Utils.LoadScene(LandingScene, GameExited);
-            }
-
-            else
-            {
-                Debug.LogError($"can't exit {nameof(GameScene)} when {nameof(GameState)} is not an {nameof(InGame)} {State}");
-            }
-        }
-
-        public void TryAgain()
-        {
             if (!InGame)
             {
-                Debug.LogError("Can't Not in Game.");
+                Debug.LogError($"can't exit when {nameof(CurrentState)} is not an {nameof(IInGameState)}.");
                 
                 return;
             }
             
-            GameExited();
+            //change to loading until scene loads async
+            ChangeGameState<Loading>();
             
-            ContinueGame(true);
+            Debug.Log($"exiting {nameof(GameScene)}...");
+                    
+            //load landing scene and call onSceneLoaded
+            Utils.LoadScene(LandingScene, GameExited);
+        }
+
+        public void TryAgain()
+        {
+            LoadSavedGame(true);
         }
         
         //called once landing scene is loaded
         private void GameExited()
         {
-            Debug.Log($"Exited {nameof(GameScene)}");
+            Debug.Log($"Exited {nameof(GameScene)}.");
                 
-            ChangeGameState(GameState.Landing);
-                
-            //reset timeScale in case it was exited in pause
-            Time.timeScale = 1f;
+            ChangeGameState<Landing>();
         }
         
         public void PauseGame()
         {
-            //pause only from GameState.Play
-            if (State != GameState.Play)
-            {
-                Debug.LogWarning($"can't {nameof(PauseGame)} when {nameof(GameState)} is {State}");
-                
-                return;
-            }
-            
-            Time.timeScale = 0f;
-
-            ChangeGameState(GameState.Pause);
+            ChangeGameState<Pause>();
         }
         
         public void GameOver()
         {
-            if (!InGame)
-            {
-                Debug.LogWarning($"can't {nameof(GameOver)} when {nameof(GameState)} is {State}");
-                
-                return;
-            }
-            
-            Time.timeScale = 0f;
-
-            ChangeGameState(GameState.GameOver);
+            ChangeGameState<GameOver>();
         }
 
         public void ResumeGame()
         {
-            //resume only from GameState.Pause
-            if (State != GameState.Pause)
-            {
-                Debug.LogWarning($"can't {nameof(ResumeGame)} when {nameof(GameState)} is {State}");
-                
-                return;
-            }
-            
-            Time.timeScale = 1f;
-            
-            ChangeGameState(GameState.Play);
+            ChangeGameState<Play>();
         }
         
         private void OnApplicationQuit()
         {
-            ChangeGameState(GameState.Quitting);
+            if (!(CurrentState is Quitting))
+            {
+                ChangeGameState<Quitting>();
+            }
         }
     }
 }

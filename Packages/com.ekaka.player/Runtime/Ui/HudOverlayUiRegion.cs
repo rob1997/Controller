@@ -17,7 +17,7 @@ namespace Player.Ui
 
         //if playing then this uiRegion is active
         //can trigger cancel action even with no activeUiMenu
-        public override bool IsActive => GameManager.Instance.State == GameState.Play;
+        public override bool IsActive => GameManager.Instance.CurrentState is Play;
 
         public override void Initialize(UiLayer rootUiElement)
         {
@@ -28,12 +28,16 @@ namespace Player.Ui
                 switch (uiMenu.UiMenuState)
                 {
                     case UiMenuState.Loading:
-                        PauseGame();
+                        //only pause from play
+                        if (GameManager.Instance.CurrentState is Play)
+                        {
+                            PauseGame();
+                        }
                         break;
                     
                     case UiMenuState.Unloaded:
                         //only resume from pause
-                        if (GameManager.Instance.State == GameState.Pause)
+                        if (GameManager.Instance.CurrentState is Pause)
                         {
                             ResumeGame();
                         }
@@ -41,26 +45,25 @@ namespace Player.Ui
                 }
             };
             
-            EventBus<GameStateChanged>.Subscribe(args =>
-            {
-                if (args.State == GameState.GameOver)
-                {
-                    //queue/load uiModal
-                    UiRoot.QueueUiModal(_gameOverUiModal);
-                }
-            });
+            EventBus<GameStateEnabled<GameOver>>.Subscribe(GameOver);
         }
 
-        public void PauseGame()
+        private void PauseGame()
         {
             GameManager.Instance.PauseGame();
         }
         
-        public void ResumeGame()
+        private void ResumeGame()
         {
             GameManager.Instance.ResumeGame();
         }
 
+        private void GameOver()
+        {
+            //queue/load uiModal
+            UiRoot.QueueUiModal(_gameOverUiModal);
+        }
+        
         //override cancel action with an exit uiModal
         public override void CancelAction()
         {
