@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1796089, g: 0.22489224, b: 0.30646396, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -756,6 +756,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6310076941916944875, guid: 84d90b498ea178e48a351887a5ea5fb7, type: 3}
+      propertyPath: _pauseUiModal.<UiModalActions>k__BackingField.Array.data[0].<Action>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 330500656}
+    - target: {fileID: 6310076941916944875, guid: 84d90b498ea178e48a351887a5ea5fb7, type: 3}
       propertyPath: _pauseUiModal.<UiModalActions>k__BackingField.Array.data[1].<Action>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 330500656}
@@ -776,6 +780,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 330500656}
     - target: {fileID: 6310076941916944875, guid: 84d90b498ea178e48a351887a5ea5fb7, type: 3}
+      propertyPath: _pauseUiModal.<UiModalActions>k__BackingField.Array.data[0].<Action>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResumeGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310076941916944875, guid: 84d90b498ea178e48a351887a5ea5fb7, type: 3}
       propertyPath: _gameOverUiModal.<UiModalActions>k__BackingField.Array.data[0].<Action>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -786,6 +794,10 @@ PrefabInstance:
     - target: {fileID: 6310076941916944875, guid: 84d90b498ea178e48a351887a5ea5fb7, type: 3}
       propertyPath: _gameOverUiModal.<UiModalActions>k__BackingField.Array.data[2].<Action>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ExitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310076941916944875, guid: 84d90b498ea178e48a351887a5ea5fb7, type: 3}
+      propertyPath: _pauseUiModal.<UiModalActions>k__BackingField.Array.data[0].<Action>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Core.Game.GameManager, ekaka.core.runtime
       objectReference: {fileID: 0}
     - target: {fileID: 6310076941916944875, guid: 84d90b498ea178e48a351887a5ea5fb7, type: 3}
       propertyPath: _gameOverUiModal.<UiModalActions>k__BackingField.Array.data[0].<Action>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
