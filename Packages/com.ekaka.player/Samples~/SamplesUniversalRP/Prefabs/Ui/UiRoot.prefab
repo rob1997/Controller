@@ -654,9 +654,9 @@ MonoBehaviour:
       <Action>k__BackingField:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 6310076941916944875}
+          - m_Target: {fileID: 0}
             m_TargetAssemblyTypeName: Player.Ui.HudOverlayUiRegion, ekaka.player.runtime
-            m_MethodName: ResumeGame
+            m_MethodName: 
             m_Mode: 1
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
