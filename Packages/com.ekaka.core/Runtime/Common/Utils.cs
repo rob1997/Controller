@@ -109,6 +109,18 @@ namespace Core.Common
             }
         }
 
+        public static bool FindIndex<T>(this T[] array, Predicate<T> predicate, out int index)
+        {
+            index = Array.FindIndex(array, predicate);
+            
+            return index != - 1;
+        }
+        
+        public static string TypeName(this object obj)
+        {
+            return obj?.GetType().Name;
+        }
+        
         public static float NormalizeValue(float value, float lowerLimit, float upperLimit)
         {
             float cachedValue = value;
@@ -240,7 +252,7 @@ namespace Core.Common
 
         public static bool IsType(this object obj, object compareObj)
         {
-            return obj.GetType() == compareObj.GetType();
+            return obj != null ? obj.GetType() == compareObj.GetType() : compareObj == null;
         }
 
         public static string[] GetAllSceneNamesInBuildSettings()

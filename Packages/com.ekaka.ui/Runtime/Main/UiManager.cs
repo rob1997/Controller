@@ -40,21 +40,21 @@ namespace Ui.Main
 
         private void GameStateChanged(GameStateChanged gameStateChanged)
         {
-            GameState state = gameStateChanged.State;
+            IGameState state = gameStateChanged.State;
             
             switch (state)
             {
-                case GameState.Loading:
+                case Loading:
                     //when GameState is loading unload all menus, ready for the next GameState
                     if (!UiRoot.AllUiLayersUnloaded) UiRoot.UnloadAllLayers();
                     break;
                 
-                case GameState.Play:
+                case Play:
                     //lock cursor on play/in Game
                     Cursor.lockState = CursorLockMode.Locked;
                     break;
                     
-                case GameState.Pause: case GameState.GameOver:
+                case Pause: case GameOver:
                     //unlock cursor on resume/in Game
                     Cursor.lockState = CursorLockMode.None;
                     break;

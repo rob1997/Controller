@@ -11,11 +11,15 @@ namespace Core.Common
     {
     }
     
+    public struct GameStateEnabled<T> : IEventParams where T : IGameState
+    {
+    }
+    
     public struct GameStateChanged : IEventParams
     {
-        public GameState State { get; private set; }
-
-        public GameStateChanged(GameState state)
+        public IGameState State { get; private set; }
+        
+        public GameStateChanged(IGameState state)
         {
             State = state;
         }

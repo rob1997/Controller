@@ -17,13 +17,13 @@ namespace Core.Input
         //enables/disables input based on game state
         private void GameStateChanged(GameStateChanged gameStateChanged)
         {
-            GameState state = gameStateChanged.State;
+            IGameState state = gameStateChanged.State;
             
             switch (state)
             {
                 //loading - when exiting game or before game loads/initializes
                 //reinitialize to unsubscribe to all the game actions subscribed during/at the start of Play
-                case GameState.Loading:
+                case Loading:
                     //dispose Input action if it exists and re-initialize
                     InputActions?.Dispose();
                     //initialize
@@ -36,12 +36,12 @@ namespace Core.Input
                     break;
                 
                 //Play when resuming game
-                case GameState.Play:
+                case Play:
                     UpdateInputActions(true);
                     break;
                 
                 //can't register input actions when paused
-                case GameState.Pause:
+                case Pause:
                     UpdateInputActions(false);
                     break;
             }
