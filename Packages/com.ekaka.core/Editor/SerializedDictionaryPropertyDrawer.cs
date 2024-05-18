@@ -61,15 +61,50 @@ namespace Core.Editor
                 
                 SerializedProperty valueProperty = property.FindPropertyRelative(BaseEditor.ValueName);
 
-                EditorGUI.PropertyField(MovedRect(.45f, .4f), valueProperty, GUIContent.none);
+                string path = valueProperty.propertyPath;
                 
                 if (GUI.Button(MovedRect(.9f, .1f), new GUIContent("-", "Remove")))
                 {
                     pairListProperty.DeleteArrayElementAtIndex(index);
+                    
+                    continue;
                 }
 
-                NewLine();
+                if (valueProperty.propertyType == SerializedPropertyType.Generic)
+                {
+                    while (valueProperty.Next(true))
+                    {
+                        if (!valueProperty.propertyPath.Contains(path))
+                        {
+                            break;
+                        }
 
+                        if (valueProperty.propertyType == SerializedPropertyType.Generic)
+                        {
+                            EditorGUI.LabelField(MovedRect(.45f, .4f), new GUIContent(valueProperty.displayName, valueProperty.tooltip), EditorStyles.boldLabel);
+                        
+                            NewLine();
+                        }
+
+                        else
+                        {
+                            DrawValueProperty();
+                        }
+                    }
+                }
+
+                else
+                {
+                    DrawValueProperty();
+                }
+
+                void DrawValueProperty()
+                {
+                    EditorGUI.PropertyField(MovedRect(.45f, .4f), valueProperty, GUIContent.none);
+                        
+                    NewLine();
+                }
+                
                 index++;
             }
         }

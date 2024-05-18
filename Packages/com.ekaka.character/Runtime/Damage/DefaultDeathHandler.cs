@@ -1,4 +1,3 @@
-using Damage.Main;
 
 namespace Character.Damage
 {

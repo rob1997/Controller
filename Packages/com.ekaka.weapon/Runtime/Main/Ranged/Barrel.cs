@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Core.Common;
-using Damage.Main;
+using Character.Damage;
 using Sensors.Main;
 using Sensors.Common;
 using UnityEngine;
@@ -81,19 +81,19 @@ namespace Weapon.Main
                 
                 if (hit.Collider.TryGetComponent(out Target target))
                 {
-                    if (target.Targetable is IDamageable damagable)
+                    if (target.Targetable is IDamageable damageable)
                     {
                         Dictionary<DamageType, float> damageSent =
                             damageGroup.ToDictionary(g => g.Key, g => normalizedPower * g.Sum(d => d.Value));
 
-                        DamageData hitData = new DamageData(damageSent, damagable.Damager, damagable);
+                        DamageData hitData = new DamageData(damageSent, damageable.Damager, damageable);
                     
                         if (_group.Adapter.Actor.Targeter.TryHit(target, hitData))
                         {
                             //hit
                             foreach (var pair in damageSent)
                             {
-                                Debug.Log($"Hit {damagable.Obj.name} with {pair.Value} {pair.Key} damage");
+                                Debug.Log($"Hit {damageable.Obj.name} with {pair.Value} {pair.Key} damage");
                             }
                         }
                     }

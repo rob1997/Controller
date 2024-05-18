@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
 using Character.Main;
-using Damage.Main;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Character.Damage
 {

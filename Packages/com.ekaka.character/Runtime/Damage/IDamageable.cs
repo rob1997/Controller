@@ -1,22 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using Core.Game;
 using Core.Common;
 using Sensors.Main;
-using UnityEngine;
 
-namespace Damage.Main
+namespace Character.Damage
 {
     public interface IDamageable : ITargetable
     {
         public Vitality Vitality { get; }
         
+        public Endurance Endurance { get; }
+        
         public Damager Damager { get; }
 
-        public float CurrentHealth => Vitality.CurrentHealth;
+        public float CurrentHealth => Vitality.CurrentValue;
         
-        public float NormalizedHealth => CurrentHealth / Vitality.FullHealth;
+        public float CurrentStamina => Endurance.CurrentValue;
+        
+        public float NormalizedHealth => CurrentHealth / Vitality.FullValue;
+        
+        public float NormalizedStamina => CurrentStamina / Endurance.FullValue;
         
         public bool IsDead => CurrentHealth <= 0;
 
@@ -26,11 +27,13 @@ namespace Damage.Main
         public float LoadCurrentHealth();
     }
 
-    public static class DamagableWrapper
+    public static class DamageableWrapper
     {
-        public static void InitializeDamagable(this IDamageable damageable)
+        public static void InitializeDamageable(this IDamageable damageable)
         {
             damageable.Vitality.Initialize(damageable);
+            
+            damageable.Endurance.Initialize(damageable);
         }
         
         public static void TakeDamage(this IDamageable damageable, DamageData damageReceived)

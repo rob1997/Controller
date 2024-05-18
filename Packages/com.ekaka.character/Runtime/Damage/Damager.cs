@@ -1,4 +1,4 @@
-﻿namespace Damage.Main
+﻿namespace Character.Damage
 {
     public class Damager
     {

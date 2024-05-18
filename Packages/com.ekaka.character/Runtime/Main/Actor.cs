@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Core.Game;
 using Core.Common;
-using Damage.Main;
+using Character.Damage;
 using Sensors.Main;
 using UnityEngine;
 
@@ -88,15 +88,17 @@ namespace Character.Main
         
         #endregion
 
-        #region Damagable
+        #region Damageable
 
         [field: SerializeField] public Vitality Vitality { get; private set; }
+        
+        [field: SerializeField] public Endurance Endurance { get; private set; }
 
         public Damager Damager { get; private set; } = new Damager();
 
         public virtual float LoadCurrentHealth()
         {
-            return Vitality.FullHealth;
+            return Vitality.FullValue;
         }
         
         #endregion
@@ -125,23 +127,16 @@ namespace Character.Main
                 controller.InvokeReady();
             }
             
-            #region Targetable
+            this.InitializeTargetable();
 
-            ITargetable targetable = this;
-
-            targetable.InitializeTargetable();
-
-            #endregion
-            
-            #region Damagable
-
-            IDamageable damageable = this;
-
-            damageable.InitializeDamagable();
-
-            #endregion
+            this.InitializeDamageable();
             
             InvokeReady();
+        }
+
+        protected virtual void Update()
+        {
+            Endurance.RecoverStamina();
         }
 
         public bool GetController<T>(out T controller) where T : Controller

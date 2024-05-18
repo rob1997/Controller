@@ -10,7 +10,7 @@ namespace Player.Controllers
         {
             base.Initialize(actor);
             
-            actor.Vitality.OnDeath += delegate
+            actor.Vitality.OnValueDepleted += delegate
             {
                 GameManager.Instance.GameOver();
             };

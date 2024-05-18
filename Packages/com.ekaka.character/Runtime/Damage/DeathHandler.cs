@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Damage.Main
+namespace Character.Damage
 {
     public abstract class DeathHandler : MonoBehaviour
     {

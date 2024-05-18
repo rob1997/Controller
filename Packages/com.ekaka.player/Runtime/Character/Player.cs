@@ -44,7 +44,7 @@ namespace Player.Character
         {
             SerializedData.DataModel.Position = transform.position.ToSerializableVector3();
             
-            SerializedData.DataModel.CurrentHealth = Vitality.CurrentHealth;
+            SerializedData.DataModel.CurrentHealth = Vitality.CurrentValue;
 
             if (GetController(out InventoryController inventoryController))
                 SerializedData.DataModel.Bag = inventoryController.Bag;
