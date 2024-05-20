@@ -2,7 +2,7 @@ using Character.Damage;
 using Character.Main;
 using Core.Game;
 
-namespace Player.Controllers
+namespace Player.Main
 {
     public class PlayerDamageController : DamageController
     {

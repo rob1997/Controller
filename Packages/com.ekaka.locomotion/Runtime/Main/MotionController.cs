@@ -7,7 +7,7 @@ using Locomotion.Common.Grounder;
 using Sensors.Main;
 using UnityEngine;
 
-namespace Locomotion.Controllers
+namespace Locomotion.Main
 {
     public abstract class MotionController : Controller
     {
@@ -219,6 +219,14 @@ namespace Locomotion.Controllers
             else Debug.LogWarning($"{nameof(Animator)} component not found");
 
             #endregion
+            
+            Actor.Endurance.OnValueDepleted += delegate
+            {
+                if (Rate == SpeedRate.Sprint)
+                {
+                    ChangeSpeedRate(SpeedRate.Run);
+                }
+            };
         }
         
         private void RegisterFallDamage()
@@ -228,7 +236,7 @@ namespace Locomotion.Controllers
                 OnGroundStateChange += grounded =>
                 {
                     if (grounded)
-                        _damageController.ApplyFallDamage(- Velocity.y);
+                        _damageController.ApplyFallDamage(- _velocity.y);
                 };
             };
                     
@@ -248,13 +256,16 @@ namespace Locomotion.Controllers
             CheckGround();
 
             ApplyGravity();
-
+            
             if (_animator != null) AnimateMotion();
         }
     
         protected virtual void LateUpdate()
         {
             Move();
+            
+            // Apply after _velocity is set.
+            ApplyStamina();
         }
 
         private void Look()
@@ -470,8 +481,8 @@ namespace Locomotion.Controllers
             float deltaTime = Time.deltaTime;
             
             //to reset interpolation speed
-            float tX = 1f / deltaTime;
-            float tZ = 1f / deltaTime;
+            float tX = deltaTime > 0 ? 1f / deltaTime : 0f;
+            float tZ = deltaTime > 0 ? 1f / deltaTime : 0f;
 
             float realVelocityX = RealVelocity.x;
             float realVelocityZ = RealVelocity.z;
@@ -495,7 +506,7 @@ namespace Locomotion.Controllers
             _velocity.z = Mathf.Lerp(realVelocityZ, velocityZ, tZ * deltaTime);
 
             #endregion
-
+            
             CharacterController.Move(_velocity * Time.deltaTime);
         }
 
@@ -532,6 +543,20 @@ namespace Locomotion.Controllers
             _velocity = velocity;
         }
 
+        private void ApplyStamina()
+        {
+            Vector3 velocityXz = new Vector3(_velocity.x, 0, _velocity.z);
+            
+            float normalizedDrainRate = Mathf.Clamp(velocityXz.magnitude / LocomotionSpeed.Sprint, 0f, 1f);
+            
+            Actor.Endurance.RecoverStamina(1f - normalizedDrainRate);
+            
+            if (Rate == SpeedRate.Sprint)
+            {
+                Actor.Endurance.DrainStamina( 5f * normalizedDrainRate);
+            }
+        }
+        
         #region Animate Motion
 
         private void AnimateMotion()
