@@ -368,6 +368,8 @@ MonoBehaviour:
   <TargetGroup>k__BackingField: {fileID: 5567617704220118938}
   <Targeter>k__BackingField: {fileID: 5276150929057803481}
   <Vitality>k__BackingField:
+    <Immutable>k__BackingField: 0
+    <LowerLimit>k__BackingField: 0
     <FullValue>k__BackingField: 100
     <Death>k__BackingField: {fileID: 8769084457819201804}
     <DeathOverrides>k__BackingField:
@@ -375,7 +377,10 @@ MonoBehaviour:
     <Resistance>k__BackingField:
       serializedList: []
   <Endurance>k__BackingField:
+    <Immutable>k__BackingField: 1
+    <LowerLimit>k__BackingField: 0
     <FullValue>k__BackingField: 100
+    <RecoveryRate>k__BackingField: 5
 --- !u!65 &6823452317137947041
 BoxCollider:
   m_ObjectHideFlags: 0
