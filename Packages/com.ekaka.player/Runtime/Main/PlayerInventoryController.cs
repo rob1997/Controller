@@ -7,12 +7,12 @@ using Core.Common;
 using Inventory.Main;
 using Inventory.Main.Item;
 using Inventory.Main.Slot;
-using Locomotion.Controllers;
+using Locomotion.Main;
 using Sensors.Main;
 using Sensors.Common;
 using UnityEngine;
 
-namespace Player.Controllers
+namespace Player.Main
 {
     public class PlayerInventoryController : InventoryController
     {

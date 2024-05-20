@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Core.Common;
-using Damage.Main;
+using Character.Damage;
 using Inventory.Main.Item;
 using UnityEngine;
 

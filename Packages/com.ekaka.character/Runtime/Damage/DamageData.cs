@@ -4,7 +4,7 @@ using System.Linq;
 using Sensors.Main;
 using UnityEngine;
 
-namespace Damage.Main
+namespace Character.Damage
 {
     //!!!INDEXES MUST BE UNIQUE
     //!!!NEVER CHANGE THE INDEX NUMBERS, CAUSES A SHUFFLE ISSUE ON CUSTOM EDITOR
@@ -55,9 +55,12 @@ namespace Damage.Main
             
             foreach (var hitPair in Hits)
             {
-                Resistance resistance = Damageable.Resistance[hitPair.Key];
-
-                if (!resistance.Invulnerable) DamageDealt += hitPair.Value - (resistance.Value * hitPair.Value);
+                DamageDealt += hitPair.Value;
+                
+                if (Damageable.Resistance.TryGetValue(hitPair.Key, out Resistance resistance) && !resistance.Invulnerable)
+                {
+                    DamageDealt -= resistance.Value * hitPair.Value;
+                }
             }
             
             MaxDamageType = Hits.Aggregate((h, l) => h.Value > l.Value ? h : l).Key;

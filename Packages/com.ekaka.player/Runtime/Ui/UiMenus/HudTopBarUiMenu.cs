@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using Damage;
-using Damage.Main;
-using TMPro;
+using Character.Damage;
 using Ui.Main;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,7 +11,7 @@ namespace Player.Ui
     {
         [SerializeField] private Image _healthBarImage;
         
-        [SerializeField] private TextMeshProUGUI _healthLabel;
+        [SerializeField] private Image _staminaBarImage;
 
         private Character.Player _player;
         
@@ -28,31 +24,40 @@ namespace Player.Ui
             //initialize heath bar
             if (_player.IsReady)
             {
-                InitializeHealthBar();
+                InitializeStats();
             }
 
             else
             {
-                _player.OnReady += InitializeHealthBar;
+                _player.OnReady += InitializeStats;
             }
         }
 
-        private void InitializeHealthBar()
+        private void InitializeStats()
         {
             Vitality vitality = _player.Vitality;
             
-            void HealthUpdated()
-            {
-                _healthBarImage.fillAmount = vitality.NormalizedHealth;
-            
-                _healthLabel.text = $"{vitality.CurrentHealth}";
-            }
-            //update health on initialize
+            //update stats on initialize
             HealthUpdated();
             
-            vitality.OnDamageTaken += damage => { HealthUpdated(); };
+            StaminaUpdated();
             
-            vitality.OnHeathGained += damage => { HealthUpdated(); };
+            vitality.OnValueChanged += delegate { HealthUpdated(); };
+            
+            void HealthUpdated()
+            {
+                _healthBarImage.fillAmount = vitality.NormalizedValue;
+            }
+        }
+
+        void StaminaUpdated()
+        {
+            _staminaBarImage.fillAmount = _player.Endurance.NormalizedValue;
+        }
+        
+        private void Update()
+        {
+            StaminaUpdated();
         }
     }
 }

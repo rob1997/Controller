@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Locomotion.Controllers;
+using Locomotion.Main;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 

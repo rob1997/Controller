@@ -136,31 +136,18 @@ namespace Core.Editor
         
         #region SerializedPropertyExtensions
 
-        public static SerializedProperty GetParent(this SerializedProperty property)
-        {
-            var path = property.propertyPath;
-            
-            int j = path.LastIndexOf('.');
-            
-            if (j < 0) return null;
-
-            int i = path.IndexOf('.', 0, j);
-
-            if (i < 0 || i == j)
-            {
-                i = 0;
-            }
-            
-            return property.serializedObject.FindProperty(path.Substring(i, j));
-        }
-        
         public static SerializedProperty FindSiblingProperty(this SerializedProperty property, string path)
         {
-            var parent = property.GetParent();
+            string absolutePath = property.propertyPath;
+
+            int index = absolutePath.LastIndexOf('.');
+
+            if (index > 0)
+            {
+                path = $"{absolutePath.Substring(0, index)}.{path}";
+            }
             
-            if (parent == null) return property.serializedObject.FindProperty(path);
-            
-            return parent.FindPropertyRelative(path);
+            return property.serializedObject.FindProperty(path);
         }
         
         /// (Extension) Get the value of the serialized property.

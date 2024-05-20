@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Damage.Main;
+using Character.Damage;
 using NPC.Main;
 using Sensors.Main;
 

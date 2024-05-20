@@ -2,11 +2,11 @@
 using Core.Game;
 using Core.Input;
 using Core.Common;
-using Locomotion.Controllers;
+using Locomotion.Main;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Player.Controllers
+namespace Player.Main
 {
     public class PlayerMotionController : MotionController
     {
@@ -43,8 +43,12 @@ namespace Player.Controllers
         
             _inputActions.Foot.Sprint.started += delegate
             {
-                ChangeSpeedRate(SpeedRate.Sprint);
+                if (!Actor.Endurance.IsDepleted)
+                {
+                    ChangeSpeedRate(SpeedRate.Sprint);
+                }
             };
+            
             _inputActions.Foot.Sprint.canceled += delegate
             {
                 if (Rate == SpeedRate.Sprint)

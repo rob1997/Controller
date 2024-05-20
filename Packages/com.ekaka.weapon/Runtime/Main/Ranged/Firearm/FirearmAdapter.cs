@@ -4,7 +4,7 @@ using Core.Game;
 using Core.Common;
 using Inventory.Main;
 using Inventory.Main.Item;
-using Locomotion.Controllers;
+using Locomotion.Main;
 using UnityEngine;
 using Weapon.Common;
 
