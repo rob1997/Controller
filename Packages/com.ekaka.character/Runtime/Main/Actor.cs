@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using Core.Game;
 using Core.Common;
 using Character.Damage;
@@ -132,11 +130,6 @@ namespace Character.Main
             this.InitializeDamageable();
             
             InvokeReady();
-        }
-
-        protected virtual void Update()
-        {
-            Endurance.RecoverStamina();
         }
 
         public bool GetController<T>(out T controller) where T : Controller

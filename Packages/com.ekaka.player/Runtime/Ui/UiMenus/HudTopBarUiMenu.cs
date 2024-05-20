@@ -1,5 +1,4 @@
 using Character.Damage;
-using TMPro;
 using Ui.Main;
 using UnityEngine;
 using UnityEngine.UI;
@@ -38,8 +37,6 @@ namespace Player.Ui
         {
             Vitality vitality = _player.Vitality;
             
-            Endurance endurance = _player.Endurance;
-            
             //update stats on initialize
             HealthUpdated();
             
@@ -51,11 +48,16 @@ namespace Player.Ui
             {
                 _healthBarImage.fillAmount = vitality.NormalizedValue;
             }
-            
-            void StaminaUpdated()
-            {
-                _staminaBarImage.fillAmount = endurance.NormalizedValue;
-            }
+        }
+
+        void StaminaUpdated()
+        {
+            _staminaBarImage.fillAmount = _player.Endurance.NormalizedValue;
+        }
+        
+        private void Update()
+        {
+            StaminaUpdated();
         }
     }
 }

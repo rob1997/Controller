@@ -548,12 +548,15 @@ namespace Locomotion.Main
             Vector3 velocityXz = new Vector3(_velocity.x, 0, _velocity.z);
             
             float normalizedDrainRate = Mathf.Clamp(velocityXz.magnitude / LocomotionSpeed.Sprint, 0f, 1f);
-            
-            Actor.Endurance.RecoverStamina(1f - normalizedDrainRate);
-            
-            if (Rate == SpeedRate.Sprint)
+         
+            if (Rate != SpeedRate.Sprint)
             {
-                Actor.Endurance.DrainStamina( 5f * normalizedDrainRate);
+                Actor.Endurance.RecoverStamina(1f - normalizedDrainRate);
+            }
+            
+            else
+            {
+                Actor.Endurance.DrainStamina(normalizedDrainRate);
             }
         }
         

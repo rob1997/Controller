@@ -19,15 +19,15 @@ namespace Character.Damage
             
             Damageable = damageable;
         }
-        
-        public void RecoverStamina()
+
+        public void RecoverStamina(float normalizedRate)
         {
-            GainValue(RecoveryRate * Time.deltaTime);
+            GainValue(RecoveryRate * normalizedRate * Time.deltaTime, out _, true);
         }
         
-        public void DrainStamina(float rate)
+        public void DrainStamina(float normalizedRate)
         {
-            LoseValue((RecoveryRate + rate) * Time.deltaTime);
+            LoseValue(RecoveryRate * normalizedRate * Time.deltaTime, out _, true);
         }
     }
 }

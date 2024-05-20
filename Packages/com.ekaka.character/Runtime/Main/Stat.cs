@@ -8,13 +8,13 @@ namespace Character.Main
     {
         #region ValueReceived
 
-        public delegate void ValueReceived(float delta);
+        public delegate void ValueReceived(float amount);
         
         public event ValueReceived OnValueReceived;
         
-        private void InvokeValueReceived(float delta)
+        private void InvokeValueReceived(float amount)
         {
-            OnValueReceived?.Invoke(delta);
+            OnValueReceived?.Invoke(amount);
         }
 
         #endregion
@@ -58,6 +58,8 @@ namespace Character.Main
 
         #endregion
 
+        [field: SerializeField] public bool Immutable { get; private set; }
+        
         [field: SerializeField, Tooltip("The lowest possible value of this stat before it's considered depleted.")]
         public float LowerLimit { get; private set; } = 0;
         
@@ -68,85 +70,49 @@ namespace Character.Main
         public float NormalizedValue => CurrentValue / FullValue;
 
         public bool IsDepleted => CurrentValue <= LowerLimit;
-        
-        protected void GainValue(float valueToGain)
-        {
-            CurrentValue += Mathf.Clamp(valueToGain, 0, FullValue - CurrentValue);
-        }
-        
-        protected bool GainValue(float valueToGain, out float valueGained)
-        {
-            InvokeValueReceived(valueToGain);
 
-            if (!GainValueSilently(valueToGain, out valueGained))
+        protected bool ChangeValue(float valueToChange, out float delta, bool silent = false)
+        {
+            if (!silent)
+            {
+                InvokeValueReceived(valueToChange);
+            }
+            
+            delta = Immutable ? 0f : Mathf.Clamp(valueToChange, LowerLimit - CurrentValue, FullValue - CurrentValue);
+
+            CurrentValue += delta;
+            
+            if (delta == 0)
             {
                 return false;
             }
-
-            InvokeValueChanged(valueGained);
+            
+            if (!silent)
+            {
+                InvokeValueChanged(delta);
+            }
                 
             if (CurrentValue >= FullValue)
             {
                 InvokeValueFull();
             }
 
-            return true;
-        }
-        
-        protected bool GainValueSilently(float valueToGain, out float valueGained)
-        {
-            float oldValue = CurrentValue;
-
-            GainValue(valueToGain);
-            
-            valueGained = CurrentValue - oldValue;
-            
-            if (valueGained <= 0)
-            {
-                return false;
-            }
-
-            return true;
-        }
-        
-        protected void LoseValue(float valueToLose)
-        {
-            CurrentValue -= Mathf.Clamp(valueToLose, 0, CurrentValue - LowerLimit);
-        }
-        
-        protected bool LoseValue(float valueToLose, out float valueLost)
-        {
-            InvokeValueReceived(-valueToLose);
-
-            if (!LoseValueSilently(valueToLose, out valueLost))
-            {
-                return false;
-            }
-            
-            InvokeValueChanged(-valueLost);
-
-            if (CurrentValue <= LowerLimit)
+            else if (CurrentValue <= LowerLimit)
             {
                 InvokeValueDepleted();
             }
 
             return true;
         }
-
-        protected bool LoseValueSilently(float valueToLose, out float valueLost)
+        
+        protected bool GainValue(float valueToGain, out float valueGained, bool silent = false)
         {
-            float oldValue = CurrentValue;
-            
-            LoseValue(valueToLose);
-            
-            valueLost = oldValue - CurrentValue;
-
-            if (valueLost <= 0)
-            {
-                return false;
-            }
-
-            return true;
+            return ChangeValue(valueToGain, out valueGained, silent);
+        }
+        
+        protected bool LoseValue(float valueToLose, out float valueLost, bool silent = false)
+        {
+            return ChangeValue(- valueToLose, out valueLost, silent);
         }
     }
 }

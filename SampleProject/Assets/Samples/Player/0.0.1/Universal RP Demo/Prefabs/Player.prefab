@@ -1883,6 +1883,7 @@ MonoBehaviour:
   <TargetGroup>k__BackingField: {fileID: 5590362405879292995}
   <Targeter>k__BackingField: {fileID: 0}
   <Vitality>k__BackingField:
+    <LowerLimit>k__BackingField: 0
     <FullValue>k__BackingField: 100
     <Death>k__BackingField: {fileID: 4702685486435802194}
     <DeathOverrides>k__BackingField:
@@ -1893,20 +1894,14 @@ MonoBehaviour:
         Value:
           <Invulnerable>k__BackingField: 0
           <Value>k__BackingField: 0
-          <Inner>k__BackingField:
-            <InnerValue>k__BackingField: 0
-            <Deeper>k__BackingField:
-              <DeeperValue>k__BackingField: 0
       - Key: 1
         Value:
           <Invulnerable>k__BackingField: 0
           <Value>k__BackingField: 0
-          <Inner>k__BackingField:
-            <InnerValue>k__BackingField: 0
-            <Deeper>k__BackingField:
-              <DeeperValue>k__BackingField: 0
   <Endurance>k__BackingField:
+    <LowerLimit>k__BackingField: 0
     <FullValue>k__BackingField: 100
+    <RecoveryRate>k__BackingField: 2
   SerializedData:
     <Id>k__BackingField: afb21571-27bf-4629-8668-1e5bf6ae4f89
     <DataModel>k__BackingField:
