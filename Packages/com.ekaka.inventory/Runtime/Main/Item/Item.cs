@@ -12,7 +12,7 @@ namespace Inventory.Main.Item
     [Serializable]
     public abstract class Item<T> : IItem where T : ItemReference
     {
-        [SerializeField] protected T reference;
+        [SerializeField, Expandable] protected T reference;
 
         [SerializeField] [HideInInspector] private string id = Utils.NewGuid();
 
