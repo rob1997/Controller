@@ -1,13 +1,13 @@
 {
   "dependencies": {
     "com.ekaka.character": {
-      "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.character",
+      "version": "file:../../Packages/com.ekaka.character",
       "depth": 0,
       "source": "local",
       "dependencies": {}
     },
     "com.ekaka.core": {
-      "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.core",
+      "version": "file:../../Packages/com.ekaka.core",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -15,26 +15,20 @@
         "com.unity.addressables": "1.18.19"
       }
     },
-    "com.ekaka.damage": {
-      "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.damage",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {}
-    },
     "com.ekaka.data": {
-      "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.data",
+      "version": "file:../../Packages/com.ekaka.data",
       "depth": 0,
       "source": "local",
       "dependencies": {}
     },
     "com.ekaka.inventory": {
-      "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.inventory",
+      "version": "file:../../Packages/com.ekaka.inventory",
       "depth": 0,
       "source": "local",
       "dependencies": {}
     },
     "com.ekaka.locomotion": {
-      "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.locomotion",
+      "version": "file:../../Packages/com.ekaka.locomotion",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -42,13 +36,13 @@
       }
     },
     "com.ekaka.npc": {
-      "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.npc",
+      "version": "file:../../Packages/com.ekaka.npc",
       "depth": 0,
       "source": "local",
       "dependencies": {}
     },
     "com.ekaka.player": {
-      "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.player",
+      "version": "file:../../Packages/com.ekaka.player",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -60,13 +54,13 @@
       }
     },
     "com.ekaka.sensors": {
-      "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.sensors",
+      "version": "file:../../Packages/com.ekaka.sensors",
       "depth": 0,
       "source": "local",
       "dependencies": {}
     },
     "com.ekaka.ui": {
-      "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.ui",
+      "version": "file:../../Packages/com.ekaka.ui",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -76,7 +70,7 @@
       }
     },
     "com.ekaka.weapon": {
-      "version": "file:C:/Users/robel/Documents/Unity/Controller/Packages/com.ekaka.weapon",
+      "version": "file:../../Packages/com.ekaka.weapon",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -85,11 +79,11 @@
       }
     },
     "com.unity.addressables": {
-      "version": "1.21.12",
+      "version": "1.21.19",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.scriptablebuildpipeline": "1.21.5",
+        "com.unity.scriptablebuildpipeline": "1.21.21",
         "com.unity.modules.assetbundle": "1.0.0",
         "com.unity.modules.imageconversion": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0",
@@ -99,7 +93,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ai.navigation": {
-      "version": "1.1.4",
+      "version": "1.1.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -118,16 +112,17 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
-      "version": "1.8.7",
+      "version": "1.8.13",
       "depth": 2,
       "source": "registry",
       "dependencies": {
-        "com.unity.mathematics": "1.2.1"
+        "com.unity.mathematics": "1.2.1",
+        "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
     "com.unity.cinemachine": {
-      "version": "2.9.5",
+      "version": "2.10.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -136,7 +131,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
-      "version": "2.0.5",
+      "version": "2.3.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -161,17 +156,17 @@
       "depth": 0,
       "source": "builtin",
       "dependencies": {
-        "com.unity.ide.visualstudio": "2.0.18",
-        "com.unity.ide.rider": "3.0.24",
+        "com.unity.ide.visualstudio": "2.0.22",
+        "com.unity.ide.rider": "3.0.28",
         "com.unity.ide.vscode": "1.2.5",
         "com.unity.editorcoroutines": "1.0.0",
         "com.unity.performance.profile-analyzer": "1.2.2",
         "com.unity.test-framework": "1.1.33",
-        "com.unity.testtools.codecoverage": "1.2.4"
+        "com.unity.testtools.codecoverage": "1.2.5"
       }
     },
     "com.unity.ide.rider": {
-      "version": "3.0.24",
+      "version": "3.0.28",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -180,7 +175,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.18",
+      "version": "2.0.22",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -196,7 +191,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
-      "version": "1.6.1",
+      "version": "1.7.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -226,7 +221,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.postprocessing": {
-      "version": "3.2.2",
+      "version": "3.4.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -234,8 +229,19 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.probuilder": {
+      "version": "5.2.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.settings-manager": "1.0.3",
+        "com.unity.modules.physics": "1.0.0",
+        "com.unity.modules.imgui": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.render-pipelines.core": {
-      "version": "14.0.8",
+      "version": "14.0.11",
       "depth": 2,
       "source": "builtin",
       "dependencies": {
@@ -246,18 +252,27 @@
       }
     },
     "com.unity.render-pipelines.universal": {
-      "version": "14.0.8",
+      "version": "14.0.11",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
         "com.unity.mathematics": "1.2.1",
-        "com.unity.burst": "1.8.4",
-        "com.unity.render-pipelines.core": "14.0.8",
-        "com.unity.shadergraph": "14.0.8"
+        "com.unity.burst": "1.8.9",
+        "com.unity.render-pipelines.core": "14.0.11",
+        "com.unity.shadergraph": "14.0.11",
+        "com.unity.render-pipelines.universal-config": "14.0.9"
+      }
+    },
+    "com.unity.render-pipelines.universal-config": {
+      "version": "14.0.10",
+      "depth": 2,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.render-pipelines.core": "14.0.10"
       }
     },
     "com.unity.scriptablebuildpipeline": {
-      "version": "1.21.5",
+      "version": "1.21.21",
       "depth": 2,
       "source": "registry",
       "dependencies": {},
@@ -272,17 +287,17 @@
     },
     "com.unity.settings-manager": {
       "version": "2.0.1",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.shadergraph": {
-      "version": "14.0.8",
+      "version": "14.0.11",
       "depth": 2,
       "source": "builtin",
       "dependencies": {
-        "com.unity.render-pipelines.core": "14.0.8",
+        "com.unity.render-pipelines.core": "14.0.11",
         "com.unity.searcher": "4.9.2"
       }
     },
@@ -314,7 +329,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.testtools.codecoverage": {
-      "version": "1.2.4",
+      "version": "1.2.5",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -333,7 +348,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
-      "version": "1.7.4",
+      "version": "1.7.6",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -364,7 +379,7 @@
       }
     },
     "com.unity.visualscripting": {
-      "version": "1.8.0",
+      "version": "1.9.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {

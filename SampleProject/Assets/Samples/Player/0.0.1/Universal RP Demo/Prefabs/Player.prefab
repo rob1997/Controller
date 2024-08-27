@@ -1883,6 +1883,7 @@ MonoBehaviour:
   <TargetGroup>k__BackingField: {fileID: 5590362405879292995}
   <Targeter>k__BackingField: {fileID: 0}
   <Vitality>k__BackingField:
+    <Immutable>k__BackingField: 0
     <LowerLimit>k__BackingField: 0
     <FullValue>k__BackingField: 100
     <Death>k__BackingField: {fileID: 4702685486435802194}
@@ -1899,6 +1900,7 @@ MonoBehaviour:
           <Invulnerable>k__BackingField: 0
           <Value>k__BackingField: 0
   <Endurance>k__BackingField:
+    <Immutable>k__BackingField: 0
     <LowerLimit>k__BackingField: 0
     <FullValue>k__BackingField: 100
     <RecoveryRate>k__BackingField: 2
@@ -1933,7 +1935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
   canPush: 1
   interpolate: 1
   strength: 5
